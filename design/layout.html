@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingersoll Rand - Layout Clone</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Custom styles for specific elements not easily handled by basic utility classes */
+        .hero-bg {
+            background-image: linear-gradient(to right, rgba(160, 20, 20, 0.8) 0%, rgba(0, 0, 0, 0.6) 50%, rgba(0, 50, 100, 0.6) 100%), url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        .nav-link-active {
+            border-top: 3px solid #cc0000;
+            padding-top: 1.25rem;
+            margin-top: -1.4rem;
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 antialiased bg-white">
+
+    <!-- Top Bar -->
+    <div class="bg-[#1a1a1a] text-white text-xs py-2 px-4 md:px-8 flex justify-between items-center">
+        <div class="flex items-center space-x-2 font-semibold">
+            <span>$77.46</span>
+            <span class="text-red-500">-3.73 <i class="fas fa-chevron-down ml-1"></i></span>
+        </div>
+        <div class="relative">
+            <input type="text" placeholder="Search for a term..." class="py-1 px-3 pr-8 rounded text-gray-800 w-48 md:w-64 focus:outline-none focus:ring-2 focus:ring-red-600">
+            <i class="fas fa-search absolute right-2 top-1.5 text-red-600 cursor-pointer"></i>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="bg-white px-4 md:px-8 py-5 flex justify-between items-center shadow-sm border-b border-gray-200">
+        <div class="flex items-center">
+            <!-- Logo Placeholder -->
+            <div class="text-red-600 font-bold text-2xl italic tracking-tighter flex items-center">
+                <span class="bg-red-600 text-white rounded-full w-8 h-8 flex items-center justify-center mr-2 text-sm not-italic">IR</span>
+                Ingersoll Rand.
+            </div>
+        </div>
+        <div class="hidden md:flex space-x-6 text-sm font-semibold text-gray-700">
+            <a href="#" class="nav-link-active text-gray-900">Company</a>
+            <a href="#" class="hover:text-red-600 transition-colors">Sustainability</a>
+            <a href="#" class="hover:text-red-600 transition-colors">Careers</a>
+            <a href="#" class="hover:text-red-600 transition-colors">Investors</a>
+            <a href="#" class="hover:text-red-600 transition-colors">News</a>
+            <a href="#" class="hover:text-red-600 transition-colors">Brands</a>
+            <a href="#" class="hover:text-red-600 transition-colors">Industries</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-bg text-white h-[400px] flex flex-col items-center justify-center text-center px-4">
+        <h1 class="text-4xl md:text-5xl font-bold mb-6">Ingersoll Rand</h1>
+        <p class="max-w-3xl text-lg md:text-xl font-medium leading-relaxed">
+            As a global provider of mission-critical flow creation and life science and industrial solutions, we are dedicated to Making Life Better for our employees, customers, shareholders, and planet
+        </p>
+    </header>
+
+    <!-- Highlight Cards -->
+    <section class="py-16 px-4 md:px-8 max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Card 1 -->
+            <div class="bg-white border border-gray-200 shadow-sm hover:shadow-md transition-shadow">
+                <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Forest" class="w-full h-48 object-cover">
+                <div class="p-6 text-center">
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">Who We Are</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed">Powered by an ownership mindset and 160 years of experience, we're Making Life Better for our employees, our customers, our shareholders, and our planet.</p>
+                </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="bg-white border border-gray-200 shadow-sm hover:shadow-md transition-shadow">
+                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Team" class="w-full h-48 object-cover">
+                <div class="p-6 text-center">
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">Careers</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed">Looking to take the next step in your career? Come join us.</p>
+                </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="bg-white border border-gray-200 shadow-sm hover:shadow-md transition-shadow">
+                <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="News" class="w-full h-48 object-cover">
+                <div class="p-6 text-center">
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">Investors</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed">Find our latest press releases, earnings presentations, Annual Reports, and more.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Brands Section -->
+    <section class="bg-[#f0f0f2] py-16 px-4 md:px-8">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12 text-[#4a5568]">Key Brands</h2>
+            
+            <!-- Large Brand Cards -->
+            <div class="space-y-6 mb-10">
+                <!-- Brand 1 -->
+                <div class="bg-white flex flex-col md:flex-row items-center shadow-sm border border-gray-100">
+                    <div class="w-full md:w-1/3 p-8 flex justify-center items-center md:border-r border-gray-200">
+                        <div class="text-red-600 font-bold text-xl italic tracking-tighter flex items-center">
+                            <span class="bg-red-600 text-white rounded-full w-6 h-6 flex items-center justify-center mr-1 text-xs not-italic">IR</span>
+                            Ingersoll Rand.
+                        </div>
+                    </div>
+                    <div class="w-full md:w-2/3 p-8">
+                        <h4 class="font-bold text-lg mb-2 text-gray-800">Ingersoll Rand</h4>
+                        <p class="text-sm text-gray-600 leading-relaxed">Ingersoll Rand provides products, services and solutions that enhance our customers' energy efficiency, productivity and operations. With over 160 years of air compressor knowledge and expertise, you can trust Ingersoll Rand to provide you with a solution you can rely on.</p>
+                    </div>
+                </div>
+
+                <!-- Brand 2 -->
+                <div class="bg-white flex flex-col md:flex-row items-center shadow-sm border border-gray-100">
+                    <div class="w-full md:w-1/3 p-8 flex justify-center items-center md:border-r border-gray-200">
+                        <h2 class="font-black text-2xl tracking-tighter text-gray-900 uppercase">Gardner<br><span class="text-red-600 border-t-2 border-red-600 pt-1 block mt-1">Denver</span></h2>
+                    </div>
+                    <div class="w-full md:w-2/3 p-8">
+                        <h4 class="font-bold text-lg mb-2 text-gray-800">Gardner Denver</h4>
+                        <p class="text-sm text-gray-600 leading-relaxed">World leading supplier of compressors, blowers and vacuum pumps. We accelerate mission-critical applications worldwide. With 160 years of experience, we are a leading global provider of compressors, blowers, and vacuum pumps.</p>
+                    </div>
+                </div>
+
+                <!-- Brand 3 -->
+                <div class="bg-white flex flex-col md:flex-row items-center shadow-sm border border-gray-100">
+                    <div class="w-full md:w-1/3 p-8 flex justify-center items-center md:border-r border-gray-200">
+                         <div class="font-bold text-2xl text-[#1a365d] flex items-center">
+                             <i class="fas fa-compressor mr-2"></i> CompAir
+                         </div>
+                    </div>
+                    <div class="w-full md:w-2/3 p-8">
+                        <h4 class="font-bold text-lg mb-2 text-gray-800">CompAir</h4>
+                        <p class="text-sm text-gray-600 leading-relaxed">Leading supplier of oil free and oil lubricated rotary screw, reciprocating, centrifugal and portable air compressors. The company has been at the forefront of air compressor technology for many decades & we now also produce our own in-house air treatment ranges to supply the complete compressed air network package.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Small Brand Logos Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                <div class="bg-white h-32 flex items-center justify-center shadow-sm border border-gray-100 p-4">
+                    <span class="text-red-600 font-bold text-3xl">ARO&reg;</span>
+                </div>
+                <div class="bg-white h-32 flex items-center justify-center shadow-sm border border-gray-100 p-4">
+                    <span class="text-red-700 font-bold text-2xl italic uppercase tracking-wider">Champion</span>
+                </div>
+                <div class="bg-white h-32 flex items-center justify-center shadow-sm border border-gray-100 p-4">
+                    <div class="flex items-center text-gray-900 font-bold text-xl"><span class="w-8 h-8 bg-blue-800 rounded-full flex items-center justify-center text-white mr-2 text-xs">ER</span> Elmo<br>Rietschle</div>
+                </div>
+                <div class="bg-white h-32 flex items-center justify-center shadow-sm border border-gray-100 p-4">
+                    <span class="text-blue-500 font-bold text-xl uppercase tracking-widest"><i class="fas fa-circle-notch mr-1"></i> Milton Roy</span>
+                </div>
+                <div class="bg-white h-32 flex items-center justify-center shadow-sm border border-gray-100 p-4">
+                    <span class="text-blue-800 font-black text-3xl tracking-tighter">NASH&reg;</span>
+                </div>
+                <div class="bg-white h-32 flex items-center justify-center shadow-sm border border-gray-100 p-4">
+                    <span class="text-[#1a365d] font-black text-2xl tracking-tighter uppercase">Robuschi</span>
+                </div>
+                <div class="bg-white h-32 flex items-center justify-center shadow-sm border border-gray-100 p-4">
+                    <span class="text-blue-600 font-black text-3xl italic tracking-tighter">ROOTS&trade;</span>
+                </div>
+                <div class="bg-white h-32 flex items-center justify-center shadow-sm border border-gray-100 p-4">
+                    <span class="text-gray-900 font-black text-2xl tracking-widest uppercase">Thomas</span>
+                </div>
+                <div class="bg-white h-32 flex items-center justify-center shadow-sm border border-gray-100 p-4">
+                    <span class="text-[#004b87] font-black text-2xl tracking-widest uppercase">Seepex.</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Industries -->
+    <section class="py-16 px-4 md:px-8 max-w-7xl mx-auto">
+        <h2 class="text-3xl font-bold text-center mb-12 text-[#4a5568]">Featured Industries</h2>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Industry 1 -->
+            <div class="bg-white border border-gray-200">
+                <img src="https://images.unsplash.com/photo-1540962351504-03099e0a754b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Aerospace" class="w-full h-40 object-cover">
+                <div class="p-4 text-center">
+                    <h4 class="font-bold text-gray-800 mb-2">Aerospace</h4>
+                    <p class="text-xs text-gray-600">Aviation and aerospace is one of the largest and most demanding manufacturing industries worldwide. We deliver reliable sources of air and gas, whether on...</p>
+                </div>
+            </div>
+            <!-- Industry 2 -->
+            <div class="bg-white border border-gray-200">
+                <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Consumer" class="w-full h-40 object-cover">
+                <div class="p-4 text-center">
+                    <h4 class="font-bold text-gray-800 mb-2">Consumer</h4>
+                    <p class="text-xs text-gray-600">Whether it is a do it yourself (DIY) home improvement project or repair, Ingersoll Rand has you covered when it comes to powerful power tools, personal transport...</p>
+                </div>
+            </div>
+            <!-- Industry 3 -->
+            <div class="bg-white border border-gray-200">
+                <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Data Center" class="w-full h-40 object-cover">
+                <div class="p-4 text-center">
+                    <h4 class="font-bold text-gray-800 mb-2">Data Center Solutions</h4>
+                    <p class="text-xs text-gray-600">End-to-end Flow & Cooling Solutions for Data Centers. Advancing Reliability, Efficiency & Thermal Performance in the Grey Space.</p>
+                </div>
+            </div>
+            <!-- Industry 4 -->
+            <div class="bg-white border border-gray-200">
+                <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Electronics" class="w-full h-40 object-cover">
+                <div class="p-4 text-center">
+                    <h4 class="font-bold text-gray-800 mb-2">Electronics and Semiconductor</h4>
+                    <p class="text-xs text-gray-600">Compressed air is used in the electronics industry more often than one might think. Is used for PCB cleaning after production, as well as transferring components pne...</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Carousel Controls -->
+        <div class="flex justify-end mt-8 space-x-2">
+            <button class="w-10 h-10 border border-gray-300 text-gray-500 hover:bg-gray-50 flex items-center justify-center transition-colors">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="w-10 h-10 border border-red-600 text-red-600 hover:bg-red-50 flex items-center justify-center transition-colors">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#2a2a2a] pt-16 border-t-[8px] border-gray-900">
+        <div class="max-w-7xl mx-auto px-4 md:px-8 pb-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Column 1 -->
+                <div>
+                    <h4 class="text-white font-bold mb-4">Company</h4>
+                    <ul class="space-y-2 text-sm text-gray-300">
+                        <li><a href="#" class="hover:text-red-500 underline decoration-red-500 underline-offset-4">Purpose and Value</a></li>
+                        <li><a href="#" class="hover:text-red-500 underline decoration-red-500 underline-offset-4">Leadership</a></li>
+                        <li><a href="#" class="hover:text-red-500 underline decoration-red-500 underline-offset-4">History</a></li>
+                        <li><a href="#" class="hover:text-red-500 underline decoration-red-500 underline-offset-4">Terms</a></li>
+                        <li><a href="#" class="hover:text-red-500 underline decoration-red-500 underline-offset-4">Cookie Policy</a></li>
+                        <li><a href="#" class="hover:text-red-500 underline decoration-red-500 underline-offset-4">Global Ethics Hotline</a></li>
+                    </ul>
+
+                    <h4 class="text-white font-bold mb-4 mt-8">Reports</h4>
+                    <ul class="space-y-2 text-sm text-gray-300">
+                        <li><a href="#" class="hover:text-red-500 underline decoration-red-500 underline-offset-4 leading-tight block">Pay Transparency Report Q3-Q4 2025<br>- 60.882.776/0001-04</a></li>
+                        <li><a href="#" class="hover:text-red-500 underline decoration-red-500 underline-offset-4 leading-tight block">Pay Transparency Report Q3-Q4 2025<br>- 02.931.123/0001-71</a></li>
+                        <li><a href="#" class="hover:text-red-500 underline decoration-red-500 underline-offset-4 leading-tight block">Pay Transparency Report Q3-Q4 2025<br>- 34.971.870/0001-20</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 2 -->
+                <div>
+                    <h4 class="text-white font-bold mb-4">Explore more</h4>
+                    <ul class="space-y-2 text-sm text-gray-300">
+                        <li><a href="#" class="hover:text-red-500 underline decoration-red-500 underline-offset-4">Careers</a></li>
+                        <li><a href="#" class="hover:text-red-500 underline decoration-red-500 underline-offset-4">Investors</a></li>
+                        <li><a href="#" class="hover:text-red-500 underline decoration-red-500 underline-offset-4">News</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3 -->
+                <div>
+                    <h4 class="text-white font-bold mb-4">Brands</h4>
+                    <ul class="space-y-2 text-sm text-gray-300">
+                        <li><a href="#" class="hover:text-red-500 underline decoration-red-500 underline-offset-4">Ingersoll Rand</a></li>
+                        <li><a href="#" class="hover:text-red-500 underline decoration-red-500 underline-offset-4">Gardner Denver</a></li>
+                        <li><a href="#" class="hover:text-red-500 underline decoration-red-500 underline-offset-4">Compair</a></li>
+                        <li><a href="#" class="hover:text-red-500 underline decoration-red-500 underline-offset-4">Thomas</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4 -->
+                <div>
+                    <h4 class="text-white font-bold mb-4">Industries</h4>
+                    <ul class="space-y-2 text-sm text-gray-300">
+                        <li><a href="#" class="hover:text-red-500 underline decoration-red-500 underline-offset-4">Aerospace</a></li>
+                        <li><a href="#" class="hover:text-red-500 underline decoration-red-500 underline-offset-4">Consumer</a></li>
+                        <li><a href="#" class="hover:text-red-500 underline decoration-red-500 underline-offset-4">Electronics</a></li>
+                        <li><a href="#" class="hover:text-red-500 underline decoration-red-500 underline-offset-4">Environmental</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Footer -->
+        <div class="bg-[#1a1a1a] py-6 px-4 md:px-8 border-t border-gray-700">
+            <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center text-xs text-gray-400">
+                <div class="mb-4 md:mb-0 text-center md:text-left">
+                    <p class="mb-1">Copyright 2025 © Ingersoll Rand</p>
+                    <a href="#" class="hover:text-white transition-colors">Terms of Use Privacy Policy</a>
+                </div>
+                <div>
+                    <div class="text-red-600 font-bold text-xl italic tracking-tighter flex items-center opacity-80 hover:opacity-100 transition-opacity">
+                        <span class="bg-red-600 text-white rounded-full w-6 h-6 flex items-center justify-center mr-1 text-xs not-italic">IR</span>
+                        Ingersoll Rand.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
