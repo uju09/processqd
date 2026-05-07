@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legal & Compliance - Ingersoll Rand</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .hero-bg-cyan-small {
+            background-image: linear-gradient(to right, rgba(8, 145, 178, 0.95) 0%, rgba(15, 23, 42, 0.9) 100%);
+        }
+        .nav-link-active {
+            border-top: 3px solid #0891b2; /* cyan-600 */
+            padding-top: 1.25rem;
+            margin-top: -1.4rem;
+        }
+        .sidebar-link-active {
+            background-color: #ecfeff; /* cyan-50 */
+            border-left: 4px solid #0891b2;
+            color: #0891b2;
+            font-weight: 700;
+        }
+        /* Custom styling for legal typography */
+        .legal-content h2 { font-size: 1.5rem; font-weight: 700; color: #1f2937; margin-top: 2.5rem; margin-bottom: 1rem; }
+        .legal-content p { color: #4b5563; margin-bottom: 1.25rem; line-height: 1.75; }
+        .legal-content ul { list-style-type: disc; padding-left: 1.5rem; margin-bottom: 1.25rem; color: #4b5563; }
+        .legal-content li { margin-bottom: 0.5rem; }
+    </style>
+</head>
+<body class="font-sans text-gray-800 antialiased bg-[#f8f9fa]">
+
+    <!-- Top Bar -->
+    <div class="bg-[#1a1a1a] text-white text-xs py-2 px-4 md:px-8 flex justify-between items-center">
+        <div class="flex items-center space-x-2 font-semibold">
+            <span>$77.46</span>
+            <span class="text-red-500">-3.73 <i class="fas fa-chevron-down ml-1"></i></span>
+        </div>
+        <div class="relative">
+            <input type="text" placeholder="Search for a term..." class="py-1 px-3 pr-8 rounded text-gray-800 w-48 md:w-64 focus:outline-none focus:ring-2 focus:ring-cyan-600">
+            <i class="fas fa-search absolute right-2 top-1.5 text-cyan-600 cursor-pointer"></i>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="bg-white px-4 md:px-8 py-5 flex justify-between items-center shadow-sm border-b border-gray-200">
+        <div class="flex items-center">
+            <div class="text-cyan-600 font-bold text-2xl italic tracking-tighter flex items-center cursor-pointer">
+                <span class="bg-cyan-600 text-white rounded-full w-8 h-8 flex items-center justify-center mr-2 text-sm not-italic">IR</span>
+                Ingersoll Rand.
+            </div>
+        </div>
+        <div class="hidden md:flex space-x-6 text-sm font-semibold text-gray-700">
+            <a href="#" class="hover:text-cyan-600 transition-colors">Company</a>
+            <a href="#" class="hover:text-cyan-600 transition-colors">Services</a>
+            <a href="#" class="hover:text-cyan-600 transition-colors">Careers</a>
+            <a href="#" class="hover:text-cyan-600 transition-colors">Investors</a>
+            <a href="#" class="hover:text-cyan-600 transition-colors">News</a>
+            <a href="#" class="nav-link-active text-gray-900">Legal</a>
+        </div>
+        <div class="md:hidden text-gray-800 text-xl cursor-pointer">
+            <i class="fas fa-bars hover:text-cyan-600"></i>
+        </div>
+    </nav>
+
+    <!-- Mini Hero Section -->
+    <header class="hero-bg-cyan-small text-white py-16 px-4 text-center">
+        <h1 class="text-3xl md:text-5xl font-bold mb-3 tracking-tight">Legal & Compliance</h1>
+        <p class="text-lg font-light opacity-90 max-w-2xl mx-auto">
+            Our commitment to transparency, privacy, and operational excellence.
+        </p>
+    </header>
+
+    <!-- Content Layout -->
+    <section class="max-w-7xl mx-auto px-4 md:px-8 py-12 flex flex-col md:flex-row gap-8 items-start">
+        
+        <!-- Sidebar Navigation -->
+        <aside class="w-full md:w-1/4 bg-white border border-gray-200 shadow-sm sticky top-6 rounded-sm">
+            <div class="p-6 border-b border-gray-100 bg-gray-50">
+                <h3 class="font-bold text-gray-800 uppercase tracking-wider text-sm">Legal Documents</h3>
+            </div>
+            <nav class="flex flex-col text-sm">
+                <a href="#" class="p-4 border-b border-gray-100 sidebar-link-active transition-colors">Privacy Policy</a>
+                <a href="#" class="p-4 border-b border-gray-100 hover:bg-gray-50 text-gray-600 hover:text-cyan-600 transition-colors border-left-transparent border-l-4">Terms of Service</a>
+                <a href="#" class="p-4 border-b border-gray-100 hover:bg-gray-50 text-gray-600 hover:text-cyan-600 transition-colors border-left-transparent border-l-4">Cookie Policy</a>
+                <a href="#" class="p-4 border-b border-gray-100 hover:bg-gray-50 text-gray-600 hover:text-cyan-600 transition-colors border-left-transparent border-l-4">GDPR Compliance</a>
+                <a href="#" class="p-4 hover:bg-gray-50 text-gray-600 hover:text-cyan-600 transition-colors border-left-transparent border-l-4">Service Level Agreement (SLA)</a>
+            </nav>
+        </aside>
+
+        <!-- Main Document Area -->
+        <main class="w-full md:w-3/4 bg-white border border-gray-200 shadow-sm p-8 md:p-12">
+            <div class="border-b border-gray-200 pb-6 mb-8 flex justify-between items-end">
+                <div>
+                    <h1 class="text-3xl font-black text-gray-900 tracking-tight mb-2">Privacy Policy</h1>
+                    <p class="text-sm text-gray-500">Last Updated: October 15, 2025</p>
+                </div>
+                <button class="hidden md:flex items-center text-sm font-semibold text-cyan-600 hover:text-cyan-800 border border-cyan-200 px-4 py-2 rounded hover:bg-cyan-50 transition-colors">
+                    <i class="fas fa-print mr-2"></i> Print Document
+                </button>
+            </div>
+
+            <div class="legal-content">
+                <p>Welcome to Ingersoll Rand's Privacy Policy. We respect your privacy and are committed to protecting your personal data. This privacy policy will inform you as to how we look after your personal data when you visit our website (regardless of where you visit it from) and tell you about your privacy rights and how the law protects you.</p>
+
+                <h2>1. Important Information and Who We Are</h2>
+                <p><strong>Purpose of this privacy policy:</strong> This privacy policy aims to give you information on how we collect and process your personal data through your use of this website, including any data you may provide through this website when you sign up to our newsletter, purchase a product or service, or take part in a competition.</p>
+                <p>This website is not intended for children and we do not knowingly collect data relating to children.</p>
+                
+                <h2>2. The Data We Collect About You</h2>
+                <p>Personal data, or personal information, means any information about an individual from which that person can be identified. It does not include data where the identity has been removed (anonymous data).</p>
+                <p>We may collect, use, store and transfer different kinds of personal data about you which we have grouped together as follows:</p>
+                <ul>
+                    <li><strong>Identity Data</strong> includes first name, maiden name, last name, username or similar identifier, marital status, title, date of birth and gender.</li>
+                    <li><strong>Contact Data</strong> includes billing address, delivery address, email address and telephone numbers.</li>
+                    <li><strong>Technical Data</strong> includes internet protocol (IP) address, your login data, browser type and version, time zone setting and location, browser plug-in types and versions, operating system and platform, and other technology on the devices you use to access this website.</li>
+                    <li><strong>Usage Data</strong> includes information about how you use our website, products and services.</li>
+                </ul>
+
+                <h2>3. How We Use Your Personal Data</h2>
+                <p>We will only use your personal data when the law allows us to. Most commonly, we will use your personal data in the following circumstances:</p>
+                <ul>
+                    <li>Where we need to perform the contract we are about to enter into or have entered into with you.</li>
+                    <li>Where it is necessary for our legitimate interests (or those of a third party) and your interests and fundamental rights do not override those interests.</li>
+                    <li>Where we need to comply with a legal obligation.</li>
+                </ul>
+
+                <h2>4. Data Security</h2>
+                <p>We have put in place appropriate security measures to prevent your personal data from being accidentally lost, used or accessed in an unauthorized way, altered or disclosed. In addition, we limit access to your personal data to those employees, agents, contractors and other third parties who have a business need to know. They will only process your personal data on our instructions and they are subject to a duty of confidentiality.</p>
+                
+                <div class="mt-12 p-6 bg-cyan-50 border-l-4 border-cyan-600 text-sm text-gray-700">
+                    <h4 class="font-bold text-cyan-800 mb-2">Have a privacy question?</h4>
+                    <p>If you have any questions about this privacy policy or our privacy practices, please contact our Data Protection Officer at <a href="mailto:privacy@ingersollrand.com" class="text-cyan-600 font-semibold hover:underline">privacy@ingersollrand.com</a>.</p>
+                </div>
+            </div>
+        </main>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#2a2a2a] pt-16 border-t-[8px] border-gray-900 mt-12">
+        <div class="max-w-7xl mx-auto px-4 md:px-8 pb-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                    <h4 class="text-white font-bold mb-4">Company</h4>
+                    <ul class="space-y-2 text-sm text-gray-300">
+                        <li><a href="#" class="hover:text-cyan-400 underline decoration-cyan-400 underline-offset-4">Purpose and Value</a></li>
+                        <li><a href="#" class="hover:text-cyan-400 underline decoration-cyan-400 underline-offset-4">Leadership</a></li>
+                        <li><a href="#" class="hover:text-cyan-400 underline decoration-cyan-400 underline-offset-4">History</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Legal</h4>
+                    <ul class="space-y-2 text-sm text-gray-300">
+                        <li><a href="#" class="hover:text-cyan-400 underline decoration-cyan-400 underline-offset-4">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-cyan-400 underline decoration-cyan-400 underline-offset-4">Terms of Service</a></li>
+                        <li><a href="#" class="hover:text-cyan-400 underline decoration-cyan-400 underline-offset-4">Cookie Policy</a></li>
+                        <li><a href="#" class="hover:text-cyan-400 underline decoration-cyan-400 underline-offset-4">GDPR Compliance</a></li>
+                        <li><a href="#" class="hover:text-cyan-400 underline decoration-cyan-400 underline-offset-4">Service Level Agreement</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Services</h4>
+                    <ul class="space-y-2 text-sm text-gray-300">
+                        <li><a href="#" class="hover:text-cyan-400 underline decoration-cyan-400 underline-offset-4">AI Automation</a></li>
+                        <li><a href="#" class="hover:text-cyan-400 underline decoration-cyan-400 underline-offset-4">Web Development</a></li>
+                        <li><a href="#" class="hover:text-cyan-400 underline decoration-cyan-400 underline-offset-4">Cloud Migration</a></li>
+                        <li><a href="#" class="hover:text-cyan-400 underline decoration-cyan-400 underline-offset-4">Quantum Computing</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Contact</h4>
+                    <ul class="space-y-2 text-sm text-gray-300">
+                        <li><a href="#" class="hover:text-cyan-400 underline decoration-cyan-400 underline-offset-4">Support Center</a></li>
+                        <li><a href="#" class="hover:text-cyan-400 underline decoration-cyan-400 underline-offset-4">Global Offices</a></li>
+                        <li><a href="#" class="hover:text-cyan-400 underline decoration-cyan-400 underline-offset-4">Partner Network</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="bg-[#1a1a1a] py-6 px-4 md:px-8 border-t border-gray-700">
+            <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center text-xs text-gray-400">
+                <div class="mb-4 md:mb-0 text-center md:text-left">
+                    <p class="mb-1">Copyright 2025 © Ingersoll Rand</p>
+                </div>
+                <div>
+                    <div class="text-cyan-600 font-bold text-xl italic tracking-tighter flex items-center opacity-80 hover:opacity-100 transition-opacity">
+                        <span class="bg-cyan-600 text-white rounded-full w-6 h-6 flex items-center justify-center mr-1 text-xs not-italic">IR</span>
+                        Ingersoll Rand.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

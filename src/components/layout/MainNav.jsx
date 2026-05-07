@@ -82,17 +82,17 @@ export function MainNav() {
             variants={logoVariants}
             initial="hidden"
             animate="visible"
-            className="font-bold text-xl flex items-center gap-3 text-cyan-600"
+            className="font-bold text-base md:text-xl flex items-center gap-2 md:gap-3 text-cyan-600"
           >
             <motion.span
-              className="bg-gradient-to-br from-cyan-500 to-sky-500 text-white rounded-lg w-10 h-10 flex items-center justify-center font-bold text-sm"
+              className="bg-gradient-to-br from-cyan-500 to-sky-500 text-white rounded-lg w-9 h-9 md:w-10 md:h-10 flex items-center justify-center font-bold text-xs md:text-sm"
               whileHover={{ scale: 1.1 }}
               transition={{ type: 'spring', stiffness: 400, damping: 10 }}
             >
               PQ
             </motion.span>
             <motion.span
-              className="hidden sm:inline"
+              className="hidden sm:inline text-sm md:text-base"
               initial={{ opacity: 0, x: -10 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.2, duration: 0.3 }}
@@ -223,10 +223,10 @@ export function MainNav() {
               initial="hidden"
               animate="visible"
               exit="exit"
-              className="fixed top-0 right-0 h-full w-full max-w-xs bg-white shadow-2xl z-50 md:hidden pb-6"
+              className="fixed top-0 right-0 h-full w-full max-w-xs bg-white shadow-2xl z-50 md:hidden overflow-y-auto"
             >
               <div className="p-6 pt-20">
-                <div className="flex flex-col gap-6">
+                <div className="flex flex-col gap-1">
                   {navLinks.map((link, i) => (
                     link.href.startsWith('/') ? (
                       <motion.div
@@ -237,7 +237,7 @@ export function MainNav() {
                       >
                         <Link
                           to={link.href}
-                          className={`text-lg font-semibold text-slate-700 hover:text-cyan-600 transition-colors ${
+                          className={`text-lg font-semibold text-slate-700 hover:text-cyan-600 transition-colors min-h-[44px] min-w-[44px] flex items-center ${
                             activeLink === link.id ? '!text-cyan-600' : ''
                           }`}
                           onClick={() => handleLinkClick(link.id)}
@@ -256,7 +256,7 @@ export function MainNav() {
                       <motion.a
                         key={link.id}
                         href={link.href}
-                        className={`text-lg font-semibold text-slate-700 hover:text-cyan-600 transition-colors ${
+                        className={`text-lg font-semibold text-slate-700 hover:text-cyan-600 transition-colors min-h-[44px] min-w-[44px] flex items-center ${
                           activeLink === link.id ? '!text-cyan-600' : ''
                         }`}
                         onClick={() => handleLinkClick(link.id)}
@@ -278,7 +278,7 @@ export function MainNav() {
 
                   <motion.a
                     href="#contact"
-                    className="mt-4 bg-gradient-to-r from-orange-500 to-orange-600 text-white px-5 py-3 rounded-lg font-semibold text-center"
+                    className="mt-4 w-full md:w-auto bg-gradient-to-r from-orange-500 to-orange-600 text-white px-5 py-3 rounded-lg font-semibold text-center min-h-[44px] min-w-[44px] flex items-center justify-center"
                     onClick={() => setIsMobileMenuOpen(false)}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}

@@ -189,7 +189,7 @@ export function Hero() {
 
   return (
     <header
-      className="h-[70vh] md:h-[60vh] bg-cover bg-center bg-no-repeat text-white flex flex-col items-center justify-center text-center p-4 md:p-8 bg-hero-gradient relative overflow-hidden"
+      className="h-[55vh] sm:h-[65vh] md:h-[60vh] xl:h-[55vh] bg-cover bg-center bg-no-repeat text-white flex flex-col items-center justify-center text-center px-4 sm:px-6 md:p-8 bg-hero-gradient relative overflow-hidden"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
     >
@@ -223,32 +223,32 @@ export function Hero() {
 
       {/* Decorative floating shapes */}
       <motion.div
-        className="absolute top-[10%] left-[5%] w-32 h-32 rounded-full border-2 border-cyan-400/20"
+        className="hidden md:block absolute top-[10%] left-[5%] w-32 h-32 rounded-full border-2 border-cyan-400/20"
         variants={floatingCircle1Variants}
         animate="animate"
       />
       <motion.div
-        className="absolute top-[60%] left-[8%] w-16 h-16 rounded-full bg-gradient-to-br from-purple-400/20 to-cyan-400/20 blur-sm"
+        className="hidden md:block absolute top-[60%] left-[8%] w-16 h-16 rounded-full bg-gradient-to-br from-purple-400/20 to-cyan-400/20 blur-sm"
         variants={floatingCircle2Variants}
         animate="animate"
       />
       <motion.div
-        className="absolute bottom-[15%] left-[12%] w-24 h-[2px] bg-gradient-to-r from-cyan-400/40 to-transparent"
+        className="hidden md:block absolute bottom-[15%] left-[12%] w-24 h-[2px] bg-gradient-to-r from-cyan-400/40 to-transparent"
         variants={floatingLine1Variants}
         animate="animate"
       />
       <motion.div
-        className="absolute top-[25%] right-[10%] w-20 h-[2px] bg-gradient-to-l from-purple-400/40 to-transparent"
+        className="hidden md:block absolute top-[25%] right-[10%] w-20 h-[2px] bg-gradient-to-l from-purple-400/40 to-transparent"
         variants={floatingLine2Variants}
         animate="animate"
       />
       <motion.div
-        className="absolute top-[40%] right-[5%] w-10 h-10 rounded-full border border-white/10"
+        className="hidden md:block absolute top-[40%] right-[5%] w-10 h-10 rounded-full border border-white/10"
         variants={floatingCircle3Variants}
         animate="animate"
       />
       <motion.div
-        className="absolute bottom-[30%] right-[15%] w-14 h-14 rounded-full bg-cyan-400/10 blur-md"
+        className="hidden md:block absolute bottom-[30%] right-[15%] w-14 h-14 rounded-full bg-cyan-400/10 blur-md"
         variants={floatingCircle1Variants}
         animate="animate"
         style={{ transitionDelay: '3s' }}
@@ -257,24 +257,24 @@ export function Hero() {
       {/* Carousel Navigation Arrows */}
       <button
         onClick={goPrev}
-        className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center cursor-pointer hover:bg-white/20 transition-all duration-300"
+        className="absolute left-2 right-auto md:left-8 top-1/2 -translate-y-1/2 z-20 w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center cursor-pointer hover:bg-white/20 transition-all duration-300"
         aria-label="Previous slide"
       >
-        <i className="fas fa-chevron-left text-white"></i>
+        <i className="fas fa-chevron-left text-white text-sm md:text-base"></i>
       </button>
       <button
         onClick={goNext}
-        className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center cursor-pointer hover:bg-white/20 transition-all duration-300"
+        className="absolute right-2 left-auto md:right-8 top-1/2 -translate-y-1/2 z-20 w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center cursor-pointer hover:bg-white/20 transition-all duration-300"
         aria-label="Next slide"
       >
-        <i className="fas fa-chevron-right text-white"></i>
+        <i className="fas fa-chevron-right text-white text-sm md:text-base"></i>
       </button>
 
       {/* Content with AnimatePresence for crossfade */}
       <AnimatePresence mode="wait">
         <motion.div
           key={currentSlideData.id}
-          className="max-w-3xl relative z-10"
+          className="w-full max-w-full px-2 sm:px-4 relative z-10"
           variants={containerVariants}
           initial="hidden"
           animate="visible"
@@ -282,30 +282,30 @@ export function Hero() {
         >
           {currentSlideData.tagline && (
             <motion.p
-              className="text-xl font-semibold text-white/90 mb-4 uppercase tracking-widest"
+              className="text-xs sm:text-sm md:text-base font-semibold text-white/90 mb-3 sm:mb-4 uppercase tracking-wider sm:tracking-widest"
               variants={itemVariants}
             >
               {currentSlideData.tagline}
             </motion.p>
           )}
           <motion.h1
-            className="text-4xl sm:text-5xl font-bold mb-6 tracking-tight"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 tracking-tight"
             variants={itemVariants}
           >
             {currentSlideData.title}
           </motion.h1>
           <motion.p
-            className="text-lg sm:text-xl font-medium leading-relaxed mb-8"
+            className="text-sm sm:text-base md:text-lg font-medium leading-relaxed mb-6 sm:mb-8 px-0 sm:px-2"
             variants={itemVariants}
           >
             {currentSlideData.description}
           </motion.p>
           <motion.div
-            className="flex gap-4 justify-center flex-wrap"
+            className="flex gap-3 sm:gap-4 justify-center flex-wrap"
             variants={containerVariants}
           >
             <motion.button
-              className="px-7 py-3.5 text-base font-semibold rounded-md bg-cyan-500 hover:bg-cyan-600 transition-all duration-200 cursor-pointer border-none"
+              className="w-full sm:w-auto px-6 sm:px-7 py-3 sm:py-3.5 text-sm sm:text-base font-semibold rounded-md bg-cyan-500 hover:bg-cyan-600 transition-all duration-200 cursor-pointer border-none"
               variants={buttonVariants}
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.98 }}
@@ -314,7 +314,7 @@ export function Hero() {
               {currentSlideData.ctaPrimary}
             </motion.button>
             <motion.button
-              className="px-7 py-3.5 text-base font-semibold rounded-md bg-transparent text-white border-2 border-white/60 hover:bg-white/10 hover:border-white transition-all duration-200 cursor-pointer"
+              className="w-full sm:w-auto px-6 sm:px-7 py-3 sm:py-3.5 text-sm sm:text-base font-semibold rounded-md bg-transparent text-white border-2 border-white/60 hover:bg-white/10 hover:border-white transition-all duration-200 cursor-pointer"
               variants={buttonVariants}
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.98 }}
@@ -327,13 +327,13 @@ export function Hero() {
       </AnimatePresence>
 
       {/* Navigation dots/indicators */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex gap-3">
+      <div className="absolute bottom-4 sm:bottom-8 left-1/2 -translate-x-1/2 z-20 flex gap-2 sm:gap-3">
         {heroSlides.map((slide, index) => (
           <button
             key={slide.id}
             onClick={() => goToSlide(index)}
-            className={`w-3 h-3 rounded-full cursor-pointer transition-all duration-300 ${index === currentSlide
-              ? 'bg-cyan-400 w-8'
+            className={`w-3 h-3 md:w-4 md:h-4 rounded-full cursor-pointer transition-all duration-300 ${index === currentSlide
+              ? 'bg-cyan-400 w-6 sm:w-8'
               : 'bg-white/40 hover:bg-white/60'
               }`}
             aria-label={`Go to slide ${index + 1}`}
