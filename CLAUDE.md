@@ -1,7 +1,7 @@
 <!-- gitnexus:start -->
 # GitNexus — Code Intelligence
 
-This project is indexed by GitNexus as **react-app** (106 symbols, 137 relationships, 0 execution flows). Use the GitNexus MCP tools to understand code, assess impact, and navigate safely.
+This project is indexed by GitNexus as **processqd** (244 symbols, 268 relationships, 0 execution flows). Use the GitNexus MCP tools to understand code, assess impact, and navigate safely.
 
 > If any GitNexus tool warns the index is stale, run `npx gitnexus analyze` in terminal first.
 
@@ -24,10 +24,10 @@ This project is indexed by GitNexus as **react-app** (106 symbols, 137 relations
 
 | Resource | Use for |
 |----------|---------|
-| `gitnexus://repo/react-app/context` | Codebase overview, check index freshness |
-| `gitnexus://repo/react-app/clusters` | All functional areas |
-| `gitnexus://repo/react-app/processes` | All execution flows |
-| `gitnexus://repo/react-app/process/{name}` | Step-by-step execution trace |
+| `gitnexus://repo/processqd/context` | Codebase overview, check index freshness |
+| `gitnexus://repo/processqd/clusters` | All functional areas |
+| `gitnexus://repo/processqd/processes` | All execution flows |
+| `gitnexus://repo/processqd/process/{name}` | Step-by-step execution trace |
 
 ## CLI
 

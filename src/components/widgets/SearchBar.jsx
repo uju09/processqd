@@ -10,9 +10,9 @@ export function SearchBar({ onSearch }) {
         placeholder="Search for a term..."
         value={value}
         onChange={(e) => setValue(e.target.value)}
-        className="pl-8 pr-3 py-1 rounded bg-white text-slate-800 w-48 outline-none text-sm border-none focus:ring-2 focus:ring-cyan-500 focus:outline-none"
+        className="w-full h-11 px-4 py-3 pl-10 pr-3 rounded bg-white text-slate-800 text-base outline-none border border-gray-200 focus:ring-2 focus:ring-cyan-500 focus:outline-none focus:border-transparent"
       />
-      <i className="fas fa-search absolute left-2.5 top-1/2 -translate-y-1/2 text-cyan-500 cursor-pointer"></i>
+      <i className="fas fa-search absolute left-3 top-1/2 -translate-y-1/2 text-cyan-500 cursor-pointer text-lg"></i>
     </div>
   );
 }

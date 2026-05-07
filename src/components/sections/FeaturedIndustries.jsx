@@ -74,20 +74,20 @@ function IndustryCard({ image, imageAlt, title, description, index }) {
       whileHover={{ rotateY: 5, transition: { duration: 0.3 } }}
       style={{ transformStyle: "preserve-3d" }}
     >
-      <div className="bg-white rounded-2xl border border-cyan-200 hover:shadow-lg hover:-translate-y-1 hover:border-cyan-400 transition-all duration-300 h-full">
+      <div className="bg-white rounded-xl md:rounded-2xl border border-cyan-200 hover:shadow-lg hover:-translate-y-1 hover:border-cyan-400 transition-all duration-300 h-full">
         <motion.div
-          className="bg-gradient-to-r from-cyan-500 to-sky-500 p-8 flex justify-center overflow-hidden rounded-t-2xl"
+          className="bg-gradient-to-r from-cyan-500 to-sky-500 p-4 md:p-8 flex justify-center overflow-hidden rounded-t-xl md:rounded-t-2xl aspect-video"
           variants={imageVariants}
           initial="rest"
           whileHover="hover"
         >
-          <img src={image} alt={imageAlt} className="w-full h-40 sm:h-32 object-cover rounded-lg" />
+          <img src={image} alt={imageAlt} className="w-full h-full object-cover rounded-lg" />
         </motion.div>
-        <div className="p-6 text-center">
-          <h4 className="font-bold text-lg text-cyan-950 mb-2">{title}</h4>
-          <p className="text-sm text-gray-500 leading-relaxed mb-4">{description}</p>
+        <div className="p-4 md:p-6 text-center">
+          <h4 className="font-bold text-base md:text-lg text-cyan-950 mb-2">{title}</h4>
+          <p className="text-xs md:text-sm text-gray-500 leading-relaxed mb-3 md:mb-4 line-clamp-3">{description}</p>
           <motion.div
-            className="text-cyan-600 hover:text-orange-500 font-semibold text-sm flex items-center justify-center gap-1 group"
+            className="text-cyan-600 hover:text-orange-500 font-semibold text-xs md:text-sm flex items-center justify-center gap-1 group"
             whileHover={{ x: 5 }}
             transition={{ type: "spring", stiffness: 400, damping: 10 }}
           >
@@ -162,7 +162,7 @@ export function FeaturedIndustries() {
   const { currentIndex, canGoNext, canGoPrev, goNext, goPrev } = useCarousel(industries.length, 4);
 
   return (
-    <section className="py-20 px-4 md:px-8 max-w-7xl mx-auto bg-gradient-to-b from-cyan-50 to-slate-50 relative overflow-hidden">
+    <section className="py-12 md:py-20 px-4 sm:px-6 lg:px-8 container-responsive bg-gradient-to-b from-cyan-50 to-slate-50 relative overflow-hidden">
       <AnimatedBackground />
 
       <motion.div
@@ -171,16 +171,16 @@ export function FeaturedIndustries() {
         initial="hidden"
         animate={headerInView ? "visible" : "hidden"}
       >
-        <h2 className="text-3xl font-extrabold text-center mb-4 bg-gradient-to-r from-cyan-600 to-sky-600 bg-clip-text text-transparent">
+        <h2 className="text-xl md:text-2xl lg:text-3xl font-extrabold text-center mb-4 bg-gradient-to-r from-cyan-600 to-sky-600 bg-clip-text text-transparent">
           AI-Powered Solutions
         </h2>
-        <p className="text-center text-gray-500 text-lg mb-12 max-w-2xl mx-auto">
+        <p className="text-center text-gray-500 text-sm md:text-base lg:text-lg mb-8 md:mb-12 max-w-2xl mx-auto px-4">
           Transform your enterprise with cutting-edge artificial intelligence and automation technologies
         </p>
       </motion.div>
 
       <motion.div
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 px-2 md:px-0"
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"

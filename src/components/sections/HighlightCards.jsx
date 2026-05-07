@@ -1,6 +1,7 @@
 import { motion, useInView, useMotionValue, useSpring } from 'framer-motion';
 import { useRef } from 'react';
-import { highlights } from '../../data/content/highlights';
+import { Link } from 'react-router-dom';
+import { servicesData } from '../../data/content/servicesData';
 
 const cardVariants = {
   hidden: (direction) => ({
@@ -48,23 +49,26 @@ const overlayVariants = {
 
 function HighlightCard({ image, imageAlt, title, description, index }) {
   const cardRef = useRef(null);
-  const isInView = useInView(cardRef, { once: true, margin: '-100px' });
+  const isInView = useInView(cardRef, { once: true, margin: '-50px' });
 
   // Alternate slide direction for visual interest
   const direction = index % 2 === 0 ? 'left' : 'right';
 
-  // Parallax effect using motion values
+  // Parallax effect using motion values (disabled on touch devices)
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
   const springX = useSpring(mouseX, { stiffness: 100, damping: 30 });
   const springY = useSpring(mouseY, { stiffness: 100, damping: 30 });
 
   const handleMouseMove = (e) => {
-    const rect = e.currentTarget.getBoundingClientRect();
-    const centerX = rect.width / 2;
-    const centerY = rect.height / 2;
-    mouseX.set((e.clientX - rect.left - centerX) / 20);
-    mouseY.set((e.clientY - rect.top - centerY) / 20);
+    // Only apply parallax on non-touch devices
+    if (window.matchMedia('(hover: hover)').matches) {
+      const rect = e.currentTarget.getBoundingClientRect();
+      const centerX = rect.width / 2;
+      const centerY = rect.height / 2;
+      mouseX.set((e.clientX - rect.left - centerX) / 20);
+      mouseY.set((e.clientY - rect.top - centerY) / 20);
+    }
   };
 
   const handleMouseLeave = () => {
@@ -79,13 +83,13 @@ function HighlightCard({ image, imageAlt, title, description, index }) {
       variants={cardVariants}
       initial="hidden"
       animate={isInView ? 'visible' : 'hidden'}
-      custom={index}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
       style={{ x: springX, y: springY }}
+      className="h-full"
     >
       <motion.div
-        className="bg-white rounded-xl p-6 border border-cyan-200 hover:border-cyan-400 shadow-sm relative overflow-hidden"
+        className="bg-white rounded-xl p-4 md:p-6 border border-cyan-200 hover:border-cyan-400 shadow-sm relative overflow-hidden h-full flex flex-col cursor-pointer transition-shadow md:hover:shadow-lg"
         variants={cardHoverVariants}
         initial="rest"
         whileHover="hover"
@@ -99,11 +103,11 @@ function HighlightCard({ image, imageAlt, title, description, index }) {
         />
 
         {/* Image wrapper with overflow-hidden */}
-        <div className="relative overflow-hidden rounded-lg mb-4">
+        <div className="relative overflow-hidden rounded-lg mb-3 md:mb-4">
           <motion.img
             src={image}
             alt={imageAlt}
-            className="w-full h-48 object-cover rounded-lg"
+            className="w-full h-36 sm:h-44 md:h-48 object-cover rounded-lg"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
             transition={{ duration: 0.6, delay: 0.2 + index * 0.1, ease: [0.25, 0.46, 0.45, 0.94] }}
@@ -111,18 +115,18 @@ function HighlightCard({ image, imageAlt, title, description, index }) {
           />
         </div>
 
-        <div className="text-center relative z-10">
+        <div className="text-center relative z-10 flex-grow">
           <motion.div
             variants={iconVariants}
             initial="rest"
             whileHover="hover"
-            className="inline-block mb-3"
+            className="inline-block mb-2 md:mb-3"
           >
-            <h3 className="text-lg font-semibold text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 to-sky-600">
+            <h3 className="text-base md:text-lg font-semibold text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 to-sky-600 line-clamp-2">
               {title}
             </h3>
           </motion.div>
-          <p className="text-sm text-slate-500 leading-relaxed">{description}</p>
+          <p className="text-sm text-slate-500 leading-relaxed line-clamp-3">{description}</p>
         </div>
       </motion.div>
     </motion.div>
@@ -136,14 +140,20 @@ export function HighlightCards() {
   return (
     <motion.section
       ref={sectionRef}
-      className="py-16 px-4 md:px-8 bg-gradient-to-br from-white to-cyan-50/30"
+      className="py-10 md:py-16 px-4 sm:px-6 md:px-8 bg-gradient-to-br from-white to-cyan-50/30 overflow-hidden"
       initial={{ opacity: 0 }}
       animate={isInView ? { opacity: 1 } : { opacity: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        {highlights.map((card, index) => (
-          <HighlightCard key={card.id} {...card} index={index} />
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+        {servicesData.map((service, index) => (
+          <Link
+            to={`/service/${service.id}`}
+            key={service.id}
+            className="block h-full"
+          >
+            <HighlightCard {...service} index={index} />
+          </Link>
         ))}
       </div>
     </motion.section>

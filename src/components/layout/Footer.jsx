@@ -127,7 +127,7 @@ export function Footer() {
             whileHover={{ scale: 1.15, boxShadow: '0 0 30px rgba(8, 145, 178, 0.6)' }}
             whileTap={{ scale: 0.9 }}
             onClick={scrollToTop}
-            className="fixed bottom-8 right-8 w-14 h-14 bg-gradient-to-br from-cyan-500 via-cyan-400 to-sky-500 text-white rounded-full flex items-center justify-center shadow-xl shadow-cyan-500/40 z-50 cursor-pointer border border-white/20"
+            className="fixed bottom-6 right-4 sm:bottom-8 sm:right-8 w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-cyan-500 via-cyan-400 to-sky-500 text-white rounded-full flex items-center justify-center shadow-xl shadow-cyan-500/40 z-50 cursor-pointer border border-white/20"
             aria-label="Scroll to top"
           >
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" width="24" height="24">
@@ -138,19 +138,19 @@ export function Footer() {
       </AnimatePresence>
 
       {/* Main Footer Content */}
-      <div className="relative max-w-[90rem] mx-auto px-6 sm:px-8 lg:px-12 pb-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 py-16">
+      <div className="relative container-responsive px-4 sm:px-6 lg:px-8 pb-12 sm:pb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 sm:gap-10 py-10 sm:py-16">
           {/* Company Info & Social */}
           <motion.div
             ref={ref}
-            className="lg:col-span-1 flex flex-col gap-5"
+            className="sm:col-span-2 lg:col-span-1 flex flex-col gap-4 sm:gap-5 text-center sm:text-left"
             initial="hidden"
             animate={isInView ? 'visible' : 'hidden'}
             custom={0}
             variants={columnVariants}
           >
             <motion.div
-              className="flex items-center gap-3"
+              className="flex items-center gap-3 justify-center sm:justify-start"
               variants={logoVariants}
               animate="pulse"
             >
@@ -201,11 +201,11 @@ export function Footer() {
               variants={columnVariants}
               className="lg:col-span-1"
             >
-              <h4 className="font-bold text-white mb-5 text-sm uppercase tracking-wider relative">
+              <h4 className="font-bold text-white mb-4 sm:mb-5 text-base sm:text-lg md:text-xl uppercase tracking-wider relative">
                 {column.title}
                 <span className="absolute -bottom-1 left-0 w-8 h-0.5 bg-gradient-to-r from-cyan-500 to-transparent" />
               </h4>
-              <ul className="flex flex-col gap-3 list-none p-0 m-0">
+              <ul className="flex flex-col gap-3 sm:gap-4 list-none p-0 m-0">
                 {column.links.map((link, linkIndex) => (
                   <li key={linkIndex}>
                     <motion.a
@@ -232,11 +232,11 @@ export function Footer() {
             variants={columnVariants}
             className="lg:col-span-1"
           >
-            <h4 className="font-bold text-white mb-5 text-sm uppercase tracking-wider relative">
+            <h4 className="font-bold text-white mb-4 sm:mb-5 text-base sm:text-lg md:text-xl uppercase tracking-wider relative">
               Contact Us
               <span className="absolute -bottom-1 left-0 w-8 h-0.5 bg-gradient-to-r from-cyan-500 to-transparent" />
             </h4>
-            <ul className="flex flex-col gap-4 list-none p-0 m-0">
+            <ul className="flex flex-col gap-3 sm:gap-4 list-none p-0 m-0">
               <li className="flex items-start gap-3 text-slate-400 text-sm group">
                 <span className="text-cyan-400 flex-shrink-0 mt-0.5 w-8 h-8 bg-slate-800/80 rounded-lg flex items-center justify-center group-hover:bg-cyan-500/20 transition-colors">
                   <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
@@ -280,7 +280,7 @@ export function Footer() {
 
       {/* Bottom Footer Bar */}
       <motion.div
-        className="relative bg-slate-950/90 border-t border-slate-800/50 py-6 px-6 sm:px-8 lg:px-12"
+        className="relative bg-slate-950/90 border-t border-slate-800/50 py-6 px-4 sm:px-6 lg:px-8"
         initial={{ opacity: 0 }}
         animate={isInView ? { opacity: 1 } : { opacity: 0 }}
         transition={{ delay: 0.6, duration: 0.5 }}
@@ -288,23 +288,34 @@ export function Footer() {
         {/* Top border glow effect */}
         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-cyan-500/50 to-transparent" />
 
-        <div className="max-w-[90rem] mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
-          <div className="text-center md:text-left">
-            <p className="text-slate-400 text-sm m-0">{footerBottom.copyright}</p>
-            <p className="bg-gradient-to-r from-cyan-400 via-sky-400 to-cyan-400 bg-clip-text text-transparent text-[11px] mt-2 tracking-widest font-medium">
-              {footerBottom.tagline}
-            </p>
+        <div className="container-responsive flex flex-col sm:flex-row justify-between items-center gap-5 sm:gap-4">
+          {/* Legal Links - Wrapped on mobile */}
+          <div className="flex flex-wrap justify-center sm:justify-start gap-x-4 sm:gap-x-6 gap-y-2 order-2 sm:order-1">
+            <a href="/terms" className="text-slate-400 text-xs sm:text-sm hover:text-cyan-400 transition-colors">Terms</a>
+            <a href="/compliance" className="text-slate-400 text-xs sm:text-sm hover:text-cyan-400 transition-colors">Privacy</a>
+            <a href="/cookies" className="text-slate-400 text-xs sm:text-sm hover:text-cyan-400 transition-colors">Cookies</a>
+            <a href="/gdpr" className="text-slate-400 text-xs sm:text-sm hover:text-cyan-400 transition-colors">GDPR</a>
+            <a href="/sla" className="text-slate-400 text-xs sm:text-sm hover:text-cyan-400 transition-colors">SLA</a>
           </div>
 
-          {/* Brand Badge */}
-          <motion.div
-            className="flex items-center gap-2 bg-slate-800/50 px-4 py-2 rounded-full border border-slate-700/50"
-            whileHover={{ scale: 1.02 }}
-          >
-            <span className="bg-gradient-to-r from-cyan-400 to-sky-400 bg-clip-text text-transparent font-bold text-sm">AI</span>
-            <span className="text-slate-500">|</span>
-            <span className="text-slate-400 font-semibold text-sm tracking-tight">{branding.shortName}</span>
-          </motion.div>
+          <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-6 order-1 sm:order-2">
+            <div className="text-center sm:text-left">
+              <p className="text-slate-400 text-xs sm:text-sm m-0">{footerBottom.copyright}</p>
+              <p className="bg-gradient-to-r from-cyan-400 via-sky-400 to-cyan-400 bg-clip-text text-transparent text-[10px] sm:text-[11px] mt-1 sm:mt-2 tracking-widest font-medium">
+                {footerBottom.tagline}
+              </p>
+            </div>
+
+            {/* Brand Badge */}
+            <motion.div
+              className="flex items-center gap-2 bg-slate-800/50 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full border border-slate-700/50"
+              whileHover={{ scale: 1.02 }}
+            >
+              <span className="bg-gradient-to-r from-cyan-400 to-sky-400 bg-clip-text text-transparent font-bold text-xs sm:text-sm">AI</span>
+              <span className="text-slate-500">|</span>
+              <span className="text-slate-400 font-semibold text-xs sm:text-sm tracking-tight">{branding.shortName}</span>
+            </motion.div>
+          </div>
         </div>
       </motion.div>
     </footer>
