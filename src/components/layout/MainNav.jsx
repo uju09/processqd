@@ -76,7 +76,7 @@ export function MainNav() {
   return (
     <>
       <nav className="bg-white shadow-md border-b border-gray-200 px-4 md:px-8 py-5 flex justify-between items-center sticky top-0 z-50">
-        <div className="max-w-6xl w-full mx-auto flex justify-between items-center">
+        <div className="container-responsive flex justify-between items-center min-w-0">
           {/* Logo */}
           <motion.div
             variants={logoVariants}

@@ -107,7 +107,7 @@ function KeyBrands() {
 
   return (
     <section className="py-16 px-4 md:px-8">
-      <div className="max-w-7xl mx-auto">
+      <div className="container-responsive">
         {/* Section Title */}
         <motion.h2
           className="text-xl sm:text-2xl lg:text-3xl font-extrabold text-center mb-10 md:mb-14 text-gray-900"
@@ -118,56 +118,54 @@ function KeyBrands() {
           Our Company
         </motion.h2>
 
-        {/* Vision + Mission Cards */}
-        <section className="py-16 px-4 md:px-8 max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10 md:mb-14">
-            <StatementCard data={missionData.vision} index={0} />
-            <StatementCard data={missionData.mission} index={1} />
-          </div>
-        </section>
-
-        {/* Industries We Serve */}
-        <section className="bg-slate-900 py-20 px-4 md:px-8 text-white relative border-b-4 border-blue-600">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-14">
-              <h3 className="text-2xl md:text-3xl font-extrabold mb-6 text-white">Process Industries We Serve</h3>
-              <div className="w-16 h-1 bg-blue-600 mx-auto"></div>
-            </div>
-            <motion.div
-              className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-4 md:gap-6"
-              variants={containerVariants}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-            >
-              {industriesData.map((industry, i) => (
-                <IndustryCard key={i} name={industry} />
-              ))}
-            </motion.div>
-          </div>
-        </section>
-
-        {/* Core Capabilities */}
-        <section className="bg-gray-200 py-20 px-4 md:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h3 className="text-2xl md:text-3xl font-extrabold text-gray-700 mb-4">Core Capabilities</h3>
-              <p className="text-gray-500 text-lg">Delivering advanced AI, intelligence, and optimization across operational domains.</p>
-            </div>
-            <motion.div
-              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5"
-              variants={containerVariants}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-            >
-              {coreCapabilities.map((capability, i) => (
-                <CapabilityCard key={i} capability={capability} index={i} />
-              ))}
-            </motion.div>
-          </div>
-        </section>
+        {/* Vision + Mission Cards - INSIDE container */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10 md:mb-14 min-w-0">
+          <StatementCard data={missionData.vision} index={0} />
+          <StatementCard data={missionData.mission} index={1} />
+        </div>
       </div>
+
+      {/* Industries We Serve - Separate section with own container */}
+      <section className="bg-slate-900 py-20 px-4 md:px-8 text-white relative border-b-4 border-blue-600">
+        <div className="container-responsive">
+          <div className="text-center mb-14">
+            <h3 className="text-2xl md:text-3xl font-extrabold mb-6 text-white">Process Industries We Serve</h3>
+            <div className="w-16 h-1 bg-blue-600 mx-auto"></div>
+          </div>
+          <motion.div
+            className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6"
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            {industriesData.map((industry, i) => (
+              <IndustryCard key={i} name={industry} />
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Core Capabilities - Separate section with own container */}
+      <section className="bg-gray-200 py-20 px-4 md:px-8">
+        <div className="container-responsive">
+          <div className="text-center mb-16">
+            <h3 className="text-2xl md:text-3xl font-extrabold text-gray-700 mb-4">Core Capabilities</h3>
+            <p className="text-gray-500 text-lg">Delivering advanced AI, intelligence, and optimization across operational domains.</p>
+          </div>
+          <motion.div
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5"
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            {coreCapabilities.map((capability, i) => (
+              <CapabilityCard key={i} capability={capability} index={i} />
+            ))}
+          </motion.div>
+        </div>
+      </section>
     </section>
   );
 }
