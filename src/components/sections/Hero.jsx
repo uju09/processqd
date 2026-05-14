@@ -186,7 +186,7 @@ export function Hero() {
 
   return (
     <header
-      className="h-[55vh] sm:h-[65vh] md:h-[60vh] xl:h-[55vh] bg-cover bg-center bg-no-repeat text-white flex flex-col items-center justify-center text-center px-4 sm:px-6 md:p-8 bg-hero-gradient relative overflow-hidden"
+      className="h-[55vh] sm:h-[65vh] md:h-[60vh] xl:h-[55vh] bg-cover bg-center bg-no-repeat text-white flex flex-col items-center justify-center text-center px-4 sm:px-6 md:p-8 bg-hero-gradient relative overflow-hidden hero-height-tall"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
     >
@@ -279,20 +279,20 @@ export function Hero() {
         >
           {currentSlideData.tagline && (
             <motion.p
-              className="text-xs sm:text-sm md:text-base font-semibold text-white/90 mb-3 sm:mb-4 uppercase tracking-wider sm:tracking-widest"
+              className="text-xs sm:text-sm md:text-base font-semibold text-white/90 mb-3 sm:mb-4 uppercase tracking-wider sm:tracking-widest weight-fluid-label text-fluid-sm"
               variants={itemVariants}
             >
               {currentSlideData.tagline}
             </motion.p>
           )}
           <motion.h1
-            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold mb-4 sm:mb-6 tracking-tight"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold mb-4 sm:mb-6 tracking-tight text-fluid-4xl weight-fluid-hero"
             variants={itemVariants}
           >
             {currentSlideData.title}
           </motion.h1>
           <motion.p
-            className="text-sm sm:text-base md:text-lg font-medium leading-relaxed mb-6 sm:mb-8 px-0 sm:px-2"
+            className="text-sm sm:text-base md:text-lg font-medium leading-relaxed mb-6 sm:mb-8 px-0 sm:px-2 text-fluid-base weight-fluid-body"
             variants={itemVariants}
           >
             {currentSlideData.description}
@@ -302,7 +302,7 @@ export function Hero() {
             variants={containerVariants}
           >
             <motion.button
-              className="w-full sm:w-auto px-6 sm:px-7 py-3 sm:py-3.5 text-sm sm:text-base font-semibold rounded-md bg-blue-600 hover:bg-blue-700 transition-all duration-200 cursor-pointer border-none"
+              className="w-full sm:w-auto px-6 sm:px-7 py-3 sm:py-3.5 text-sm sm:text-base font-semibold rounded-md bg-blue-600 hover:bg-blue-700 transition-all duration-200 cursor-pointer border-none weight-fluid-cta"
               variants={buttonVariants}
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.98 }}
@@ -311,7 +311,7 @@ export function Hero() {
               {currentSlideData.ctaPrimary}
             </motion.button>
             <motion.button
-              className="w-full sm:w-auto px-6 sm:px-7 py-3 sm:py-3.5 text-sm sm:text-base font-semibold rounded-md bg-transparent text-white border-2 border-white/60 hover:bg-white/10 hover:border-white transition-all duration-200 cursor-pointer"
+              className="w-full sm:w-auto px-6 sm:px-7 py-3 sm:py-3.5 text-sm sm:text-base font-semibold rounded-md bg-transparent text-white border-2 border-white/60 hover:bg-white/10 hover:border-white transition-all duration-200 cursor-pointer weight-fluid-cta"
               variants={buttonVariants}
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.98 }}

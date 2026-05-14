@@ -15,13 +15,13 @@ const containerVariants = {
 function HeroSection() {
   return (
     <header
-      className="relative h-[280px] sm:h-[350px] md:h-[450px] flex flex-col items-center justify-center text-center overflow-hidden container-responsive"
+      className="relative h-[280px] sm:h-[350px] md:h-[450px] flex flex-col items-center justify-center text-center overflow-hidden container-responsive hero-height-standard"
       style={{
         backgroundImage: `linear-gradient(to right, rgba(6, 182, 212, 0.5) 0%, rgba(8, 145, 178, 0.5) 50%, rgba(6, 182, 212, 0.5) 100%), url('https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80')`
       }}
     >
       <motion.h1
-        className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-extrabold text-white mb-3 sm:mb-4 tracking-tight px-2"
+        className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-extrabold text-white mb-3 sm:mb-4 tracking-tight text-fluid-4xl weight-fluid-hero"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
@@ -66,7 +66,7 @@ function ServicesGrid() {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-cyan-500 font-bold tracking-widest uppercase text-xs sm:text-sm mb-2">What We Offer</h2>
-          <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold text-gray-800 mb-3 sm:mb-4">Our Services</h3>
+          <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold text-gray-800 mb-3 sm:mb-4 text-fluid-2xl weight-fluid-heading">Our Services</h3>
           <p className="text-gray-600 text-sm sm:text-base md:text-lg">Comprehensive AI solutions tailored to your business needs</p>
         </motion.div>
 
@@ -80,7 +80,7 @@ function ServicesGrid() {
           {servicesData.map((service, index) => (
             <motion.div
               key={service.id}
-              className="group bg-white border-2 border-gray-200 shadow-md overflow-hidden hover:shadow-xl hover:border-cyan-300 transition-all duration-300 min-h-[400px] sm:min-h-[450px] flex flex-col"
+              className="group bg-white border-2 border-gray-200 shadow-md overflow-hidden hover:shadow-xl hover:border-cyan-300 transition-all duration-300 min-h-[clamp(360px,50vw,480px)] flex flex-col"
               variants={fadeInUp}
             >
               <div className="relative h-48 sm:h-52 overflow-hidden flex-shrink-0">
@@ -96,9 +96,9 @@ function ServicesGrid() {
                   <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-cyan-50 flex items-center justify-center text-cyan-500">
                     <i className="fas fa-cog text-sm sm:text-base"></i>
                   </div>
-                  <h4 className="text-lg sm:text-xl font-extrabold text-gray-800">{service.title}</h4>
+                  <h4 className="text-lg sm:text-xl font-extrabold text-gray-800 text-fluid-lg weight-fluid-card-title">{service.title}</h4>
                 </div>
-                <p className="text-gray-700 text-sm font-medium leading-relaxed flex-grow">{service.description}</p>
+                <p className="text-gray-700 text-sm font-medium leading-relaxed flex-grow line-clamp-3 text-fluid-sm weight-fluid-body">{service.description}</p>
                 <Link
                   to={`/service/${service.id}`}
                   className="inline-flex items-center gap-2 mt-4 text-cyan-500 font-semibold text-xs sm:text-sm hover:text-cyan-600 transition-colors"

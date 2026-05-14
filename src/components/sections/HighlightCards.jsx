@@ -89,7 +89,7 @@ function HighlightCard({ image, imageAlt, title, description, index }) {
       className="h-full"
     >
       <motion.div
-        className="bg-gradient-to-br from-slate-50 to-blue-50 rounded-xl p-5 sm:p-6 border-2 border-blue-200 hover:border-blue-400 shadow-md hover:shadow-xl relative overflow-hidden min-h-[380px] sm:min-h-[400px] flex flex-col cursor-pointer transition-all duration-300 w-full"
+        className="bg-gradient-to-br from-slate-50 to-blue-50 rounded-xl p-5 sm:p-6 border-2 border-blue-200 hover:border-blue-400 shadow-md hover:shadow-xl relative overflow-hidden min-h-[clamp(320px,45vw,420px)] flex flex-col cursor-pointer transition-all duration-300 w-full"
         variants={cardHoverVariants}
         initial="rest"
         whileHover="hover"
@@ -122,11 +122,11 @@ function HighlightCard({ image, imageAlt, title, description, index }) {
             whileHover="hover"
             className="inline-block mb-2 md:mb-3"
           >
-            <h3 className="text-base md:text-lg font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-700 line-clamp-2">
+            <h3 className="text-base md:text-lg font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-700 line-clamp-2 weight-fluid-card-title">
               {title}
             </h3>
           </motion.div>
-          <p className="text-sm font-semibold text-gray-700 leading-relaxed line-clamp-3">{description}</p>
+          <p className="text-sm font-semibold text-gray-700 leading-relaxed line-clamp-3 text-fluid-sm weight-fluid-body">{description}</p>
         </div>
       </motion.div>
     </motion.div>

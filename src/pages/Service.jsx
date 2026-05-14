@@ -16,13 +16,13 @@ const containerVariants = {
 function HeroSection({ service }) {
   return (
     <header
-      className="relative h-[220px] sm:h-[280px] md:h-[350px] flex flex-col items-center justify-center text-center px-4 bg-cover bg-center overflow-hidden"
+      className="relative h-[220px] sm:h-[280px] md:h-[350px] flex flex-col items-center justify-center text-center px-4 bg-cover bg-center overflow-hidden hero-height-fluid"
       style={{
         backgroundImage: `linear-gradient(to right, rgba(8, 145, 178, 0.95) 0%, rgba(15, 23, 42, 0.9) 100%), url('${service?.image || 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80'}')`
       }}
     >
       <motion.h1
-        className="text-2xl sm:text-3xl md:text-5xl font-extrabold text-white mb-2 sm:mb-3 tracking-tight px-2"
+        className="text-2xl sm:text-3xl md:text-5xl font-extrabold text-white mb-2 sm:mb-3 tracking-tight px-2 text-fluid-4xl weight-fluid-hero"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
@@ -172,7 +172,7 @@ function ServiceContent({ service }) {
     >
       <div className="border-b border-gray-200 pb-6 mb-6 sm:mb-8 flex flex-col gap-4">
         <div>
-          <h1 className="text-2xl sm:text-3xl md:text-4xl font-black text-gray-900 tracking-tight mb-1 sm:mb-2">{service.title}</h1>
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-black text-gray-900 tracking-tight mb-1 sm:mb-2 text-fluid-2xl">{service.title}</h1>
           <p className="text-xs sm:text-sm text-cyan-600 font-semibold tracking-wide uppercase">{service.heroSubtitle}</p>
         </div>
         <Link

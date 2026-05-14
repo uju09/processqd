@@ -14,7 +14,7 @@ export const missionData = {
 export const industriesData = [
   'Steel & Metals', 'Glass Manufacturing', 'Chemicals',
   'Power & Utilities', 'Sugar & Process Manufacturing',
-  'Cement', 'Oil & Gas', 'Mining', 'Healthcare & Life Sciences'
+  'Oil & Gas', 'Mining', 'Healthcare & Life Sciences'
 ];
 
 export const coreCapabilities = [

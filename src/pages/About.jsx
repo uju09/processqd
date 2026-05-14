@@ -56,13 +56,13 @@ function AnimatedCounter({ value, suffix = '' }) {
 function HeroSection() {
   return (
     <header
-      className="relative h-[40vh] sm:h-[45vh] md:h-[50vh] flex flex-col items-center justify-center text-center px-4 sm:px-6 bg-cover bg-center"
+      className="relative h-[40vh] sm:h-[45vh] md:h-[50vh] flex flex-col items-center justify-center text-center px-4 sm:px-6 bg-cover bg-center hero-height-standard"
       style={{
         backgroundImage: `linear-gradient(to right, rgba(6, 182, 212, 0.5) 0%, rgba(0, 0, 0, 0.7) 50%, rgba(0, 50, 100, 0.6) 100%), url('https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80')`
       }}
     >
       <motion.h1
-        className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-white mb-3 sm:mb-4 tracking-tight"
+        className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-white mb-3 sm:mb-4 tracking-tight text-fluid-4xl weight-fluid-hero"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
@@ -175,7 +175,7 @@ function CoreValuesSection() {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-cyan-500 font-bold tracking-widest uppercase text-xs sm:text-sm mb-2">How We Operate</h2>
-          <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-800 mb-3 sm:mb-4">Our Core Values</h3>
+          <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-800 mb-3 sm:mb-4 text-fluid-2xl weight-fluid-heading">Our Core Values</h3>
           <p className="text-gray-600 text-base sm:text-lg">The principles that drive our quantum innovation</p>
         </motion.div>
 
@@ -183,7 +183,7 @@ function CoreValuesSection() {
           {aboutContent.coreValues.map((value, index) => (
             <motion.div
               key={index}
-              className="bg-white border-2 border-gray-200 shadow-md hover:shadow-lg hover:-translate-y-1 transition-all duration-300 min-h-[280px] flex flex-col"
+              className="bg-white border-2 border-gray-200 shadow-md hover:shadow-lg hover:-translate-y-1 transition-all duration-300 card-height-full flex flex-col"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -194,7 +194,7 @@ function CoreValuesSection() {
                 <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-cyan-50 flex items-center justify-center text-cyan-500 text-xl sm:text-2xl mb-4 sm:mb-6">
                   <i className="fas fa-lightbulb"></i>
                 </div>
-                <h4 className="text-lg sm:text-xl font-extrabold mb-3 sm:mb-4 text-gray-800">{value.title}</h4>
+                <h4 className="text-lg sm:text-xl font-extrabold mb-3 sm:mb-4 text-gray-800 weight-fluid-heading">{value.title}</h4>
                 <p className="text-sm text-gray-700 font-medium leading-relaxed">{value.description}</p>
               </div>
             </motion.div>
