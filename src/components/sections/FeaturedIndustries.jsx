@@ -74,7 +74,7 @@ function IndustryCard({ image, imageAlt, title, description, index }) {
       whileHover={{ rotateY: 5, transition: { duration: 0.3 } }}
       style={{ transformStyle: "preserve-3d" }}
     >
-      <div className="bg-white rounded-xl md:rounded-2xl border border-blue-200 hover:shadow-lg hover:-translate-y-1 hover:border-blue-400 transition-all duration-300 h-full">
+      <div className="bg-white rounded-xl md:rounded-2xl border-2 border-blue-200 hover:shadow-lg hover:-translate-y-1 hover:border-blue-400 transition-all duration-300 h-full min-h-[380px] flex flex-col">
         <motion.div
           className="bg-gradient-to-r from-blue-500 to-blue-600 p-4 md:p-8 flex justify-center overflow-hidden rounded-t-xl md:rounded-t-2xl aspect-[4/3] sm:aspect-video"
           variants={imageVariants}
@@ -83,9 +83,9 @@ function IndustryCard({ image, imageAlt, title, description, index }) {
         >
           <img src={image} alt={imageAlt} className="w-full h-full object-cover rounded-lg" />
         </motion.div>
-        <div className="p-4 md:p-6 text-center">
-          <h4 className="font-bold text-base md:text-lg text-blue-950 mb-2">{title}</h4>
-          <p className="text-xs sm:text-sm text-gray-600 leading-relaxed mb-3 md:mb-4 line-clamp-2 sm:line-clamp-3">{description}</p>
+        <div className="p-5 sm:p-6 text-center flex-grow flex flex-col justify-center">
+          <h4 className="text-base md:text-lg font-extrabold text-blue-950 mb-2">{title}</h4>
+          <p className="text-sm font-medium text-gray-600 leading-relaxed mb-3 md:mb-4 line-clamp-2 sm:line-clamp-3">{description}</p>
           <motion.div
             className="text-blue-600 hover:text-orange-500 font-semibold text-xs md:text-sm flex items-center justify-center gap-1 group"
             whileHover={{ x: 5 }}

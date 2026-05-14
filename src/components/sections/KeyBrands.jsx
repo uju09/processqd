@@ -18,7 +18,7 @@ function StatementCard({ data, index }) {
   const isVision = index === 0;
   return (
     <motion.div
-      className={`bg-white p-8 md:p-10 border-t-4 ${isVision ? 'border-blue-700' : 'border-blue-600'} shadow-sm border-l border-r border-b border-gray-100 hover:shadow-md transition-shadow`}
+      className={`bg-white p-8 md:p-10 border-t-4 ${isVision ? 'border-blue-700' : 'border-blue-600'} shadow-md border border-gray-200 hover:shadow-lg transition-all min-h-[280px] flex flex-col`}
       variants={cardVariants}
       initial="hidden"
       whileInView="visible"
@@ -29,9 +29,9 @@ function StatementCard({ data, index }) {
         <div className={`${isVision ? 'bg-blue-100 text-blue-700' : 'bg-blue-50 text-blue-600'} p-4 rounded-full mr-4 flex items-center justify-center`}>
           <i className={`${isVision ? 'fas fa-eye' : 'fas fa-bullseye'} text-2xl`}></i>
         </div>
-        <h3 className="text-2xl md:text-3xl font-bold text-gray-900">{data.title}</h3>
+        <h3 className="text-2xl md:text-3xl font-extrabold text-gray-900">{data.title}</h3>
       </div>
-      <p className="text-gray-600 leading-relaxed text-base md:text-lg">
+      <p className="text-gray-700 leading-relaxed text-base md:text-lg font-medium">
         {data.statement}
       </p>
     </motion.div>
@@ -55,14 +55,14 @@ function IndustryCard({ name }) {
   const icon = industryIcons[name] || 'fas fa-industry';
   return (
     <motion.div
-      className="group border border-slate-700 bg-slate-800 p-8 text-center hover:border-blue-600 hover:bg-slate-700 transition-all cursor-pointer"
+      className="group border-2 border-slate-700 bg-slate-800 p-8 text-center hover:border-blue-600 hover:bg-slate-700 transition-all cursor-pointer min-h-[180px] flex flex-col justify-center"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
       whileHover={{ y: -4 }}
     >
       <i className={`${icon} text-4xl text-gray-500 group-hover:text-blue-500 mb-4 transition-colors`}></i>
-      <h4 className="font-bold text-sm md:text-base uppercase tracking-wide text-white">{name}</h4>
+      <h4 className="font-extrabold text-sm md:text-base uppercase tracking-wide text-white">{name}</h4>
     </motion.div>
   );
 }
@@ -80,17 +80,17 @@ function CapabilityCard({ capability, index }) {
 
   return (
     <motion.div
-      className="bg-white p-8 shadow-sm border border-gray-200 hover:-translate-y-1 hover:shadow-lg transition-all duration-300"
+      className="bg-white p-8 shadow-md border-2 border-gray-200 hover:-translate-y-1 hover:shadow-lg hover:border-blue-300 transition-all duration-300 min-h-[320px] flex flex-col"
       variants={cardVariants}
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
     >
-      <h4 className="text-lg font-bold mb-6 text-gray-900 flex items-center border-b border-gray-100 pb-4">
+      <h4 className="text-lg font-extrabold mb-6 text-gray-900 flex items-center border-b border-gray-100 pb-4">
         <i className={`${icon} text-blue-600 mr-3 text-2xl`}></i>
         {capability.title}
       </h4>
-      <ul className="space-y-3 text-sm text-gray-600 font-medium">
+      <ul className="space-y-3 text-sm text-gray-700 font-semibold flex-grow">
         {capability.items.map((item, i) => (
           <li key={i} className="flex items-start">
             <i className="fas fa-angle-right text-blue-500 mt-1 mr-3"></i>
@@ -110,7 +110,7 @@ function KeyBrands() {
       <div className="max-w-7xl mx-auto">
         {/* Section Title */}
         <motion.h2
-          className="text-xl sm:text-2xl lg:text-3xl font-bold text-center mb-10 md:mb-14 text-gray-900"
+          className="text-xl sm:text-2xl lg:text-3xl font-extrabold text-center mb-10 md:mb-14 text-gray-900"
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -130,7 +130,7 @@ function KeyBrands() {
         <section className="bg-slate-900 py-20 px-4 md:px-8 text-white relative border-b-4 border-blue-600">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-14">
-              <h3 className="text-2xl md:text-3xl font-bold mb-6 text-white">Process Industries We Serve</h3>
+              <h3 className="text-2xl md:text-3xl font-extrabold mb-6 text-white">Process Industries We Serve</h3>
               <div className="w-16 h-1 bg-blue-600 mx-auto"></div>
             </div>
             <motion.div
@@ -151,7 +151,7 @@ function KeyBrands() {
         <section className="bg-gray-200 py-20 px-4 md:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h3 className="text-2xl md:text-3xl font-bold text-gray-700 mb-4">Core Capabilities</h3>
+              <h3 className="text-2xl md:text-3xl font-extrabold text-gray-700 mb-4">Core Capabilities</h3>
               <p className="text-gray-500 text-lg">Delivering advanced AI, intelligence, and optimization across operational domains.</p>
             </div>
             <motion.div

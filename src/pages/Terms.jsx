@@ -28,7 +28,7 @@ function HeroSection() {
       }}
     >
       <motion.h1
-        className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3 tracking-tight"
+        className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-white mb-3 tracking-tight"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
@@ -72,7 +72,7 @@ function Sidebar() {
       transition={{ duration: 0.6, delay: 0.2 }}
     >
       <div className="p-6 border-b border-gray-100 bg-gray-50">
-        <h3 className="font-bold text-gray-800 uppercase tracking-wider text-sm">Legal Documents</h3>
+        <h3 className="font-extrabold text-gray-800 uppercase tracking-wider text-sm">Legal Documents</h3>
       </div>
       <nav className="flex flex-col text-sm">
         {sidebarLinks.map((link) => {
@@ -141,21 +141,21 @@ function TermsContent() {
 
         <motion.div variants={containerVariants} initial="hidden" animate="visible">
           <motion.div variants={fadeInUp}>
-            <h2 className="text-xl md:text-2xl font-bold text-gray-800 mt-8 md:mt-10 mb-4">1. Acceptance of Terms</h2>
+            <h2 className="text-xl md:text-2xl font-extrabold text-gray-800 mt-8 md:mt-10 mb-4">1. Acceptance of Terms</h2>
             <p className="text-gray-600 mb-4 leading-relaxed">
               By creating an account or using any ProcessQ Dynamics service, you acknowledge that you have read, understood, and agree to be bound by these Terms and our Privacy Policy. If you do not agree to these Terms, you may not access or use our services.
             </p>
           </motion.div>
 
           <motion.div variants={fadeInUp}>
-            <h2 className="text-xl md:text-2xl font-bold text-gray-800 mt-8 md:mt-10 mb-4">2. Description of Service</h2>
+            <h2 className="text-xl md:text-2xl font-extrabold text-gray-800 mt-8 md:mt-10 mb-4">2. Description of Service</h2>
             <p className="text-gray-600 mb-4 leading-relaxed">
               ProcessQ Dynamics provides AI-powered process automation, enterprise solutions, technology consulting, and cloud migration services. We reserve the right to modify, suspend, or discontinue any part of our services at any time without prior notice.
             </p>
           </motion.div>
 
           <motion.div variants={fadeInUp}>
-            <h2 className="text-xl md:text-2xl font-bold text-gray-800 mt-8 md:mt-10 mb-4">3. User Accounts and Responsibilities</h2>
+            <h2 className="text-xl md:text-2xl font-extrabold text-gray-800 mt-8 md:mt-10 mb-4">3. User Accounts and Responsibilities</h2>
             <p className="text-gray-600 mb-4 leading-relaxed">
               You are responsible for maintaining the confidentiality of your account credentials and for all activities that occur under your account. You agree to notify us immediately of any unauthorized use of your account. You must provide accurate and complete information when creating an account.
             </p>
@@ -167,21 +167,21 @@ function TermsContent() {
           </motion.div>
 
           <motion.div variants={fadeInUp}>
-            <h2 className="text-xl md:text-2xl font-bold text-gray-800 mt-8 md:mt-10 mb-4">4. Intellectual Property Rights</h2>
+            <h2 className="text-xl md:text-2xl font-extrabold text-gray-800 mt-8 md:mt-10 mb-4">4. Intellectual Property Rights</h2>
             <p className="text-gray-600 mb-4 leading-relaxed">
               All content, designs, logos, and materials on our platform are owned by ProcessQ Dynamics or our licensors and are protected by intellectual property laws. You retain ownership of any content you submit through our services, but grant us a license to use, store, and process such content as necessary to provide our services.
             </p>
           </motion.div>
 
           <motion.div variants={fadeInUp}>
-            <h2 className="text-xl md:text-2xl font-bold text-gray-800 mt-8 md:mt-10 mb-4">5. Limitation of Liability</h2>
+            <h2 className="text-xl md:text-2xl font-extrabold text-gray-800 mt-8 md:mt-10 mb-4">5. Limitation of Liability</h2>
             <p className="text-gray-600 mb-8 leading-relaxed">
               To the maximum extent permitted by law, ProcessQ Dynamics shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including but not limited to loss of profits, data, or other intangible losses resulting from your use of or inability to use our services.
             </p>
           </motion.div>
 
           <motion.div variants={fadeInUp}>
-            <h2 className="text-xl md:text-2xl font-bold text-gray-800 mt-8 md:mt-10 mb-4">6. Governing Law</h2>
+            <h2 className="text-xl md:text-2xl font-extrabold text-gray-800 mt-8 md:mt-10 mb-4">6. Governing Law</h2>
             <p className="text-gray-600 mb-8 leading-relaxed">
               These Terms shall be governed by and construed in accordance with the laws of India, without regard to its conflict of law provisions. Any disputes arising under these Terms shall be subject to the exclusive jurisdiction of the courts of Bangalore, Karnataka.
             </p>

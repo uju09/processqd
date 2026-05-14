@@ -28,7 +28,7 @@ function HeroSection() {
       }}
     >
       <motion.h1
-        className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3 tracking-tight"
+        className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-white mb-3 tracking-tight"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
@@ -72,7 +72,7 @@ function Sidebar() {
       transition={{ duration: 0.6, delay: 0.2 }}
     >
       <div className="p-6 border-b border-gray-100 bg-gray-50">
-        <h3 className="font-bold text-gray-800 uppercase tracking-wider text-sm">Legal Documents</h3>
+        <h3 className="font-extrabold text-gray-800 uppercase tracking-wider text-sm">Legal Documents</h3>
       </div>
       <nav className="flex flex-col text-sm">
         {sidebarLinks.map((link) => {
@@ -141,7 +141,7 @@ function SLAContent() {
 
         <motion.div variants={containerVariants} initial="hidden" animate="visible">
           <motion.div variants={fadeInUp}>
-            <h2 className="text-xl md:text-2xl font-bold text-gray-800 mt-8 md:mt-10 mb-4">1. Service Availability</h2>
+            <h2 className="text-xl md:text-2xl font-extrabold text-gray-800 mt-8 md:mt-10 mb-4">1. Service Availability</h2>
             <p className="text-gray-600 mb-4 leading-relaxed">
               We commit to maintaining the following service availability levels:
             </p>
@@ -156,7 +156,7 @@ function SLAContent() {
           </motion.div>
 
           <motion.div variants={fadeInUp}>
-            <h2 className="text-xl md:text-2xl font-bold text-gray-800 mt-8 md:mt-10 mb-4">2. Support Response Times</h2>
+            <h2 className="text-xl md:text-2xl font-extrabold text-gray-800 mt-8 md:mt-10 mb-4">2. Support Response Times</h2>
             <p className="text-gray-600 mb-4 leading-relaxed">
               Our support team is available 24/7 for critical issues. Response time SLAs by severity:
             </p>
@@ -169,7 +169,7 @@ function SLAContent() {
           </motion.div>
 
           <motion.div variants={fadeInUp}>
-            <h2 className="text-xl md:text-2xl font-bold text-gray-800 mt-8 md:mt-10 mb-4">3. Performance Credits</h2>
+            <h2 className="text-xl md:text-2xl font-extrabold text-gray-800 mt-8 md:mt-10 mb-4">3. Performance Credits</h2>
             <p className="text-gray-600 mb-4 leading-relaxed">
               If we fail to meet our availability commitments, you may be eligible for service credits:
             </p>
@@ -184,14 +184,14 @@ function SLAContent() {
           </motion.div>
 
           <motion.div variants={fadeInUp}>
-            <h2 className="text-xl md:text-2xl font-bold text-gray-800 mt-8 md:mt-10 mb-4">4. Exclusions</h2>
+            <h2 className="text-xl md:text-2xl font-extrabold text-gray-800 mt-8 md:mt-10 mb-4">4. Exclusions</h2>
             <p className="text-gray-600 mb-8 leading-relaxed">
               This SLA does not apply to downtime caused by: scheduled maintenance (with advance notice), force majeure events, issues caused by customer's applications or equipment, third-party services, or DDoS attacks. Performance metrics are measured using our internal monitoring systems.
             </p>
           </motion.div>
 
           <motion.div variants={fadeInUp}>
-            <h2 className="text-xl md:text-2xl font-bold text-gray-800 mt-8 md:mt-10 mb-4">5. Incident Reporting</h2>
+            <h2 className="text-xl md:text-2xl font-extrabold text-gray-800 mt-8 md:mt-10 mb-4">5. Incident Reporting</h2>
             <p className="text-gray-600 mb-8 leading-relaxed">
               To report a service incident or request support, contact our NOC team at support@processqdynamics.com or call our dedicated enterprise support line available in your client portal.
             </p>
