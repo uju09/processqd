@@ -254,14 +254,14 @@ export function Hero() {
       {/* Carousel Navigation Arrows */}
       <button
         onClick={goPrev}
-        className="absolute left-2 right-auto md:left-8 top-1/2 -translate-y-1/2 z-20 w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center cursor-pointer hover:bg-white/20 transition-all duration-300"
+        className="absolute left-3 right-auto md:left-8 top-1/2 -translate-y-1/2 z-20 w-11 h-11 md:w-12 md:h-12 min-w-[44px] min-h-[44px] rounded-full bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center cursor-pointer hover:bg-white/20 transition-all duration-300"
         aria-label="Previous slide"
       >
         <i className="fas fa-chevron-left text-white text-sm md:text-base"></i>
       </button>
       <button
         onClick={goNext}
-        className="absolute right-2 left-auto md:right-8 top-1/2 -translate-y-1/2 z-20 w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center cursor-pointer hover:bg-white/20 transition-all duration-300"
+        className="absolute right-3 left-auto md:right-8 top-1/2 -translate-y-1/2 z-20 w-11 h-11 md:w-12 md:h-12 min-w-[44px] min-h-[44px] rounded-full bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center cursor-pointer hover:bg-white/20 transition-all duration-300"
         aria-label="Next slide"
       >
         <i className="fas fa-chevron-right text-white text-sm md:text-base"></i>

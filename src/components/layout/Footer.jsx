@@ -178,7 +178,7 @@ export function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={social.label}
-                  className="w-11 h-11 bg-slate-800/80 border border-slate-700/50 rounded-xl text-blue-300 flex items-center justify-center transition-colors duration-300"
+                  className="w-11 h-11 sm:w-12 sm:h-12 bg-slate-800/80 border border-slate-700/50 rounded-xl text-blue-300 flex items-center justify-center transition-colors duration-300"
                   variants={iconVariants}
                   whileHover="hover"
                   initial={{ opacity: 0, y: 10 }}

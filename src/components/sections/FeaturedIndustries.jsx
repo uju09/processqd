@@ -76,7 +76,7 @@ function IndustryCard({ image, imageAlt, title, description, index }) {
     >
       <div className="bg-white rounded-xl md:rounded-2xl border border-blue-200 hover:shadow-lg hover:-translate-y-1 hover:border-blue-400 transition-all duration-300 h-full">
         <motion.div
-          className="bg-gradient-to-r from-blue-500 to-blue-600 p-4 md:p-8 flex justify-center overflow-hidden rounded-t-xl md:rounded-t-2xl aspect-video"
+          className="bg-gradient-to-r from-blue-500 to-blue-600 p-4 md:p-8 flex justify-center overflow-hidden rounded-t-xl md:rounded-t-2xl aspect-[4/3] sm:aspect-video"
           variants={imageVariants}
           initial="rest"
           whileHover="hover"
@@ -85,7 +85,7 @@ function IndustryCard({ image, imageAlt, title, description, index }) {
         </motion.div>
         <div className="p-4 md:p-6 text-center">
           <h4 className="font-bold text-base md:text-lg text-blue-950 mb-2">{title}</h4>
-          <p className="text-xs md:text-sm text-gray-600 leading-relaxed mb-3 md:mb-4 line-clamp-3">{description}</p>
+          <p className="text-xs sm:text-sm text-gray-600 leading-relaxed mb-3 md:mb-4 line-clamp-2 sm:line-clamp-3">{description}</p>
           <motion.div
             className="text-blue-600 hover:text-orange-500 font-semibold text-xs md:text-sm flex items-center justify-center gap-1 group"
             whileHover={{ x: 5 }}
@@ -180,7 +180,7 @@ export function FeaturedIndustries() {
       </motion.div>
 
       <motion.div
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 px-2 md:px-0"
+        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 md:gap-6 px-2 md:px-0"
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
