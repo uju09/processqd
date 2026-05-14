@@ -21,7 +21,7 @@ function HeroSection() {
       }}
     >
       <motion.h1
-        className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold text-white mb-3 sm:mb-4 tracking-tight px-2"
+        className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-extrabold text-white mb-3 sm:mb-4 tracking-tight px-2"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
@@ -66,7 +66,7 @@ function ServicesGrid() {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-cyan-500 font-bold tracking-widest uppercase text-xs sm:text-sm mb-2">What We Offer</h2>
-          <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-800 mb-3 sm:mb-4">Our Services</h3>
+          <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold text-gray-800 mb-3 sm:mb-4">Our Services</h3>
           <p className="text-gray-600 text-sm sm:text-base md:text-lg">Comprehensive AI solutions tailored to your business needs</p>
         </motion.div>
 
@@ -80,10 +80,10 @@ function ServicesGrid() {
           {servicesData.map((service, index) => (
             <motion.div
               key={service.id}
-              className="group bg-white border border-gray-200 shadow-sm overflow-hidden hover:shadow-xl transition-all duration-300"
+              className="group bg-white border-2 border-gray-200 shadow-md overflow-hidden hover:shadow-xl hover:border-cyan-300 transition-all duration-300 min-h-[400px] sm:min-h-[450px] flex flex-col"
               variants={fadeInUp}
             >
-              <div className="relative h-40 sm:h-52 overflow-hidden">
+              <div className="relative h-48 sm:h-52 overflow-hidden flex-shrink-0">
                 <img
                   src={service.image}
                   alt={service.title}
@@ -91,17 +91,17 @@ function ServicesGrid() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
-              <div className="p-4 sm:p-6">
+              <div className="p-5 sm:p-6 flex-grow flex flex-col">
                 <div className="flex items-center gap-2 sm:gap-3 mb-2 sm:mb-3">
                   <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-cyan-50 flex items-center justify-center text-cyan-500">
                     <i className="fas fa-cog text-sm sm:text-base"></i>
                   </div>
-                  <h4 className="text-lg sm:text-xl font-bold text-gray-800">{service.title}</h4>
+                  <h4 className="text-lg sm:text-xl font-extrabold text-gray-800">{service.title}</h4>
                 </div>
-                <p className="text-gray-600 text-sm leading-relaxed">{service.description}</p>
+                <p className="text-gray-700 text-sm font-medium leading-relaxed flex-grow">{service.description}</p>
                 <Link
                   to={`/service/${service.id}`}
-                  className="inline-flex items-center gap-2 mt-3 sm:mt-4 text-cyan-500 font-semibold text-xs sm:text-sm hover:text-cyan-600 transition-colors"
+                  className="inline-flex items-center gap-2 mt-4 text-cyan-500 font-semibold text-xs sm:text-sm hover:text-cyan-600 transition-colors"
                 >
                   Learn More
                   <i className="fas fa-arrow-right text-xs"></i>
@@ -169,7 +169,7 @@ function WhyChooseUsSection() {
             <h2 className="text-cyan-500 font-bold tracking-widest uppercase text-xs sm:text-sm mb-2">
               Why Choose Us
             </h2>
-            <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-800 mb-4 sm:mb-6 leading-tight">
+            <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold text-gray-800 mb-4 sm:mb-6 leading-tight">
               Expert Guidance for Every Step
             </h3>
             <p className="text-gray-600 mb-6 sm:mb-8 leading-relaxed text-sm sm:text-base">
@@ -205,7 +205,7 @@ function CTASection() {
     <section className="py-10 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 bg-[#0f172a] overflow-hidden">
       <div className="max-w-4xl mx-auto text-center">
         <motion.h2
-          className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-3 sm:mb-4"
+          className="text-xl sm:text-2xl md:text-3xl font-extrabold text-white mb-3 sm:mb-4"
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}

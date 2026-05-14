@@ -286,7 +286,7 @@ export function Hero() {
             </motion.p>
           )}
           <motion.h1
-            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 tracking-tight"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold mb-4 sm:mb-6 tracking-tight"
             variants={itemVariants}
           >
             {currentSlideData.title}

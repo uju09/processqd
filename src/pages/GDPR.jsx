@@ -28,7 +28,7 @@ function HeroSection() {
       }}
     >
       <motion.h1
-        className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3 tracking-tight"
+        className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-white mb-3 tracking-tight"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
@@ -72,7 +72,7 @@ function Sidebar() {
       transition={{ duration: 0.6, delay: 0.2 }}
     >
       <div className="p-6 border-b border-gray-100 bg-gray-50">
-        <h3 className="font-bold text-gray-800 uppercase tracking-wider text-sm">Legal Documents</h3>
+        <h3 className="font-extrabold text-gray-800 uppercase tracking-wider text-sm">Legal Documents</h3>
       </div>
       <nav className="flex flex-col text-sm">
         {sidebarLinks.map((link) => {
@@ -141,7 +141,7 @@ function GDPRContent() {
 
         <motion.div variants={containerVariants} initial="hidden" animate="visible">
           <motion.div variants={fadeInUp}>
-            <h2 className="text-xl md:text-2xl font-bold text-gray-800 mt-8 md:mt-10 mb-4">1. Data Controller</h2>
+            <h2 className="text-xl md:text-2xl font-extrabold text-gray-800 mt-8 md:mt-10 mb-4">1. Data Controller</h2>
             <p className="text-gray-600 mb-4 leading-relaxed">
               ProcessQ Dynamics Private Limited acts as the data controller for personal data processed through our website and services. Our registered office is located in Bangalore, Karnataka, India.
             </p>
@@ -151,7 +151,7 @@ function GDPRContent() {
           </motion.div>
 
           <motion.div variants={fadeInUp}>
-            <h2 className="text-xl md:text-2xl font-bold text-gray-800 mt-8 md:mt-10 mb-4">2. Legal Basis for Processing</h2>
+            <h2 className="text-xl md:text-2xl font-extrabold text-gray-800 mt-8 md:mt-10 mb-4">2. Legal Basis for Processing</h2>
             <p className="text-gray-600 mb-4 leading-relaxed">
               We process personal data only when we have a valid legal basis, including:
             </p>
@@ -164,7 +164,7 @@ function GDPRContent() {
           </motion.div>
 
           <motion.div variants={fadeInUp}>
-            <h2 className="text-xl md:text-2xl font-bold text-gray-800 mt-8 md:mt-10 mb-4">3. Your GDPR Rights</h2>
+            <h2 className="text-xl md:text-2xl font-extrabold text-gray-800 mt-8 md:mt-10 mb-4">3. Your GDPR Rights</h2>
             <p className="text-gray-600 mb-4 leading-relaxed">
               As a data subject in the EEA, you have the following rights:
             </p>
@@ -180,14 +180,14 @@ function GDPRContent() {
           </motion.div>
 
           <motion.div variants={fadeInUp}>
-            <h2 className="text-xl md:text-2xl font-bold text-gray-800 mt-8 md:mt-10 mb-4">4. Data Transfers</h2>
+            <h2 className="text-xl md:text-2xl font-extrabold text-gray-800 mt-8 md:mt-10 mb-4">4. Data Transfers</h2>
             <p className="text-gray-600 mb-8 leading-relaxed">
               When we transfer data outside the EEA, we ensure appropriate safeguards are in place, such as Standard Contractual Clauses approved by the European Commission. Our primary data centers are located in India and the United States, operating under binding corporate rules and data processing agreements.
             </p>
           </motion.div>
 
           <motion.div variants={fadeInUp}>
-            <h2 className="text-xl md:text-2xl font-bold text-gray-800 mt-8 md:mt-10 mb-4">5. Data Protection Officer</h2>
+            <h2 className="text-xl md:text-2xl font-extrabold text-gray-800 mt-8 md:mt-10 mb-4">5. Data Protection Officer</h2>
             <p className="text-gray-600 mb-8 leading-relaxed">
               We have appointed a Data Protection Officer (DPO) who can be reached at dpo@processqdynamics.com. The DPO oversees our GDPR compliance program and serves as the primary point of contact for data protection matters.
             </p>

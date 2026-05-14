@@ -59,36 +59,6 @@ export const servicesData = [
     ],
     outcomes: ['Optimal scheduling', 'Resource efficiency', 'Cost reduction']
   },
-  {
-    id: 'industrial-vision-ocr',
-    title: 'Industrial Vision & OCR',
-    icon: 'fas fa-eye',
-    heroTitle: 'Industrial Vision & OCR',
-    heroSubtitle: 'Coming Soon',
-    description: 'Defect detection, OCR for handwritten logs, vision-based inspection, and video analytics for industrial environments.',
-    image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
-    features: [
-      { title: 'Defect Detection', description: 'AI-powered visual inspection for quality control.' },
-      { title: 'OCR for Handwritten Logs', description: 'Digitize handwritten industrial records.' },
-      { title: 'Vision-Based Inspection', description: 'Automated visual quality assurance systems.' }
-    ],
-    outcomes: ['Improved quality', 'Reduced manual inspection', 'Consistent standards']
-  },
-  {
-    id: 'time-series-intelligence',
-    title: 'Time-Series Intelligence',
-    icon: 'fas fa-wave-square',
-    heroTitle: 'Time-Series Intelligence',
-    heroSubtitle: 'Coming Soon',
-    description: 'Advanced time-series modeling, drift detection, process stability analysis, and root cause analytics for industrial operations.',
-    image: 'https://images.unsplash.com/photo-1707286981660-f59326267198?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
-    features: [
-      { title: 'Drift Detection', description: 'Identify process changes before they become problems.' },
-      { title: 'Process Stability Analysis', description: 'Statistical monitoring of process health.' },
-      { title: 'Root Cause Analytics', description: 'Data-driven investigation of operational issues.' }
-    ],
-    outcomes: ['Early warning systems', 'Proactive maintenance', 'Reduced variability']
-  }
 ];
 
 export const getServiceById = (id) => servicesData.find(s => s.id === id);

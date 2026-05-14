@@ -28,7 +28,7 @@ function HeroSection() {
       }}
     >
       <motion.h1
-        className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3 tracking-tight"
+        className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-white mb-3 tracking-tight"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
@@ -72,7 +72,7 @@ function Sidebar() {
       transition={{ duration: 0.6, delay: 0.2 }}
     >
       <div className="p-6 border-b border-gray-100 bg-gray-50">
-        <h3 className="font-bold text-gray-800 uppercase tracking-wider text-sm">Legal Documents</h3>
+        <h3 className="font-extrabold text-gray-800 uppercase tracking-wider text-sm">Legal Documents</h3>
       </div>
       <nav className="flex flex-col text-sm">
         {sidebarLinks.map((link) => {
@@ -141,14 +141,14 @@ function CookiesContent() {
 
         <motion.div variants={containerVariants} initial="hidden" animate="visible">
           <motion.div variants={fadeInUp}>
-            <h2 className="text-xl md:text-2xl font-bold text-gray-800 mt-8 md:mt-10 mb-4">1. What Are Cookies?</h2>
+            <h2 className="text-xl md:text-2xl font-extrabold text-gray-800 mt-8 md:mt-10 mb-4">1. What Are Cookies?</h2>
             <p className="text-gray-600 mb-4 leading-relaxed">
               Cookies are small text files that are stored on your device when you visit a website. They help websites remember your preferences, analyze how you use the site, and personalize your experience. Similar technologies include web beacons, pixel tags, and local storage.
             </p>
           </motion.div>
 
           <motion.div variants={fadeInUp}>
-            <h2 className="text-xl md:text-2xl font-bold text-gray-800 mt-8 md:mt-10 mb-4">2. Types of Cookies We Use</h2>
+            <h2 className="text-xl md:text-2xl font-extrabold text-gray-800 mt-8 md:mt-10 mb-4">2. Types of Cookies We Use</h2>
             <p className="text-gray-600 mb-4 leading-relaxed">
               We use several categories of cookies to operate our platform effectively:
             </p>
@@ -169,7 +169,7 @@ function CookiesContent() {
           </motion.div>
 
           <motion.div variants={fadeInUp}>
-            <h2 className="text-xl md:text-2xl font-bold text-gray-800 mt-8 md:mt-10 mb-4">3. How We Use Third-Party Cookies</h2>
+            <h2 className="text-xl md:text-2xl font-extrabold text-gray-800 mt-8 md:mt-10 mb-4">3. How We Use Third-Party Cookies</h2>
             <p className="text-gray-600 mb-4 leading-relaxed">
               Some cookies are placed by third-party services that appear on our pages. We use:
             </p>
@@ -181,7 +181,7 @@ function CookiesContent() {
           </motion.div>
 
           <motion.div variants={fadeInUp}>
-            <h2 className="text-xl md:text-2xl font-bold text-gray-800 mt-8 md:mt-10 mb-4">4. Managing Your Cookie Preferences</h2>
+            <h2 className="text-xl md:text-2xl font-extrabold text-gray-800 mt-8 md:mt-10 mb-4">4. Managing Your Cookie Preferences</h2>
             <p className="text-gray-600 mb-4 leading-relaxed">
               You can manage your cookie preferences through our cookie consent banner when you first visit our site, or by adjusting your browser settings. Note that disabling certain cookies may affect the functionality of our platform.
             </p>

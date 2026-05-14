@@ -42,5 +42,10 @@ export const coreCapabilities = [
     title: 'Industrial Vision & OCR',
     icon: 'fas fa-eye',
     items: ['Defect Detection', 'OCR for Handwritten Logs', 'Vision-Based Inspection', 'Video Analytics']
+  },
+  {
+    title: 'Industrial Vision & OCR',
+    icon: 'fas fa-eye',
+    items: ['Defect Detection', 'OCR for Handwritten Logs', 'Vision-Based Inspection', 'Video Analytics']
   }
 ];

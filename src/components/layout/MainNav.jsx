@@ -82,7 +82,7 @@ export function MainNav() {
             variants={logoVariants}
             initial="hidden"
             animate="visible"
-            className="font-bold text-base md:text-xl flex items-center gap-2 md:gap-3 text-blue-600"
+            className="font-extrabold text-base md:text-xl flex items-center gap-2 md:gap-3 text-blue-600"
           >
             <motion.span
               className="bg-gradient-to-br from-blue-500 to-blue-600 text-white rounded-lg w-9 h-9 md:w-10 md:h-10 flex items-center justify-center font-bold text-xs md:text-sm"
@@ -102,7 +102,7 @@ export function MainNav() {
           </motion.div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex gap-7 text-sm font-semibold text-slate-700 items-center">
+          <div className="hidden md:flex gap-7 text-sm font-extrabold text-slate-700 items-center">
             {navLinks.map((link, i) => (
               <motion.div
                 key={link.id}
@@ -237,7 +237,7 @@ export function MainNav() {
                       >
                         <Link
                           to={link.href}
-                          className={`text-lg font-semibold text-slate-700 hover:text-blue-600 transition-colors min-h-[44px] min-w-[44px] flex items-center ${
+                          className={`text-lg font-extrabold text-slate-700 hover:text-blue-600 transition-colors min-h-[44px] min-w-[44px] flex items-center ${
                             activeLink === link.id ? '!text-blue-600' : ''
                           }`}
                           onClick={() => handleLinkClick(link.id)}

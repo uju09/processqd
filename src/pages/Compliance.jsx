@@ -33,7 +33,7 @@ function HeroSection() {
       }}
     >
       <motion.h1
-        className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3 tracking-tight"
+        className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-white mb-3 tracking-tight"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
@@ -77,7 +77,7 @@ function Sidebar() {
       transition={{ duration: 0.6, delay: 0.2 }}
     >
       <div className="p-6 border-b border-gray-100 bg-gray-50">
-        <h3 className="font-bold text-gray-800 uppercase tracking-wider text-sm">Legal Documents</h3>
+        <h3 className="font-extrabold text-gray-800 uppercase tracking-wider text-sm">Legal Documents</h3>
       </div>
       <nav className="flex flex-col text-sm">
         {sidebarLinks.map((link) => {
@@ -150,7 +150,7 @@ function PrivacyPolicyContent() {
 
         <motion.div variants={containerVariants} initial="hidden" animate="visible">
           <motion.div variants={fadeInUp}>
-            <h2 className="text-xl md:text-2xl font-bold text-gray-800 mt-8 md:mt-10 mb-4">1. Important Information and Who We Are</h2>
+            <h2 className="text-xl md:text-2xl font-extrabold text-gray-800 mt-8 md:mt-10 mb-4">1. Important Information and Who We Are</h2>
             <p className="text-gray-600 mb-4 leading-relaxed">
               <strong>Purpose of this privacy policy:</strong> This privacy policy aims to give you information on how we collect and process your personal data through your use of this website, including any data you may provide through this website when you sign up to our newsletter, purchase a product or service, or take part in a competition.
             </p>
@@ -160,7 +160,7 @@ function PrivacyPolicyContent() {
           </motion.div>
 
           <motion.div variants={fadeInUp}>
-            <h2 className="text-xl md:text-2xl font-bold text-gray-800 mt-8 md:mt-10 mb-4">2. The Data We Collect About You</h2>
+            <h2 className="text-xl md:text-2xl font-extrabold text-gray-800 mt-8 md:mt-10 mb-4">2. The Data We Collect About You</h2>
             <p className="text-gray-600 mb-4 leading-relaxed">
               Personal data, or personal information, means any information about an individual from which that person can be identified. It does not include data where the identity has been removed (anonymous data).
             </p>
@@ -184,7 +184,7 @@ function PrivacyPolicyContent() {
           </motion.div>
 
           <motion.div variants={fadeInUp}>
-            <h2 className="text-xl md:text-2xl font-bold text-gray-800 mt-8 md:mt-10 mb-4">3. How We Use Your Personal Data</h2>
+            <h2 className="text-xl md:text-2xl font-extrabold text-gray-800 mt-8 md:mt-10 mb-4">3. How We Use Your Personal Data</h2>
             <p className="text-gray-600 mb-4 leading-relaxed">
               We will only use your personal data when the law allows us to. Most commonly, we will use your personal data in the following circumstances:
             </p>
@@ -196,7 +196,7 @@ function PrivacyPolicyContent() {
           </motion.div>
 
           <motion.div variants={fadeInUp}>
-            <h2 className="text-xl md:text-2xl font-bold text-gray-800 mt-8 md:mt-10 mb-4">4. Data Security</h2>
+            <h2 className="text-xl md:text-2xl font-extrabold text-gray-800 mt-8 md:mt-10 mb-4">4. Data Security</h2>
             <p className="text-gray-600 mb-8 leading-relaxed">
               We have put in place appropriate security measures to prevent your personal data from being accidentally lost, used or accessed in an unauthorized way, altered or disclosed. In addition, we limit access to your personal data to those employees, agents, contractors and other third parties who have a business need to know. They will only process your personal data on our instructions and they are subject to a duty of confidentiality.
             </p>

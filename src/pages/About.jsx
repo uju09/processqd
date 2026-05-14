@@ -62,7 +62,7 @@ function HeroSection() {
       }}
     >
       <motion.h1
-        className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3 sm:mb-4 tracking-tight"
+        className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-white mb-3 sm:mb-4 tracking-tight"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
@@ -105,7 +105,7 @@ function WhoWeAreSection() {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-cyan-500 font-bold tracking-widest uppercase text-xs sm:text-sm mb-2">Our Purpose</h2>
-          <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800 mb-4 sm:mb-6 leading-tight">{aboutContent.hero.title}</h3>
+          <h3 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-gray-800 mb-4 sm:mb-6 leading-tight">{aboutContent.hero.title}</h3>
           <p className="text-gray-600 mb-4 sm:mb-6 leading-relaxed">{aboutContent.hero.subtitle}</p>
           <p className="text-gray-600 mb-6 sm:mb-8 leading-relaxed">
             Since our founding in 2024, we've been dedicated to helping enterprises leverage cutting-edge technology for unprecedented growth. Our quantum-inspired AI solutions have transformed operations across multiple industries worldwide.
@@ -183,19 +183,19 @@ function CoreValuesSection() {
           {aboutContent.coreValues.map((value, index) => (
             <motion.div
               key={index}
-              className="bg-white border border-gray-200 shadow-sm hover:shadow-md transition-all duration-300 transform hover:-translate-y-1"
+              className="bg-white border-2 border-gray-200 shadow-md hover:shadow-lg hover:-translate-y-1 transition-all duration-300 min-h-[280px] flex flex-col"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
               <div className="h-2 bg-cyan-500 w-full"></div>
-              <div className="p-6 sm:p-8">
+              <div className="p-6 sm:p-8 flex-grow flex flex-col">
                 <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-cyan-50 flex items-center justify-center text-cyan-500 text-xl sm:text-2xl mb-4 sm:mb-6">
                   <i className="fas fa-lightbulb"></i>
                 </div>
-                <h4 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4 text-gray-800">{value.title}</h4>
-                <p className="text-sm text-gray-600 leading-relaxed">{value.description}</p>
+                <h4 className="text-lg sm:text-xl font-extrabold mb-3 sm:mb-4 text-gray-800">{value.title}</h4>
+                <p className="text-sm text-gray-700 font-medium leading-relaxed">{value.description}</p>
               </div>
             </motion.div>
           ))}
@@ -211,7 +211,7 @@ function MissionVisionSection() {
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
           <motion.div
-            className="bg-[#f0f0f2] border border-gray-200 shadow-sm p-6 sm:p-8"
+            className="bg-[#f0f0f2] border-2 border-gray-200 shadow-md p-6 sm:p-8 min-h-[240px] flex flex-col"
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -220,11 +220,11 @@ function MissionVisionSection() {
             <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-cyan-100 flex items-center justify-center text-cyan-500 text-xl sm:text-2xl mb-4 sm:mb-6">
               <i className="fas fa-bullseye"></i>
             </div>
-            <h3 className="text-xl sm:text-2xl font-bold text-gray-800 mb-3 sm:mb-4">Our Mission</h3>
-            <p className="text-gray-600 leading-relaxed text-sm sm:text-base">{aboutContent.mission}</p>
+            <h3 className="text-xl sm:text-2xl font-extrabold text-gray-800 mb-3 sm:mb-4">Our Mission</h3>
+            <p className="text-gray-700 leading-relaxed text-sm sm:text-base font-medium">{aboutContent.mission}</p>
           </motion.div>
           <motion.div
-            className="bg-[#f0f0f2] border border-gray-200 shadow-sm p-6 sm:p-8"
+            className="bg-[#f0f0f2] border-2 border-gray-200 shadow-md p-6 sm:p-8 min-h-[240px] flex flex-col"
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -233,8 +233,8 @@ function MissionVisionSection() {
             <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-cyan-100 flex items-center justify-center text-cyan-500 text-xl sm:text-2xl mb-4 sm:mb-6">
               <i className="fas fa-eye"></i>
             </div>
-            <h3 className="text-xl sm:text-2xl font-bold text-gray-800 mb-3 sm:mb-4">Our Vision</h3>
-            <p className="text-gray-600 leading-relaxed text-sm sm:text-base">{aboutContent.vision}</p>
+            <h3 className="text-xl sm:text-2xl font-extrabold text-gray-800 mb-3 sm:mb-4">Our Vision</h3>
+            <p className="text-gray-700 leading-relaxed text-sm sm:text-base font-medium">{aboutContent.vision}</p>
           </motion.div>
         </div>
       </div>
@@ -246,7 +246,7 @@ function CTASection() {
   return (
     <section className="py-12 sm:py-16 px-4 sm:px-6 border-b border-gray-200 text-center bg-[#f0f0f2]">
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-800 mb-3 sm:mb-4">{aboutContent.cta.title}</h2>
+        <h2 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-gray-800 mb-3 sm:mb-4">{aboutContent.cta.title}</h2>
         <p className="text-gray-600 mb-6 sm:mb-8 text-sm sm:text-base">{aboutContent.cta.subtitle}</p>
         <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
           <a href="/contact" className="inline-block bg-cyan-500 text-white font-semibold py-3 px-6 sm:px-8 rounded hover:bg-cyan-600 transition-colors shadow-sm w-full sm:w-auto">
