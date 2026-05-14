@@ -15,33 +15,30 @@ const heroSlides = [
   },
   {
     id: 2,
-    tagline: 'Trusted by Industry Leaders',
-    title: '500+ Enterprises Transformed',
-    description:
-      'From manufacturing giants to tech startups, our AI solutions have delivered measurable results across diverse industries. See why leading companies choose ProcessQ Dynamics for their digital transformation journey.',
+    tagline: 'Predictive Maintenance & Process Optimization',
+    title: 'AI-Driven Systems for Industrial Operations',
+    description: 'Deploy AI-driven systems for predictive maintenance, anomaly detection, process optimization, and operational intelligence across manufacturing and process industries.',
     ctaPrimary: 'View Case Studies',
     ctaSecondary: 'Learn More',
-    backgroundImage: 'https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80',
+    backgroundImage: 'https://images.unsplash.com/photo-1717386255773-1e3037c81788?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80',
   },
   {
     id: 3,
-    tagline: '24/7 AI Support',
-    title: 'Always-On Intelligent Assistance',
-    description:
-      'Deploy AI-powered support systems that never sleep. Our intelligent chatbots and virtual assistants handle customer inquiries around the clock, reducing response times by 80% while maintaining human-quality interactions.',
-    ctaPrimary: 'Explore AI Support',
-    ctaSecondary: 'Start Free Trial',
-    backgroundImage: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80',
+    tagline: 'Industrial Copilots',
+    title: 'Transform Industrial Documents into Intelligent AI',
+    description: 'Transform industrial documents such as SOPs, P&IDs, PFDs, manuals, and datasheets into intelligent AI copilots using Agentic RAG, knowledge graphs, and domain-aware language models.',
+    ctaPrimary: 'Explore Solutions',
+    ctaSecondary: 'Learn More',
+    backgroundImage: 'https://images.unsplash.com/photo-1694903110330-cc64b7e1d21d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80',
   },
   {
     id: 4,
-    tagline: 'Deploy in Minutes',
-    title: 'Get Started in Under 5 Minutes',
-    description:
-      'Our plug-and-play AI modules integrate seamlessly with your existing systems. No complex setup, no lengthy implementations — just drag, drop, and deploy intelligent automation across your operations.',
-    ctaPrimary: 'Start Free Trial',
-    ctaSecondary: 'Watch Demo',
-    backgroundImage: 'https://images.unsplash.com/photo-1518186285589-2f7649de83e0?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80',
+    tagline: 'Advanced Optimization',
+    title: 'Complex Industrial Scheduling & Resource Allocation',
+    description: 'Apply advanced optimization techniques and quantum-inspired algorithms to solve complex industrial scheduling, resource allocation, and operational planning problems.',
+    ctaPrimary: 'Schedule Consultation',
+    ctaSecondary: 'View Case Studies',
+    backgroundImage: 'https://images.unsplash.com/photo-1707286981660-f59326267198?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80',
   },
 ];
 
@@ -195,7 +192,7 @@ export function Hero() {
     >
       {/* Background parallax overlay */}
       <motion.div
-        className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-transparent to-purple-500/10"
+        className="absolute inset-0 bg-gradient-to-br from-blue-600/10 via-transparent to-blue-700/10"
         animate={{
           scale: [1, 1.05, 1],
           opacity: [0.8, 1, 0.8]
@@ -223,22 +220,22 @@ export function Hero() {
 
       {/* Decorative floating shapes */}
       <motion.div
-        className="hidden md:block absolute top-[10%] left-[5%] w-32 h-32 rounded-full border-2 border-cyan-400/20"
+        className="hidden md:block absolute top-[10%] left-[5%] w-32 h-32 rounded-full border-2 border-blue-600/20"
         variants={floatingCircle1Variants}
         animate="animate"
       />
       <motion.div
-        className="hidden md:block absolute top-[60%] left-[8%] w-16 h-16 rounded-full bg-gradient-to-br from-purple-400/20 to-cyan-400/20 blur-sm"
+        className="hidden md:block absolute top-[60%] left-[8%] w-16 h-16 rounded-full bg-gradient-to-br from-blue-400/20 to-blue-500/20 blur-sm"
         variants={floatingCircle2Variants}
         animate="animate"
       />
       <motion.div
-        className="hidden md:block absolute bottom-[15%] left-[12%] w-24 h-[2px] bg-gradient-to-r from-cyan-400/40 to-transparent"
+        className="hidden md:block absolute bottom-[15%] left-[12%] w-24 h-[2px] bg-gradient-to-r from-blue-500/40 to-transparent"
         variants={floatingLine1Variants}
         animate="animate"
       />
       <motion.div
-        className="hidden md:block absolute top-[25%] right-[10%] w-20 h-[2px] bg-gradient-to-l from-purple-400/40 to-transparent"
+        className="hidden md:block absolute top-[25%] right-[10%] w-20 h-[2px] bg-gradient-to-l from-blue-500/40 to-transparent"
         variants={floatingLine2Variants}
         animate="animate"
       />
@@ -248,7 +245,7 @@ export function Hero() {
         animate="animate"
       />
       <motion.div
-        className="hidden md:block absolute bottom-[30%] right-[15%] w-14 h-14 rounded-full bg-cyan-400/10 blur-md"
+        className="hidden md:block absolute bottom-[30%] right-[15%] w-14 h-14 rounded-full bg-blue-500/10 blur-md"
         variants={floatingCircle1Variants}
         animate="animate"
         style={{ transitionDelay: '3s' }}
@@ -305,7 +302,7 @@ export function Hero() {
             variants={containerVariants}
           >
             <motion.button
-              className="w-full sm:w-auto px-6 sm:px-7 py-3 sm:py-3.5 text-sm sm:text-base font-semibold rounded-md bg-cyan-500 hover:bg-cyan-600 transition-all duration-200 cursor-pointer border-none"
+              className="w-full sm:w-auto px-6 sm:px-7 py-3 sm:py-3.5 text-sm sm:text-base font-semibold rounded-md bg-blue-600 hover:bg-blue-700 transition-all duration-200 cursor-pointer border-none"
               variants={buttonVariants}
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.98 }}
@@ -333,7 +330,7 @@ export function Hero() {
             key={slide.id}
             onClick={() => goToSlide(index)}
             className={`w-3 h-3 md:w-4 md:h-4 rounded-full cursor-pointer transition-all duration-300 ${index === currentSlide
-              ? 'bg-cyan-400 w-6 sm:w-8'
+              ? 'bg-blue-500 w-6 sm:w-8'
               : 'bg-white/40 hover:bg-white/60'
               }`}
             aria-label={`Go to slide ${index + 1}`}

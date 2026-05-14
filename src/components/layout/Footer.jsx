@@ -56,18 +56,18 @@ export function Footer() {
   const iconVariants = {
     hover: {
       scale: 1.15,
-      boxShadow: '0 0 20px rgba(8, 145, 178, 0.5)',
-      backgroundColor: 'rgba(8, 145, 178, 0.3)'
+      boxShadow: '0 0 20px rgba(29, 78, 216, 0.5)',
+      backgroundColor: 'rgba(29, 78, 216, 0.3)'
     }
   };
 
   const linkVariants = {
-    hover: { x: 6, color: '#22d3ee' }
+    hover: { x: 6, color: '#60a5fa' }
   };
 
   const logoVariants = {
     pulse: {
-      boxShadow: ['0 0 10px rgba(8, 145, 178, 0.3)', '0 0 25px rgba(8, 145, 178, 0.6)', '0 0 10px rgba(8, 145, 178, 0.3)'],
+      boxShadow: ['0 0 10px rgba(29, 78, 216, 0.3)', '0 0 25px rgba(29, 78, 216, 0.6)', '0 0 10px rgba(29, 78, 216, 0.3)'],
       transition: {
         duration: 2,
         repeat: Infinity,
@@ -100,19 +100,19 @@ export function Footer() {
   ];
 
   return (
-    <footer className="relative bg-gradient-to-b from-slate-900 via-slate-900 to-slate-950 border-t border-cyan-500/30 overflow-hidden">
+    <footer className="relative bg-gradient-to-b from-slate-900 via-slate-900 to-slate-950 border-t border-blue-500/30 overflow-hidden">
       {/* Decorative background elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute -top-24 -right-24 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl" />
-        <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-sky-500/5 rounded-full blur-3xl" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-cyan-500/2 rounded-full blur-3xl" />
+        <div className="absolute -top-24 -right-24 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl" />
+        <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-indigo-500/5 rounded-full blur-3xl" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-blue-500/2 rounded-full blur-3xl" />
       </div>
 
       {/* Grid pattern overlay */}
       <div
         className="absolute inset-0 opacity-[0.03] pointer-events-none"
         style={{
-          backgroundImage: `linear-gradient(rgba(8, 145, 178, 0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(8, 145, 178, 0.3) 1px, transparent 1px)`,
+          backgroundImage: `linear-gradient(rgba(29, 78, 216, 0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(29, 78, 216, 0.3) 1px, transparent 1px)`,
           backgroundSize: '60px 60px'
         }}
       />
@@ -124,10 +124,10 @@ export function Footer() {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.8 }}
-            whileHover={{ scale: 1.15, boxShadow: '0 0 30px rgba(8, 145, 178, 0.6)' }}
+            whileHover={{ scale: 1.15, boxShadow: '0 0 30px rgba(29, 78, 216, 0.6)' }}
             whileTap={{ scale: 0.9 }}
             onClick={scrollToTop}
-            className="fixed bottom-6 right-4 sm:bottom-8 sm:right-8 w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-cyan-500 via-cyan-400 to-sky-500 text-white rounded-full flex items-center justify-center shadow-xl shadow-cyan-500/40 z-50 cursor-pointer border border-white/20"
+            className="fixed bottom-6 right-4 sm:bottom-8 sm:right-8 w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-blue-500 via-blue-400 to-indigo-500 text-white rounded-full flex items-center justify-center shadow-xl shadow-blue-500/40 z-50 cursor-pointer border border-white/20"
             aria-label="Scroll to top"
           >
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" width="24" height="24">
@@ -154,12 +154,12 @@ export function Footer() {
               variants={logoVariants}
               animate="pulse"
             >
-              <span className="bg-gradient-to-br from-cyan-400 via-cyan-500 to-sky-600 text-white rounded-xl w-12 h-12 flex items-center justify-center text-base font-bold shadow-lg shadow-cyan-500/30">
+              <span className="bg-gradient-to-br from-blue-400 via-blue-500 to-indigo-600 text-white rounded-xl w-12 h-12 flex items-center justify-center text-base font-bold shadow-lg shadow-blue-500/30">
                 PQ
               </span>
               <div className="flex flex-col">
                 <span className="text-white font-bold text-lg tracking-tight leading-tight">{branding.companyName}</span>
-                <span className="text-cyan-400 text-xs font-medium tracking-wider">DYNAMICS</span>
+                <span className="text-blue-400 text-xs font-medium tracking-wider">DYNAMICS</span>
               </div>
             </motion.div>
             <p className="text-slate-400 text-sm leading-relaxed max-w-xs">{branding.tagline}</p>
@@ -178,7 +178,7 @@ export function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={social.label}
-                  className="w-11 h-11 bg-slate-800/80 border border-slate-700/50 rounded-xl text-cyan-300 flex items-center justify-center transition-colors duration-300"
+                  className="w-11 h-11 bg-slate-800/80 border border-slate-700/50 rounded-xl text-blue-300 flex items-center justify-center transition-colors duration-300"
                   variants={iconVariants}
                   whileHover="hover"
                   initial={{ opacity: 0, y: 10 }}
@@ -203,19 +203,19 @@ export function Footer() {
             >
               <h4 className="font-bold text-white mb-4 sm:mb-5 text-base sm:text-lg md:text-xl uppercase tracking-wider relative">
                 {column.title}
-                <span className="absolute -bottom-1 left-0 w-8 h-0.5 bg-gradient-to-r from-cyan-500 to-transparent" />
+                <span className="absolute -bottom-1 left-0 w-8 h-0.5 bg-gradient-to-r from-blue-500 to-transparent" />
               </h4>
               <ul className="flex flex-col gap-3 sm:gap-4 list-none p-0 m-0">
                 {column.links.map((link, linkIndex) => (
                   <li key={linkIndex}>
                     <motion.a
                       href={link.href}
-                      className="text-slate-400 text-sm block py-1 hover:text-cyan-400 transition-colors duration-200 relative group"
+                      className="text-slate-400 text-sm block py-1 hover:text-blue-400 transition-colors duration-200 relative group"
                       variants={linkVariants}
                       whileHover="hover"
                       transition={{ duration: 0.2 }}
                     >
-                      <span className="absolute left-0 top-1/2 -translate-y-1/2 w-0 h-0.5 bg-cyan-400 group-hover:w-3 transition-all duration-200 -ml-3" />
+                      <span className="absolute left-0 top-1/2 -translate-y-1/2 w-0 h-0.5 bg-blue-400 group-hover:w-3 transition-all duration-200 -ml-3" />
                       {link.text}
                     </motion.a>
                   </li>
@@ -234,11 +234,11 @@ export function Footer() {
           >
             <h4 className="font-bold text-white mb-4 sm:mb-5 text-base sm:text-lg md:text-xl uppercase tracking-wider relative">
               Contact Us
-              <span className="absolute -bottom-1 left-0 w-8 h-0.5 bg-gradient-to-r from-cyan-500 to-transparent" />
+              <span className="absolute -bottom-1 left-0 w-8 h-0.5 bg-gradient-to-r from-blue-500 to-transparent" />
             </h4>
             <ul className="flex flex-col gap-3 sm:gap-4 list-none p-0 m-0">
               <li className="flex items-start gap-3 text-slate-400 text-sm group">
-                <span className="text-cyan-400 flex-shrink-0 mt-0.5 w-8 h-8 bg-slate-800/80 rounded-lg flex items-center justify-center group-hover:bg-cyan-500/20 transition-colors">
+                <span className="text-blue-400 flex-shrink-0 mt-0.5 w-8 h-8 bg-slate-800/80 rounded-lg flex items-center justify-center group-hover:bg-blue-500/20 transition-colors">
                   <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
                     <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
                   </svg>
@@ -246,27 +246,27 @@ export function Footer() {
                 <span className="leading-relaxed">{footerContact.address}</span>
               </li>
               <li className="flex items-start gap-3 text-slate-400 text-sm group">
-                <span className="text-cyan-400 flex-shrink-0 mt-0.5 w-8 h-8 bg-slate-800/80 rounded-lg flex items-center justify-center group-hover:bg-cyan-500/20 transition-colors">
+                <span className="text-blue-400 flex-shrink-0 mt-0.5 w-8 h-8 bg-slate-800/80 rounded-lg flex items-center justify-center group-hover:bg-blue-500/20 transition-colors">
                   <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
                     <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
                   </svg>
                 </span>
-                <a href={`tel:${footerContact.phone}`} className="hover:text-cyan-400 transition-colors">{footerContact.phone}</a>
+                <a href={`tel:${footerContact.phone}`} className="hover:text-blue-400 transition-colors">{footerContact.phone}</a>
               </li>
               <li className="flex items-start gap-3 text-slate-400 text-sm group">
-                <span className="text-cyan-400 flex-shrink-0 mt-0.5 w-8 h-8 bg-slate-800/80 rounded-lg flex items-center justify-center group-hover:bg-cyan-500/20 transition-colors">
+                <span className="text-blue-400 flex-shrink-0 mt-0.5 w-8 h-8 bg-slate-800/80 rounded-lg flex items-center justify-center group-hover:bg-blue-500/20 transition-colors">
                   <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
                     <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
                   </svg>
                 </span>
-                <a href={`mailto:${footerContact.email}`} className="hover:text-cyan-400 transition-colors">{footerContact.email}</a>
+                <a href={`mailto:${footerContact.email}`} className="hover:text-blue-400 transition-colors">{footerContact.email}</a>
               </li>
             </ul>
 
             {/* Business Hours */}
             <div className="mt-8 pt-6 border-t border-slate-700/50">
               <h5 className="text-white font-semibold text-[13px] mb-4 flex items-center gap-2">
-                <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14" className="text-cyan-400">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14" className="text-blue-400">
                   <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/>
                 </svg>
                 Business Hours
@@ -286,22 +286,22 @@ export function Footer() {
         transition={{ delay: 0.6, duration: 0.5 }}
       >
         {/* Top border glow effect */}
-        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-cyan-500/50 to-transparent" />
+        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-blue-500/50 to-transparent" />
 
         <div className="container-responsive flex flex-col sm:flex-row justify-between items-center gap-5 sm:gap-4">
           {/* Legal Links - Wrapped on mobile */}
           <div className="flex flex-wrap justify-center sm:justify-start gap-x-4 sm:gap-x-6 gap-y-2 order-2 sm:order-1">
-            <a href="/terms" className="text-slate-400 text-xs sm:text-sm hover:text-cyan-400 transition-colors">Terms</a>
-            <a href="/compliance" className="text-slate-400 text-xs sm:text-sm hover:text-cyan-400 transition-colors">Privacy</a>
-            <a href="/cookies" className="text-slate-400 text-xs sm:text-sm hover:text-cyan-400 transition-colors">Cookies</a>
-            <a href="/gdpr" className="text-slate-400 text-xs sm:text-sm hover:text-cyan-400 transition-colors">GDPR</a>
-            <a href="/sla" className="text-slate-400 text-xs sm:text-sm hover:text-cyan-400 transition-colors">SLA</a>
+            <a href="/terms" className="text-slate-400 text-xs sm:text-sm hover:text-blue-400 transition-colors">Terms</a>
+            <a href="/compliance" className="text-slate-400 text-xs sm:text-sm hover:text-blue-400 transition-colors">Privacy</a>
+            <a href="/cookies" className="text-slate-400 text-xs sm:text-sm hover:text-blue-400 transition-colors">Cookies</a>
+            <a href="/gdpr" className="text-slate-400 text-xs sm:text-sm hover:text-blue-400 transition-colors">GDPR</a>
+            <a href="/sla" className="text-slate-400 text-xs sm:text-sm hover:text-blue-400 transition-colors">SLA</a>
           </div>
 
           <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-6 order-1 sm:order-2">
             <div className="text-center sm:text-left">
               <p className="text-slate-400 text-xs sm:text-sm m-0">{footerBottom.copyright}</p>
-              <p className="bg-gradient-to-r from-cyan-400 via-sky-400 to-cyan-400 bg-clip-text text-transparent text-[10px] sm:text-[11px] mt-1 sm:mt-2 tracking-widest font-medium">
+              <p className="bg-gradient-to-r from-blue-400 via-indigo-400 to-blue-400 bg-clip-text text-transparent text-[10px] sm:text-[11px] mt-1 sm:mt-2 tracking-widest font-medium">
                 {footerBottom.tagline}
               </p>
             </div>
@@ -311,7 +311,7 @@ export function Footer() {
               className="flex items-center gap-2 bg-slate-800/50 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full border border-slate-700/50"
               whileHover={{ scale: 1.02 }}
             >
-              <span className="bg-gradient-to-r from-cyan-400 to-sky-400 bg-clip-text text-transparent font-bold text-xs sm:text-sm">AI</span>
+              <span className="bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent font-bold text-xs sm:text-sm">AI</span>
               <span className="text-slate-500">|</span>
               <span className="text-slate-400 font-semibold text-xs sm:text-sm tracking-tight">{branding.shortName}</span>
             </motion.div>

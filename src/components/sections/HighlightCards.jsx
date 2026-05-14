@@ -89,14 +89,14 @@ function HighlightCard({ image, imageAlt, title, description, index }) {
       className="h-full"
     >
       <motion.div
-        className="bg-white rounded-xl p-4 md:p-6 border border-cyan-200 hover:border-cyan-400 shadow-sm relative overflow-hidden h-full flex flex-col cursor-pointer transition-shadow md:hover:shadow-lg"
+        className="bg-white rounded-xl p-4 md:p-6 border border-blue-200 hover:border-blue-400 shadow-sm relative overflow-hidden h-full flex flex-col cursor-pointer transition-shadow md:hover:shadow-lg"
         variants={cardHoverVariants}
         initial="rest"
         whileHover="hover"
       >
         {/* Gradient overlay */}
         <motion.div
-          className="absolute inset-0 bg-gradient-to-br from-cyan-100/50 to-sky-100/50 pointer-events-none"
+          className="absolute inset-0 bg-gradient-to-br from-blue-100/50 to-blue-50/50 pointer-events-none"
           variants={overlayVariants}
           initial="rest"
           whileHover="hover"
@@ -122,11 +122,11 @@ function HighlightCard({ image, imageAlt, title, description, index }) {
             whileHover="hover"
             className="inline-block mb-2 md:mb-3"
           >
-            <h3 className="text-base md:text-lg font-semibold text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 to-sky-600 line-clamp-2">
+            <h3 className="text-base md:text-lg font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-700 line-clamp-2">
               {title}
             </h3>
           </motion.div>
-          <p className="text-sm text-slate-500 leading-relaxed line-clamp-3">{description}</p>
+          <p className="text-sm text-gray-600 leading-relaxed line-clamp-3">{description}</p>
         </div>
       </motion.div>
     </motion.div>
@@ -140,12 +140,12 @@ export function HighlightCards() {
   return (
     <motion.section
       ref={sectionRef}
-      className="py-10 md:py-16 px-4 sm:px-6 md:px-8 bg-gradient-to-br from-white to-cyan-50/30 overflow-hidden"
+      className="py-10 md:py-16 px-4 sm:px-6 md:px-8 bg-gradient-to-br from-white to-blue-50/30 overflow-hidden"
       initial={{ opacity: 0 }}
       animate={isInView ? { opacity: 1 } : { opacity: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
         {servicesData.map((service, index) => (
           <Link
             to={`/service/${service.id}`}

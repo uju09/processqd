@@ -1,10 +1,8 @@
 export const heroContent = {
-  title: 'AI-Driven Process Optimization for Modern Enterprises',
-  tagline: 'Where AI Meets Operational Excellence',
-  description:
-    'Transforming complex industrial & business processes using Artificial Intelligence, Advanced Analytics, & Intelligent Automation. We help organizations unlock measurable efficiency, cost reduction, and operational excellence through practical AI implementation — not just strategy, but real deployment.',
-  backgroundImage:
-    'https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80',
-  ctaPrimary: 'Explore Services',
-  ctaSecondary: 'Book Consultation',
+  title: 'Industrial Intelligence for Autonomous Operations',
+  tagline: 'Industrial AI',
+  description: 'We help industrial enterprises improve reliability, optimize operations, reduce downtime, and unlock operational intelligence through Industrial AI, Agentic AI, predictive analytics, and advanced optimization systems.',
+  backgroundImage: 'https://images.unsplash.com/photo-1735494033576-9c882e80504c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80',
+  ctaPrimary: 'Explore Solutions',
+  ctaSecondary: 'Schedule Consultation',
 };

@@ -10,7 +10,7 @@ export function CarouselControls({ canGoPrev, canGoNext, onPrev, onNext }) {
         <i className="fas fa-chevron-left"></i>
       </button>
       <button
-        className={`w-10 h-10 md:w-12 md:h-12 min-w-10 min-h-10 flex-shrink-0 border border-cyan-500 bg-white text-cyan-500 flex items-center justify-center cursor-pointer hover:bg-cyan-50 transition-colors rounded-lg ${canGoNext ? '' : 'opacity-50 cursor-not-allowed'}`}
+        className={`w-10 h-10 md:w-12 md:h-12 min-w-10 min-h-10 flex-shrink-0 border border-blue-500 bg-white text-blue-500 flex items-center justify-center cursor-pointer hover:bg-blue-50 transition-colors rounded-lg ${canGoNext ? '' : 'opacity-50 cursor-not-allowed'}`}
         onClick={onNext}
         disabled={!canGoNext}
         aria-label="Next slide"

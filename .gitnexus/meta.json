@@ -1,12 +1,12 @@
 {
   "repoPath": "/Users/ujwalganeshakotkar/Documents/Processgd/design/react-app",
-  "lastCommit": "d1f0bcfef835e98626dcef1beacd439f9bfe4fa7",
-  "indexedAt": "2026-05-07T16:14:09.187Z",
+  "lastCommit": "90e8f29b67d5a7c18f0189024f3f613d1891498c",
+  "indexedAt": "2026-05-14T07:35:25.048Z",
   "remoteUrl": "https://github.com/uju09/processqd",
   "stats": {
-    "files": 44,
-    "nodes": 244,
-    "edges": 268,
+    "files": 50,
+    "nodes": 317,
+    "edges": 345,
     "communities": 2,
     "processes": 0,
     "embeddings": 0

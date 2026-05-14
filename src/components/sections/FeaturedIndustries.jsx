@@ -74,9 +74,9 @@ function IndustryCard({ image, imageAlt, title, description, index }) {
       whileHover={{ rotateY: 5, transition: { duration: 0.3 } }}
       style={{ transformStyle: "preserve-3d" }}
     >
-      <div className="bg-white rounded-xl md:rounded-2xl border border-cyan-200 hover:shadow-lg hover:-translate-y-1 hover:border-cyan-400 transition-all duration-300 h-full">
+      <div className="bg-white rounded-xl md:rounded-2xl border border-blue-200 hover:shadow-lg hover:-translate-y-1 hover:border-blue-400 transition-all duration-300 h-full">
         <motion.div
-          className="bg-gradient-to-r from-cyan-500 to-sky-500 p-4 md:p-8 flex justify-center overflow-hidden rounded-t-xl md:rounded-t-2xl aspect-video"
+          className="bg-gradient-to-r from-blue-500 to-blue-600 p-4 md:p-8 flex justify-center overflow-hidden rounded-t-xl md:rounded-t-2xl aspect-video"
           variants={imageVariants}
           initial="rest"
           whileHover="hover"
@@ -84,10 +84,10 @@ function IndustryCard({ image, imageAlt, title, description, index }) {
           <img src={image} alt={imageAlt} className="w-full h-full object-cover rounded-lg" />
         </motion.div>
         <div className="p-4 md:p-6 text-center">
-          <h4 className="font-bold text-base md:text-lg text-cyan-950 mb-2">{title}</h4>
-          <p className="text-xs md:text-sm text-gray-500 leading-relaxed mb-3 md:mb-4 line-clamp-3">{description}</p>
+          <h4 className="font-bold text-base md:text-lg text-blue-950 mb-2">{title}</h4>
+          <p className="text-xs md:text-sm text-gray-600 leading-relaxed mb-3 md:mb-4 line-clamp-3">{description}</p>
           <motion.div
-            className="text-cyan-600 hover:text-orange-500 font-semibold text-xs md:text-sm flex items-center justify-center gap-1 group"
+            className="text-blue-600 hover:text-orange-500 font-semibold text-xs md:text-sm flex items-center justify-center gap-1 group"
             whileHover={{ x: 5 }}
             transition={{ type: "spring", stiffness: 400, damping: 10 }}
           >
@@ -111,7 +111,7 @@ function AnimatedBackground() {
         <rect width="100%" height="100%" fill="url(#grid)" />
       </svg>
       <motion.div
-        className="absolute w-96 h-96 bg-cyan-400 rounded-full blur-3xl opacity-20"
+        className="absolute w-96 h-96 bg-blue-400 rounded-full blur-3xl opacity-20"
         animate={{
           x: [0, 50, 0],
           y: [0, -30, 0],
@@ -125,7 +125,7 @@ function AnimatedBackground() {
         style={{ top: "10%", left: "10%" }}
       />
       <motion.div
-        className="absolute w-80 h-80 bg-sky-400 rounded-full blur-3xl opacity-15"
+        className="absolute w-80 h-80 bg-blue-500 rounded-full blur-3xl opacity-15"
         animate={{
           x: [0, -40, 0],
           y: [0, 40, 0],
@@ -162,7 +162,7 @@ export function FeaturedIndustries() {
   const { currentIndex, canGoNext, canGoPrev, goNext, goPrev } = useCarousel(industries.length, 4);
 
   return (
-    <section className="py-12 md:py-20 px-4 sm:px-6 lg:px-8 container-responsive bg-gradient-to-b from-cyan-50 to-slate-50 relative overflow-hidden">
+    <section className="py-12 md:py-20 px-4 sm:px-6 lg:px-8 container-responsive bg-gradient-to-b from-blue-50 to-slate-50 relative overflow-hidden">
       <AnimatedBackground />
 
       <motion.div
@@ -171,7 +171,7 @@ export function FeaturedIndustries() {
         initial="hidden"
         animate={headerInView ? "visible" : "hidden"}
       >
-        <h2 className="text-xl md:text-2xl lg:text-3xl font-extrabold text-center mb-4 bg-gradient-to-r from-cyan-600 to-sky-600 bg-clip-text text-transparent">
+        <h2 className="text-xl md:text-2xl lg:text-3xl font-extrabold text-center mb-4 bg-gradient-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent">
           AI-Powered Solutions
         </h2>
         <p className="text-center text-gray-500 text-sm md:text-base lg:text-lg mb-8 md:mb-12 max-w-2xl mx-auto px-4">
