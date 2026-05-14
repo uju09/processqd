@@ -1,128 +1,103 @@
 import { motion } from 'framer-motion';
 import { useRef } from 'react';
+import { missionData, industriesData, coreCapabilities } from '../../data/content/brands';
 
-const largeBrands = [
-  {
-    id: 'ingersoll-rand',
-    name: 'Ingersoll Rand',
-    logoType: 'ingersoll',
-    description:
-      'Ingersoll Rand provides products, services and solutions that enhance our customers\' energy efficiency, productivity and operations. With over 160 years of air compressor knowledge and expertise, you can trust Ingersoll Rand to provide you with a solution you can rely on.',
-  },
-  {
-    id: 'gardner-denver',
-    name: 'Gardner Denver',
-    logoType: 'gardner',
-    description:
-      'World leading supplier of compressors, blowers and vacuum pumps. We accelerate mission-critical applications worldwide. With 160 years of experience, we are a leading global provider of compressors, blowers, and vacuum pumps.',
-  },
-  {
-    id: 'compair',
-    name: 'CompAir',
-    logoType: 'compair',
-    description:
-      'Leading supplier of oil free and oil lubricated rotary screw, reciprocating, centrifugal and portable air compressors. The company has been at the forefront of air compressor technology for many decades & we now also produce our own in-house air treatment ranges to supply the complete compressed air network package.',
-  },
-];
-
-const smallBrands = [
-  { id: 'aro', name: 'ARO', style: 'text-red-600 font-bold text-3xl' },
-  { id: 'champion', name: 'Champion', style: 'text-red-700 font-bold text-2xl italic uppercase tracking-wider' },
-  { id: 'elmo', name: 'Elmo Rietschle', style: 'text-gray-900 font-bold text-xl', prefix: 'ER', prefixBg: 'bg-blue-800' },
-  { id: 'milton', name: 'Milton Roy', style: 'text-blue-500 font-bold text-xl uppercase tracking-widest', icon: 'circle-notch' },
-  { id: 'nash', name: 'NASH', style: 'text-blue-800 font-black text-3xl tracking-tighter' },
-  { id: 'robuschi', name: 'Robuschi', style: 'text-[#1a365d] font-black text-2xl tracking-tighter uppercase' },
-  { id: 'roots', name: 'ROOTS', style: 'text-blue-600 font-black text-3xl italic tracking-tighter' },
-  { id: 'thomas', name: 'Thomas', style: 'text-gray-900 font-black text-2xl tracking-widest uppercase' },
-  { id: 'seepex', name: 'Seepex', style: 'text-[#004b87] font-black text-2xl tracking-widest uppercase' },
-];
+// Card variants for animations
+const cardVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
+};
 
 const containerVariants = {
   hidden: {},
-  visible: { transition: { staggerChildren: 0.15 } }
+  visible: { transition: { staggerChildren: 0.1 } }
 };
 
-const cardVariants = {
-  hidden: { opacity: 0, y: 30 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut' } }
-};
-
-const logoVariants = {
-  hidden: { opacity: 0, scale: 0.9 },
-  visible: { opacity: 1, scale: 1, transition: { duration: 0.4, ease: 'easeOut' } }
-};
-
-function IngersollRandLogo() {
-  return (
-    <div className="text-red-600 font-bold text-xl italic tracking-tighter flex items-center">
-      <span className="bg-red-600 text-white rounded-full w-6 h-6 flex items-center justify-center mr-1 text-xs not-italic">IR</span>
-      Ingersoll Rand.
-    </div>
-  );
-}
-
-function GardnerDenverLogo() {
-  return (
-    <h2 className="font-black text-2xl tracking-tighter text-gray-900 uppercase">
-      Gardner<br />
-      <span className="text-red-600 border-t-2 border-red-600 pt-1 block mt-1">Denver</span>
-    </h2>
-  );
-}
-
-function CompAirLogo() {
-  return (
-    <div className="font-bold text-2xl text-[#1a365d] flex items-center">
-      <i className="fas fa-gear mr-2 text-[#1a365d]"></i> CompAir
-    </div>
-  );
-}
-
-function LargeBrandCard({ brand }) {
+// Vision/Mission Card Component
+function StatementCard({ data, index }) {
+  const isVision = index === 0;
   return (
     <motion.div
-      className="bg-white flex flex-col md:flex-row items-center shadow-sm border border-gray-100 hover:shadow-md hover:border-cyan-200 transition-all duration-300"
+      className={`bg-white p-8 md:p-10 border-t-4 ${isVision ? 'border-blue-700' : 'border-blue-600'} shadow-sm border-l border-r border-b border-gray-100 hover:shadow-md transition-shadow`}
       variants={cardVariants}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, margin: '-50px' }}
+      viewport={{ once: true }}
       whileHover={{ y: -4 }}
     >
-      <div className="w-full md:w-1/3 p-4 sm:p-6 md:p-8 flex justify-center items-center md:border-r border-gray-200 min-h-[100px] md:min-h-[120px]">
-        {brand.id === 'ingersoll-rand' && <IngersollRandLogo />}
-        {brand.id === 'gardner-denver' && <GardnerDenverLogo />}
-        {brand.id === 'compair' && <CompAirLogo />}
+      <div className="flex items-center mb-6">
+        <div className={`${isVision ? 'bg-blue-100 text-blue-700' : 'bg-blue-50 text-blue-600'} p-4 rounded-full mr-4 flex items-center justify-center`}>
+          <i className={`${isVision ? 'fas fa-eye' : 'fas fa-bullseye'} text-2xl`}></i>
+        </div>
+        <h3 className="text-2xl md:text-3xl font-bold text-gray-900">{data.title}</h3>
       </div>
-      <div className="w-full md:w-2/3 p-4 sm:p-6 md:p-8">
-        <h4 className="font-bold text-base sm:text-lg mb-2 text-gray-800">{brand.name}</h4>
-        <p className="text-sm text-gray-600 leading-relaxed">{brand.description}</p>
-      </div>
+      <p className="text-gray-600 leading-relaxed text-base md:text-lg">
+        {data.statement}
+      </p>
     </motion.div>
   );
 }
 
-function SmallBrandLogo({ brand }) {
+// Industry Card Component
+const industryIcons = {
+  'Steel & Metals': 'fas fa-layer-group',
+  'Glass Manufacturing': 'fas fa-fire',
+  'Chemicals': 'fas fa-flask',
+  'Power & Utilities': 'fas fa-bolt',
+  'Sugar & Process Manufacturing': 'fas fa-boxes-stacked',
+  'Cement': 'fas fa-cubes',
+  'Oil & Gas': 'fas fa-oil-well',
+  'Mining': 'fas fa-hammer',
+  'Healthcare & Life Sciences': 'fas fa-suitcase-medical'
+};
+
+function IndustryCard({ name }) {
+  const icon = industryIcons[name] || 'fas fa-industry';
   return (
     <motion.div
-      className="bg-white h-24 sm:h-28 md:h-32 flex items-center justify-center shadow-sm border border-gray-100 p-3 sm:p-4 hover:shadow-md hover:border-cyan-200 transition-all duration-300 cursor-pointer"
-      variants={logoVariants}
+      className="group border border-slate-700 bg-slate-800 p-8 text-center hover:border-blue-600 hover:bg-slate-700 transition-all cursor-pointer"
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
+      whileHover={{ y: -4 }}
+    >
+      <i className={`${icon} text-4xl text-gray-500 group-hover:text-blue-500 mb-4 transition-colors`}></i>
+      <h4 className="font-bold text-sm md:text-base uppercase tracking-wide text-white">{name}</h4>
+    </motion.div>
+  );
+}
+
+// Capability Card Component
+function CapabilityCard({ capability, index }) {
+  const iconMap = {
+    'fas fa-robot': 'fas fa-robot',
+    'fas fa-chart-line': 'fas fa-chart-line',
+    'fas fa-brain': 'fas fa-network-wired',
+    'fas fa-atom': 'fas fa-chess-knight',
+    'fas fa-eye': 'fas fa-camera'
+  };
+  const icon = iconMap[capability.icon] || capability.icon;
+
+  return (
+    <motion.div
+      className="bg-white p-8 shadow-sm border border-gray-200 hover:-translate-y-1 hover:shadow-lg transition-all duration-300"
+      variants={cardVariants}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, margin: '-50px' }}
-      whileHover={{ scale: 1.05 }}
+      viewport={{ once: true }}
     >
-      {brand.id === 'elmo' ? (
-        <div className={`flex items-center ${brand.style}`}>
-          <span className={`${brand.prefixBg} text-white rounded-full w-8 h-8 flex items-center justify-center mr-2 text-xs font-bold`}>{brand.prefix}</span>
-          {brand.name}
-        </div>
-      ) : brand.id === 'milton-roy' || brand.id === 'milton' ? (
-        <span className={brand.style}>
-          <i className={`fas fa-${brand.icon} mr-1`}></i> {brand.name}
-        </span>
-      ) : (
-        <span className={brand.style}>{brand.name}</span>
-      )}
+      <h4 className="text-lg font-bold mb-6 text-gray-900 flex items-center border-b border-gray-100 pb-4">
+        <i className={`${icon} text-blue-600 mr-3 text-2xl`}></i>
+        {capability.title}
+      </h4>
+      <ul className="space-y-3 text-sm text-gray-600 font-medium">
+        {capability.items.map((item, i) => (
+          <li key={i} className="flex items-start">
+            <i className="fas fa-angle-right text-blue-500 mt-1 mr-3"></i>
+            {item}
+          </li>
+        ))}
+      </ul>
     </motion.div>
   );
 }
@@ -131,44 +106,67 @@ function KeyBrands() {
   const ref = useRef(null);
 
   return (
-    <section className="bg-[#f0f0f2] py-12 md:py-16 px-4 sm:px-6 md:px-8 overflow-hidden">
-      <div className="max-w-6xl mx-auto">
+    <section className="py-16 px-4 md:px-8">
+      <div className="max-w-7xl mx-auto">
+        {/* Section Title */}
         <motion.h2
-          ref={ref}
-          className="text-xl sm:text-2xl lg:text-3xl font-bold text-center mb-8 md:mb-12 text-[#4a5568]"
+          className="text-xl sm:text-2xl lg:text-3xl font-bold text-center mb-10 md:mb-14 text-gray-900"
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
         >
-          Key Brands
+          Our Company
         </motion.h2>
 
-        {/* Large Brand Cards */}
-        <motion.div
-          className="space-y-4 md:space-y-6 mb-8 md:mb-10"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: '-50px' }}
-        >
-          {largeBrands.map((brand) => (
-            <LargeBrandCard key={brand.id} brand={brand} />
-          ))}
-        </motion.div>
+        {/* Vision + Mission Cards */}
+        <section className="py-16 px-4 md:px-8 max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10 md:mb-14">
+            <StatementCard data={missionData.vision} index={0} />
+            <StatementCard data={missionData.mission} index={1} />
+          </div>
+        </section>
 
-        {/* Small Brand Logos Grid */}
-        <motion.div
-          className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 sm:gap-4 md:gap-6"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: '-50px' }}
-        >
-          {smallBrands.map((brand) => (
-            <SmallBrandLogo key={brand.id} brand={brand} />
-          ))}
-        </motion.div>
+        {/* Industries We Serve */}
+        <section className="bg-slate-900 py-20 px-4 md:px-8 text-white relative border-b-4 border-blue-600">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-14">
+              <h3 className="text-2xl md:text-3xl font-bold mb-6 text-white">Process Industries We Serve</h3>
+              <div className="w-16 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+            <motion.div
+              className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-4 md:gap-6"
+              variants={containerVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+            >
+              {industriesData.map((industry, i) => (
+                <IndustryCard key={i} name={industry} />
+              ))}
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Core Capabilities */}
+        <section className="bg-gray-200 py-20 px-4 md:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h3 className="text-2xl md:text-3xl font-bold text-gray-700 mb-4">Core Capabilities</h3>
+              <p className="text-gray-500 text-lg">Delivering advanced AI, intelligence, and optimization across operational domains.</p>
+            </div>
+            <motion.div
+              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5"
+              variants={containerVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+            >
+              {coreCapabilities.map((capability, i) => (
+                <CapabilityCard key={i} capability={capability} index={i} />
+              ))}
+            </motion.div>
+          </div>
+        </section>
       </div>
     </section>
   );

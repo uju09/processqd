@@ -82,10 +82,10 @@ export function MainNav() {
             variants={logoVariants}
             initial="hidden"
             animate="visible"
-            className="font-bold text-base md:text-xl flex items-center gap-2 md:gap-3 text-cyan-600"
+            className="font-bold text-base md:text-xl flex items-center gap-2 md:gap-3 text-blue-600"
           >
             <motion.span
-              className="bg-gradient-to-br from-cyan-500 to-sky-500 text-white rounded-lg w-9 h-9 md:w-10 md:h-10 flex items-center justify-center font-bold text-xs md:text-sm"
+              className="bg-gradient-to-br from-blue-500 to-blue-600 text-white rounded-lg w-9 h-9 md:w-10 md:h-10 flex items-center justify-center font-bold text-xs md:text-sm"
               whileHover={{ scale: 1.1 }}
               transition={{ type: 'spring', stiffness: 400, damping: 10 }}
             >
@@ -115,8 +115,8 @@ export function MainNav() {
                 {link.href.startsWith('/') ? (
                   <Link
                     to={link.href}
-                    className={`text-slate-700 hover:text-cyan-600 transition-colors ${
-                      activeLink === link.id ? '!text-cyan-600' : ''
+                    className={`text-slate-700 hover:text-blue-600 transition-colors ${
+                      activeLink === link.id ? '!text-blue-600' : ''
                     }`}
                     onClick={() => handleLinkClick(link.id)}
                   >
@@ -124,7 +124,7 @@ export function MainNav() {
                     {activeLink === link.id && (
                       <motion.div
                         layoutId="activeUnderline"
-                        className="absolute -bottom-1 left-0 right-0 h-0.5 bg-cyan-600 rounded-full"
+                        className="absolute -bottom-1 left-0 right-0 h-0.5 bg-blue-600 rounded-full"
                         transition={{ type: 'spring', stiffness: 500, damping: 30 }}
                       />
                     )}
@@ -132,8 +132,8 @@ export function MainNav() {
                 ) : (
                   <a
                     href={link.href}
-                    className={`text-slate-700 hover:text-cyan-600 transition-colors ${
-                      activeLink === link.id ? '!text-cyan-600' : ''
+                    className={`text-slate-700 hover:text-blue-600 transition-colors ${
+                      activeLink === link.id ? '!text-blue-600' : ''
                     }`}
                     onClick={() => handleLinkClick(link.id)}
                   >
@@ -141,7 +141,7 @@ export function MainNav() {
                     {activeLink === link.id && (
                       <motion.div
                         layoutId="activeUnderline"
-                        className="absolute -bottom-1 left-0 right-0 h-0.5 bg-cyan-600 rounded-full"
+                        className="absolute -bottom-1 left-0 right-0 h-0.5 bg-blue-600 rounded-full"
                         transition={{ type: 'spring', stiffness: 500, damping: 30 }}
                       />
                     )}
@@ -237,8 +237,8 @@ export function MainNav() {
                       >
                         <Link
                           to={link.href}
-                          className={`text-lg font-semibold text-slate-700 hover:text-cyan-600 transition-colors min-h-[44px] min-w-[44px] flex items-center ${
-                            activeLink === link.id ? '!text-cyan-600' : ''
+                          className={`text-lg font-semibold text-slate-700 hover:text-blue-600 transition-colors min-h-[44px] min-w-[44px] flex items-center ${
+                            activeLink === link.id ? '!text-blue-600' : ''
                           }`}
                           onClick={() => handleLinkClick(link.id)}
                         >
@@ -246,7 +246,7 @@ export function MainNav() {
                           {activeLink === link.id && (
                             <motion.div
                               layoutId="mobileActiveUnderline"
-                              className="mt-1 h-0.5 bg-cyan-600 rounded-full"
+                              className="mt-1 h-0.5 bg-blue-600 rounded-full"
                               transition={{ type: 'spring', stiffness: 500, damping: 30 }}
                             />
                           )}
@@ -256,8 +256,8 @@ export function MainNav() {
                       <motion.a
                         key={link.id}
                         href={link.href}
-                        className={`text-lg font-semibold text-slate-700 hover:text-cyan-600 transition-colors min-h-[44px] min-w-[44px] flex items-center ${
-                          activeLink === link.id ? '!text-cyan-600' : ''
+                        className={`text-lg font-semibold text-slate-700 hover:text-blue-600 transition-colors min-h-[44px] min-w-[44px] flex items-center ${
+                          activeLink === link.id ? '!text-blue-600' : ''
                         }`}
                         onClick={() => handleLinkClick(link.id)}
                         initial={{ opacity: 0, x: 20 }}
@@ -268,7 +268,7 @@ export function MainNav() {
                         {activeLink === link.id && (
                           <motion.div
                             layoutId="mobileActiveUnderline"
-                            className="mt-1 h-0.5 bg-cyan-600 rounded-full"
+                            className="mt-1 h-0.5 bg-blue-600 rounded-full"
                             transition={{ type: 'spring', stiffness: 500, damping: 30 }}
                           />
                         )}

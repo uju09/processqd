@@ -1,177 +1,93 @@
 export const servicesData = [
   {
-    id: 'ai-process-automation',
-    title: 'AI Process Automation',
-    icon: 'fas fa-robot',
-    heroTitle: 'AI Process Automation',
-    heroSubtitle: 'Intelligent Workflow Optimization',
-    description: 'Transform your enterprise with intelligent automation. In today\'s fast-paced digital landscape, manual and repetitive tasks slow down innovation and increase the risk of operational errors. We leverage advanced machine learning algorithms and Robotic Process Automation (RPA) to streamline your operations from end to end.',
-    image: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+    id: 'autonomous-industrial-intelligence',
+    title: 'Autonomous Industrial Intelligence',
+    icon: 'fas fa-industry',
+    heroTitle: 'Autonomous Industrial Intelligence',
+    heroSubtitle: 'AI-Driven Industrial Operations',
+    description: 'Deploy AI-driven systems for predictive maintenance, anomaly detection, process optimization, and operational intelligence across manufacturing and process industries.',
+    image: 'https://images.unsplash.com/photo-1561471828-96e54774b225?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
     features: [
-      {
-        title: 'Cognitive Document Processing',
-        description: 'Automatically extract, classify, and validate data from unstructured documents such as invoices, contracts, and emails using Natural Language Processing (NLP).'
-      },
-      {
-        title: 'Robotic Process Automation (RPA)',
-        description: 'Deploy digital workers to handle repetitive, rules-based tasks across multiple applications, freeing your human workforce for higher-value strategic initiatives.'
-      },
-      {
-        title: 'Predictive Maintenance Analytics',
-        description: 'Utilize machine learning models to predict equipment failures before they happen, significantly reducing downtime in industrial settings.'
-      }
+      { title: 'Predictive Maintenance', description: 'AI-powered equipment failure prediction to reduce unplanned downtime.' },
+      { title: 'Process Optimization', description: 'Real-time optimization of industrial processes for maximum efficiency.' },
+      { title: 'Asset Performance Management', description: 'Comprehensive monitoring and management of critical industrial assets.' }
     ],
-    outcomes: [
-      'Up to 40% reduction in operational processing times.',
-      'Near 100% accuracy in data entry and compliance reporting.',
-      'Enhanced employee satisfaction by removing tedious manual tasks.',
-      'Highly scalable operations capable of handling volume spikes without adding headcount.'
-    ]
+    outcomes: ['Reduced unplanned downtime', 'Improved operational efficiency', 'Enhanced asset reliability']
   },
   {
-    id: 'web-development',
-    title: 'Web Development',
-    icon: 'fas fa-code',
-    heroTitle: 'Web Development',
-    heroSubtitle: 'Modern, Scalable Web Solutions',
-    description: 'Build powerful web applications that scale with your business. Our development team specializes in creating responsive, performant, and secure web applications using cutting-edge technologies and best practices.',
-    image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+    id: 'agentic-ai-knowledge-systems',
+    title: 'Agentic AI & Knowledge Systems',
+    icon: 'fas fa-brain',
+    heroTitle: 'Agentic AI & Knowledge Systems',
+    heroSubtitle: 'Industrial Document Intelligence',
+    description: 'Transform industrial documents such as SOPs, P&IDs, PFDs, manuals, and datasheets into intelligent AI copilots using Agentic RAG, knowledge graphs, and domain-aware language models.',
+    image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
     features: [
-      {
-        title: 'Responsive Design',
-        description: 'Create beautiful, device-agnostic experiences that work flawlessly on desktops, tablets, and mobile devices with modern CSS frameworks and techniques.'
-      },
-      {
-        title: 'Full-Stack Development',
-        description: 'From frontend interfaces to backend APIs, our team delivers complete solutions using React, Node.js, Python, and other modern frameworks.'
-      },
-      {
-        title: 'Performance Optimization',
-        description: 'Achieve lightning-fast load times through code splitting, lazy loading, CDN integration, and efficient caching strategies.'
-      }
+      { title: 'Agentic RAG', description: 'Retrieval-augmented generation with autonomous agent capabilities.' },
+      { title: 'Knowledge Graphs', description: 'Structured knowledge representation for industrial domains.' },
+      { title: 'Industrial Copilot', description: 'AI-powered assistants specialized for industrial environments.' }
     ],
-    outcomes: [
-      'Sub-second page load times for improved user engagement.',
-      'Cross-browser compatibility ensuring consistent experiences.',
-      'SEO-optimized architecture for better search rankings.',
-      'Scalable architecture supporting millions of concurrent users.'
-    ]
+    outcomes: ['Instant document access', 'Intelligent search', 'Automated compliance']
   },
   {
-    id: 'enterprise-solutions',
-    title: 'Enterprise Solutions',
-    icon: 'fas fa-building',
-    heroTitle: 'Enterprise Solutions',
-    heroSubtitle: 'Business-Critical Systems',
-    description: 'Implement robust enterprise systems that drive operational efficiency across your organization. We design and deploy scalable solutions that integrate with your existing infrastructure and support your long-term growth objectives.',
-    image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+    id: 'predictive-prescriptive-optimization',
+    title: 'Predictive & Prescriptive Optimization',
+    icon: 'fas fa-chart-line',
+    heroTitle: 'Predictive & Prescriptive Optimization',
+    heroSubtitle: 'Data-Driven Decision Making',
+    description: 'Leverage forecasting, anomaly detection, and optimization models to improve throughput, reduce downtime, enhance quality, and drive measurable operational ROI.',
+    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
     features: [
-      {
-        title: 'ERP Integration',
-        description: 'Seamlessly connect your enterprise resource planning systems with custom workflows, dashboards, and automated reporting tools.'
-      },
-      {
-        title: 'Legacy System Modernization',
-        description: 'Transform outdated monolithic applications into modern microservices architectures without disrupting ongoing business operations.'
-      },
-      {
-        title: 'Workflow Automation',
-        description: 'Design and implement automated approval chains, document routing, and business process management systems.'
-      }
+      { title: 'Time-Series Forecasting', description: 'Accurate predictions using advanced multivariate models.' },
+      { title: 'Anomaly Detection', description: 'Real-time identification of deviations from normal operations.' },
+      { title: 'Yield Optimization', description: 'Data-driven approaches to maximize production output.' }
     ],
-    outcomes: [
-      '30% reduction in manual processing overhead.',
-      'Real-time visibility into enterprise-wide operations.',
-      'Enhanced data accuracy across all business units.',
-      'Improved compliance with regulatory requirements.'
-    ]
+    outcomes: ['Improved throughput', 'Reduced defects', 'Measurable ROI']
   },
   {
-    id: 'technology-consulting',
-    title: 'Technology Consulting',
-    icon: 'fas fa-lightbulb',
-    heroTitle: 'Technology Consulting',
-    heroSubtitle: 'Strategic Technology Guidance',
-    description: 'Navigate complex technology decisions with confidence. Our consulting team provides strategic guidance on technology stack selection, architecture design, and digital transformation initiatives tailored to your business goals.',
-    image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
-    features: [
-      {
-        title: 'Technology Assessment',
-        description: 'Comprehensive evaluation of your current technology landscape with actionable recommendations for improvement and optimization.'
-      },
-      {
-        title: 'Architecture Design',
-        description: 'Design scalable, maintainable system architectures that support future growth and integrate with existing infrastructure.'
-      },
-      {
-        title: 'Digital Transformation',
-        description: 'Develop roadmaps for modernizing legacy systems, adopting cloud-native technologies, and implementing AI/ML capabilities.'
-      }
-    ],
-    outcomes: [
-      'Clear technology roadmap aligned with business objectives.',
-      'Reduced technical debt and improved system reliability.',
-      'Faster time-to-market for new products and features.',
-      'Informed investment decisions backed by expert analysis.'
-    ]
-  },
-  {
-    id: 'cloud-migration',
-    title: 'Cloud Migration',
-    icon: 'fas fa-cloud',
-    heroTitle: 'Cloud Migration',
-    heroSubtitle: 'Seamless Cloud Adoption',
-    description: 'Move your infrastructure to the cloud with minimal disruption and maximum value. We specialize in planning and executing cloud migration strategies across AWS, Azure, and Google Cloud Platform.',
-    image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
-    features: [
-      {
-        title: 'Infrastructure Assessment',
-        description: 'Analyze your current infrastructure to identify migration opportunities, dependencies, and potential risks before execution.'
-      },
-      {
-        title: 'Lift-and-Shift Migration',
-        description: 'Quickly migrate existing workloads to cloud infrastructure with minimal code changes using containerization and VM migration tools.'
-      },
-      {
-        title: 'Cloud-Native Refactoring',
-        description: 'Re-architect applications to leverage cloud-native services including serverless computing, managed databases, and auto-scaling.'
-      }
-    ],
-    outcomes: [
-      '40% reduction in infrastructure costs on average.',
-      '99.99% uptime with built-in redundancy and failover.',
-      'Elastic scalability to handle traffic spikes effortlessly.',
-      'Enhanced security with cloud-native protection mechanisms.'
-    ]
-  },
-  {
-    id: 'quantum-computing',
-    title: 'Quantum Computing',
+    id: 'quantum-inspired-decision-intelligence',
+    title: 'Quantum-Inspired Decision Intelligence',
     icon: 'fas fa-atom',
-    heroTitle: 'Quantum Computing',
-    heroSubtitle: 'Next-Generation Processing',
-    description: 'Prepare your organization for the quantum advantage. Our quantum computing practice helps businesses understand quantum technologies, identify applicable use cases, and develop quantum-ready algorithms.',
+    heroTitle: 'Quantum-Inspired Decision Intelligence',
+    heroSubtitle: 'Advanced Optimization',
+    description: 'Apply advanced optimization techniques and quantum-inspired algorithms to solve complex industrial scheduling, resource allocation, and operational planning problems.',
     image: 'https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
     features: [
-      {
-        title: 'Quantum Readiness Assessment',
-        description: 'Evaluate your organization\'s readiness for quantum computing and identify high-impact use cases in optimization, cryptography, and simulation.'
-      },
-      {
-        title: 'Hybrid Classical-Quantum Development',
-        description: 'Build algorithms that leverage quantum processing for specific subproblems while using classical computing for general computation.'
-      },
-      {
-        title: 'Post-Quantum Cryptography',
-        description: 'Prepare your security infrastructure for the quantum era by implementing quantum-resistant cryptographic algorithms.'
-      }
+      { title: 'QUBO-inspired Optimization', description: 'Quantum-inspired formulations for complex optimization problems.' },
+      { title: 'Scheduling', description: 'Intelligent scheduling for industrial operations.' },
+      { title: 'Resource Allocation', description: 'Optimal distribution of resources across operations.' }
     ],
-    outcomes: [
-      'Early competitive advantage in quantum-ready capabilities.',
-      'Future-proof security against quantum computing threats.',
-      'Access to quantum computing resources and expertise.',
-      'Strategic positioning for quantum market opportunities.'
-    ]
+    outcomes: ['Optimal scheduling', 'Resource efficiency', 'Cost reduction']
+  },
+  {
+    id: 'industrial-vision-ocr',
+    title: 'Industrial Vision & OCR',
+    icon: 'fas fa-eye',
+    heroTitle: 'Industrial Vision & OCR',
+    heroSubtitle: 'Coming Soon',
+    description: 'Defect detection, OCR for handwritten logs, vision-based inspection, and video analytics for industrial environments.',
+    image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+    features: [
+      { title: 'Defect Detection', description: 'AI-powered visual inspection for quality control.' },
+      { title: 'OCR for Handwritten Logs', description: 'Digitize handwritten industrial records.' },
+      { title: 'Vision-Based Inspection', description: 'Automated visual quality assurance systems.' }
+    ],
+    outcomes: ['Improved quality', 'Reduced manual inspection', 'Consistent standards']
+  },
+  {
+    id: 'time-series-intelligence',
+    title: 'Time-Series Intelligence',
+    icon: 'fas fa-wave-square',
+    heroTitle: 'Time-Series Intelligence',
+    heroSubtitle: 'Coming Soon',
+    description: 'Advanced time-series modeling, drift detection, process stability analysis, and root cause analytics for industrial operations.',
+    image: 'https://images.unsplash.com/photo-1707286981660-f59326267198?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+    features: [
+      { title: 'Drift Detection', description: 'Identify process changes before they become problems.' },
+      { title: 'Process Stability Analysis', description: 'Statistical monitoring of process health.' },
+      { title: 'Root Cause Analytics', description: 'Data-driven investigation of operational issues.' }
+    ],
+    outcomes: ['Early warning systems', 'Proactive maintenance', 'Reduced variability']
   }
 ];
 
