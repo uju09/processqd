@@ -109,8 +109,8 @@ export function Contact() {
               <div>
                 <label className="block text-sm font-semibold text-gray-700 mb-2">Message *</label>
                 <textarea
-                  rows="5"
-                  className="w-full min-h-11 border border-gray-300 rounded px-4 py-3 focus:outline-none focus:border-cyan-600 focus:ring-1 focus:ring-cyan-600 transition-colors"
+                  rows="4"
+                  className="w-full min-h-[100px] sm:min-h-11 border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:border-cyan-600 focus:ring-1 focus:ring-cyan-600 transition-colors"
                   placeholder="Please provide details about your request..."
                   required
                 />
@@ -118,7 +118,7 @@ export function Contact() {
 
               <button
                 type="submit"
-                className="bg-cyan-600 text-white font-bold py-3 px-8 rounded hover:bg-cyan-700 transition-colors shadow-sm w-full min-h-11"
+                className="bg-cyan-600 text-white font-bold py-3.5 px-8 rounded-lg hover:bg-cyan-700 transition-colors shadow-sm w-full min-h-[48px] sm:min-h-11"
               >
                 Submit Message
               </button>

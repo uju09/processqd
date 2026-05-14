@@ -82,7 +82,7 @@ function MobileNav({ activeId, isOpen, onToggle }) {
 
       <div
         id="mobile-nav-content"
-        className={`overflow-hidden transition-all duration-300 ${isOpen ? 'max-h-[400px]' : 'max-h-0'}`}
+        className={`overflow-hidden transition-all duration-300 ${isOpen ? 'max-h-[50vh] overflow-y-auto opacity-100' : 'max-h-0 opacity-0'}`}
       >
         <nav className="pb-2">
           {servicesData.map((s) => {
