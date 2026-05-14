@@ -7,13 +7,13 @@ export function Contact() {
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <header
-        className="relative h-64 sm:h-80 md:h-[350px] lg:h-[400px] flex flex-col items-center justify-center text-center px-4 bg-cover bg-center"
+        className="relative h-64 sm:h-80 md:h-[350px] lg:h-[400px] flex flex-col items-center justify-center text-center px-4 bg-cover bg-center hero-height-fluid"
         style={{
           backgroundImage: `linear-gradient(to right, rgba(8, 145, 178, 0.85) 0%, rgba(0, 0, 0, 0.7) 50%, rgba(0, 50, 100, 0.6) 100%), url('https://images.unsplash.com/photo-1516387938699-a93567ec168e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80')`
         }}
       >
         <motion.h1
-          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-4 tracking-tight px-2"
+          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-4 tracking-tight text-fluid-4xl weight-fluid-hero"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -52,12 +52,12 @@ export function Contact() {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-cyan-600 font-bold tracking-widest uppercase text-xs sm:text-sm mb-2">Send a Message</h2>
-            <h3 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#4a5568] mb-6 sm:mb-8 leading-tight">How can we help you today?</h3>
+            <h3 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#4a5568] mb-6 sm:mb-8 leading-tight text-fluid-3xl weight-fluid-heading">How can we help you today?</h3>
 
             <form className="space-y-5 sm:space-y-6">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                 <div>
-                  <label className="block text-sm font-semibold text-gray-700 mb-2">First Name *</label>
+                  <label className="block text-sm font-semibold text-gray-700 mb-2 weight-fluid-label">First Name *</label>
                   <input
                     type="text"
                     className="w-full min-h-11 border border-gray-300 rounded px-4 py-3 focus:outline-none focus:border-cyan-600 focus:ring-1 focus:ring-cyan-600 transition-colors"
@@ -66,7 +66,7 @@ export function Contact() {
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-semibold text-gray-700 mb-2">Last Name *</label>
+                  <label className="block text-sm font-semibold text-gray-700 mb-2 weight-fluid-label">Last Name *</label>
                   <input
                     type="text"
                     className="w-full min-h-11 border border-gray-300 rounded px-4 py-3 focus:outline-none focus:border-cyan-600 focus:ring-1 focus:ring-cyan-600 transition-colors"
@@ -78,7 +78,7 @@ export function Contact() {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                 <div>
-                  <label className="block text-sm font-semibold text-gray-700 mb-2">Email Address *</label>
+                  <label className="block text-sm font-semibold text-gray-700 mb-2 weight-fluid-label">Email Address *</label>
                   <input
                     type="email"
                     className="w-full min-h-11 border border-gray-300 rounded px-4 py-3 focus:outline-none focus:border-cyan-600 focus:ring-1 focus:ring-cyan-600 transition-colors"
@@ -87,7 +87,7 @@ export function Contact() {
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-semibold text-gray-700 mb-2">Phone Number</label>
+                  <label className="block text-sm font-semibold text-gray-700 mb-2 weight-fluid-label">Phone Number</label>
                   <input
                     type="tel"
                     className="w-full min-h-11 border border-gray-300 rounded px-4 py-3 focus:outline-none focus:border-cyan-600 focus:ring-1 focus:ring-cyan-600 transition-colors"
@@ -97,7 +97,7 @@ export function Contact() {
               </div>
 
               <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-2">Inquiry Type *</label>
+                <label className="block text-sm font-semibold text-gray-700 mb-2 weight-fluid-label">Inquiry Type *</label>
                 <select className="w-full min-h-11 border border-gray-300 rounded px-4 py-3 focus:outline-none focus:border-cyan-600 focus:ring-1 focus:ring-cyan-600 transition-colors text-gray-600" required>
                   <option value="">Select an option...</option>
                   {contactContent.form.inquiryTypes.map((type) => (
@@ -107,7 +107,7 @@ export function Contact() {
               </div>
 
               <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-2">Message *</label>
+                <label className="block text-sm font-semibold text-gray-700 mb-2 weight-fluid-label">Message *</label>
                 <textarea
                   rows="4"
                   className="w-full min-h-[100px] sm:min-h-11 border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:border-cyan-600 focus:ring-1 focus:ring-cyan-600 transition-colors"
@@ -118,7 +118,7 @@ export function Contact() {
 
               <button
                 type="submit"
-                className="bg-cyan-600 text-white font-bold py-3.5 px-8 rounded-lg hover:bg-cyan-700 transition-colors shadow-sm w-full min-h-[48px] sm:min-h-11"
+                className="bg-cyan-600 text-white font-bold py-3.5 px-8 rounded-lg hover:bg-cyan-700 transition-colors shadow-sm w-full min-h-[48px] sm:min-h-11 weight-fluid-cta"
               >
                 Submit Message
               </button>

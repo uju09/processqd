@@ -74,7 +74,7 @@ function IndustryCard({ image, imageAlt, title, description, index }) {
       whileHover={{ rotateY: 5, transition: { duration: 0.3 } }}
       style={{ transformStyle: "preserve-3d" }}
     >
-      <div className="bg-white rounded-xl md:rounded-2xl border-2 border-blue-200 hover:shadow-lg hover:-translate-y-1 hover:border-blue-400 transition-all duration-300 h-full min-h-[380px] flex flex-col">
+      <div className="bg-white rounded-xl md:rounded-2xl border-2 border-blue-200 hover:shadow-lg hover:-translate-y-1 hover:border-blue-400 transition-all duration-300 h-full min-h-[clamp(300px,40vw,400px)] flex flex-col">
         <motion.div
           className="bg-gradient-to-r from-blue-500 to-blue-600 p-4 md:p-8 flex justify-center overflow-hidden rounded-t-xl md:rounded-t-2xl aspect-[4/3] sm:aspect-video"
           variants={imageVariants}
@@ -84,8 +84,8 @@ function IndustryCard({ image, imageAlt, title, description, index }) {
           <img src={image} alt={imageAlt} className="w-full h-full object-cover rounded-lg" />
         </motion.div>
         <div className="p-5 sm:p-6 text-center flex-grow flex flex-col justify-center">
-          <h4 className="text-base md:text-lg font-extrabold text-blue-950 mb-2">{title}</h4>
-          <p className="text-sm font-medium text-gray-600 leading-relaxed mb-3 md:mb-4 line-clamp-2 sm:line-clamp-3">{description}</p>
+          <h4 className="text-base md:text-lg font-extrabold text-blue-950 mb-2 text-fluid-lg weight-fluid-card-title">{title}</h4>
+          <p className="text-sm font-medium text-gray-600 leading-relaxed mb-3 md:mb-4 line-clamp-2 sm:line-clamp-3 text-fluid-sm weight-fluid-body">{description}</p>
           <motion.div
             className="text-blue-600 hover:text-orange-500 font-semibold text-xs md:text-sm flex items-center justify-center gap-1 group"
             whileHover={{ x: 5 }}
@@ -171,7 +171,7 @@ export function FeaturedIndustries() {
         initial="hidden"
         animate={headerInView ? "visible" : "hidden"}
       >
-        <h2 className="text-xl md:text-2xl lg:text-3xl font-extrabold text-center mb-4 bg-gradient-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent">
+        <h2 className="text-xl md:text-2xl lg:text-3xl font-extrabold text-center mb-4 bg-gradient-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent text-fluid-xl">
           AI-Powered Solutions
         </h2>
         <p className="text-center text-gray-500 text-sm md:text-base lg:text-lg mb-8 md:mb-12 max-w-2xl mx-auto px-4">

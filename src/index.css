@@ -58,12 +58,9 @@
 }
 
 @utility container-responsive {
-  width: 100%;
-  max-width: 1280px;
+  width: 92vw;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 1rem;
-  padding-right: 1rem;
 }
 
 @utility touch-target {
@@ -75,10 +72,132 @@
   letter-spacing: -0.02em;
 }
 
+/* === CONFIDENT FLUID TYPOGRAPHY SYSTEM === */
+/* Base: 320px (min) to 1440px (max) viewport */
+
+@utility text-fluid-xs {
+  font-size: clamp(0.875rem, 0.8rem + 0.375vw, 1rem); /* 14px - 16px */
+  line-height: 1.5;
+}
+
+@utility text-fluid-sm {
+  font-size: clamp(1rem, 0.9rem + 0.5vw, 1.125rem); /* 16px - 18px */
+  line-height: 1.5;
+}
+
+@utility text-fluid-base {
+  font-size: clamp(1.125rem, 1rem + 0.625vw, 1.25rem); /* 18px - 20px */
+  line-height: 1.6;
+}
+
+@utility text-fluid-lg {
+  font-size: clamp(1.25rem, 1.1rem + 0.75vw, 1.5rem); /* 20px - 24px */
+  line-height: 1.5;
+}
+
+@utility text-fluid-xl {
+  font-size: clamp(1.5rem, 1.25rem + 1.25vw, 2rem); /* 24px - 32px */
+  line-height: 1.4;
+}
+
+@utility text-fluid-2xl {
+  font-size: clamp(1.75rem, 1.5rem + 1.25vw, 2.5rem); /* 28px - 40px */
+  line-height: 1.3;
+}
+
+@utility text-fluid-3xl {
+  font-size: clamp(2.25rem, 1.75rem + 2.5vw, 3.5rem); /* 36px - 56px */
+  line-height: 1.2;
+}
+
+@utility text-fluid-4xl {
+  font-size: clamp(2.5rem, 2rem + 2.5vw, 4rem); /* 40px - 64px */
+  line-height: 1.15;
+}
+
+@utility text-fluid-5xl {
+  font-size: clamp(3rem, 2.5rem + 2.5vw, 4.5rem); /* 48px - 72px */
+  line-height: 1.1;
+}
+
+@utility text-fluid-6xl {
+  font-size: clamp(3.5rem, 2.5rem + 5vw, 5rem); /* 56px - 80px */
+  line-height: 1.05;
+}
+
+/* === RESPONSIVE LINE HEIGHTS === */
+/* More line height on mobile, tighter on desktop */
+
+@media (min-width: 768px) {
+  .text-fluid-base {
+    line-height: 1.5;
+  }
+  .text-fluid-lg,
+  .text-fluid-xl {
+    line-height: 1.4;
+  }
+  .text-fluid-2xl {
+    line-height: 1.25;
+  }
+  .text-fluid-3xl,
+  .text-fluid-4xl {
+    line-height: 1.1;
+  }
+}
+
+/* === WIDTH-BASED CARD HEIGHTS === */
+
+@utility card-aspect-image {
+  aspect-ratio: 4 / 3;
+  max-height: 480px;
+}
+
+@utility card-height-full {
+  height: 100%;
+  min-height: clamp(300px, 40vw, 450px);
+}
+
+@utility card-height-statement {
+  min-height: clamp(240px, 22vw, 320px);
+}
+
+@utility card-height-industry {
+  min-height: clamp(140px, 18vw, 200px);
+}
+
+@utility card-height-capability {
+  min-height: clamp(280px, 26vw, 380px);
+}
+
+/* === FLUID HERO HEIGHTS === */
+
+@utility hero-height-fluid {
+  height: clamp(220px, 50vh, 450px);
+}
+
+@utility hero-height-standard {
+  height: clamp(280px, 55vh, 500px);
+}
+
+@utility hero-height-tall {
+  min-height: clamp(320px, 60vh, 600px);
+}
+
+/* === 320PX VIEWPORT CONSTRAINTS === */
+
+@utility card-safe-min {
+  min-height: max(280px, 80vw);
+  max-height: 85vh;
+  overflow-y: auto;
+}
+
 @media (min-width: 640px) {
   .container-responsive {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
+  }
+  .card-aspect-image {
+    aspect-ratio: 16 / 10;
   }
 }
 
@@ -86,6 +205,98 @@
   .container-responsive {
     padding-left: 2rem;
     padding-right: 2rem;
+  }
+  .card-aspect-image {
+    aspect-ratio: 16 / 9;
+    max-height: 400px;
+  }
+}
+
+/* === FLUID FONT WEIGHT SYSTEM === */
+/* Progressive boldness: light on mobile, heavier on desktop */
+
+/* H1/Hero Titles - extrabold(800) on mobile, black(900) on desktop */
+@utility weight-fluid-hero {
+  font-weight: 800;
+}
+@media (min-width: 768px) {
+  .weight-fluid-hero {
+    font-weight: 900;
+  }
+}
+
+/* Section Headings - bold(700) on mobile, extrabold(800) on tablet+ */
+@utility weight-fluid-heading {
+  font-weight: 700;
+}
+@media (min-width: 640px) {
+  .weight-fluid-heading {
+    font-weight: 800;
+  }
+}
+
+/* Card Titles - extrabold(800) on mobile, black(900) on desktop */
+@utility weight-fluid-card-title {
+  font-weight: 800;
+}
+@media (min-width: 768px) {
+  .weight-fluid-card-title {
+    font-weight: 900;
+  }
+}
+
+/* Body Text - medium(500) on mobile, semibold(600) on desktop */
+@utility weight-fluid-body {
+  font-weight: 500;
+}
+@media (min-width: 768px) {
+  .weight-fluid-body {
+    font-weight: 600;
+  }
+}
+
+/* Navigation Links - extrabold(800) on mobile, black(900) on large desktop */
+@utility weight-fluid-nav {
+  font-weight: 800;
+}
+@media (min-width: 1024px) {
+  .weight-fluid-nav {
+    font-weight: 900;
+  }
+}
+
+/* CTA Buttons - semibold(600) on mobile, bold(700) on tablet+ */
+@utility weight-fluid-cta {
+  font-weight: 600;
+}
+@media (min-width: 640px) {
+  .weight-fluid-cta {
+    font-weight: 700;
+  }
+}
+
+/* Taglines/Labels - medium(500) on mobile, semibold(600) on tablet+ */
+@utility weight-fluid-label {
+  font-weight: 500;
+}
+@media (min-width: 640px) {
+  .weight-fluid-label {
+    font-weight: 600;
+  }
+}
+
+/* Large screen font caps */
+@media (min-width: 1440px) {
+  .text-fluid-4xl,
+  .text-fluid-5xl,
+  .text-fluid-6xl {
+    font-size: clamp(2.5rem, 4vw, 4rem);
+  }
+  .weight-fluid-hero {
+    font-weight: 900;
+  }
+  .weight-fluid-card-title {
+    font-weight: 900;
   }
 }
 

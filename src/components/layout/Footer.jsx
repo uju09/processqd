@@ -201,7 +201,7 @@ export function Footer() {
               variants={columnVariants}
               className="lg:col-span-1"
             >
-              <h4 className="font-extrabold text-white mb-4 sm:mb-5 text-base sm:text-lg md:text-xl uppercase tracking-wider relative">
+              <h4 className="font-extrabold text-white mb-4 sm:mb-5 text-base sm:text-lg md:text-xl uppercase tracking-wider relative weight-fluid-heading">
                 {column.title}
                 <span className="absolute -bottom-1 left-0 w-8 h-0.5 bg-gradient-to-r from-blue-500 to-transparent" />
               </h4>
@@ -232,7 +232,7 @@ export function Footer() {
             variants={columnVariants}
             className="lg:col-span-1"
           >
-            <h4 className="font-bold text-white mb-4 sm:mb-5 text-base sm:text-lg md:text-xl uppercase tracking-wider relative">
+            <h4 className="font-bold text-white mb-4 sm:mb-5 text-base sm:text-lg md:text-xl uppercase tracking-wider relative weight-fluid-heading">
               Contact Us
               <span className="absolute -bottom-1 left-0 w-8 h-0.5 bg-gradient-to-r from-blue-500 to-transparent" />
             </h4>

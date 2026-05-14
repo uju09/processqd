@@ -76,7 +76,7 @@ export function MainNav() {
   return (
     <>
       <nav className="bg-white shadow-md border-b border-gray-200 px-4 md:px-8 py-5 flex justify-between items-center sticky top-0 z-50">
-        <div className="max-w-6xl w-full mx-auto flex justify-between items-center">
+        <div className="container-responsive flex justify-between items-center min-w-0">
           {/* Logo */}
           <motion.div
             variants={logoVariants}
@@ -102,7 +102,7 @@ export function MainNav() {
           </motion.div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex gap-7 text-sm font-extrabold text-slate-700 items-center">
+          <div className="hidden md:flex gap-7 text-sm font-extrabold text-slate-700 items-center weight-fluid-nav">
             {navLinks.map((link, i) => (
               <motion.div
                 key={link.id}
@@ -160,7 +160,7 @@ export function MainNav() {
           >
             <motion.a
               href="#contact"
-              className="relative bg-gradient-to-r from-orange-500 to-orange-600 text-white px-5 py-2.5 rounded-lg font-semibold text-sm"
+              className="relative bg-gradient-to-r from-orange-500 to-orange-600 text-white px-5 py-2.5 rounded-lg font-semibold text-sm weight-fluid-cta"
               whileHover="hover"
               animate={{
                 boxShadow: [
@@ -237,7 +237,7 @@ export function MainNav() {
                       >
                         <Link
                           to={link.href}
-                          className={`text-lg font-extrabold text-slate-700 hover:text-blue-600 transition-colors min-h-[44px] min-w-[44px] flex items-center ${
+                          className={`text-lg font-extrabold text-slate-700 hover:text-blue-600 transition-colors min-h-[44px] min-w-[44px] flex items-center weight-fluid-nav ${
                             activeLink === link.id ? '!text-blue-600' : ''
                           }`}
                           onClick={() => handleLinkClick(link.id)}
