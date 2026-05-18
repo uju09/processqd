@@ -89,7 +89,7 @@ function HighlightCard({ image, imageAlt, title, description, index }) {
       className="h-full"
     >
       <motion.div
-        className="bg-gradient-to-br from-slate-50 to-blue-50 rounded-xl p-5 sm:p-6 border-2 border-blue-200 hover:border-blue-400 shadow-md hover:shadow-xl relative overflow-hidden min-h-[clamp(320px,45vw,420px)] flex flex-col cursor-pointer transition-all duration-300 w-full"
+        className="bg-gradient-to-br from-slate-50 to-blue-50 rounded-xl border-2 border-blue-200 hover:border-blue-400 shadow-md hover:shadow-xl relative overflow-hidden min-h-[clamp(320px,45vw,420px)] flex flex-col cursor-pointer transition-all duration-300 w-full"
         variants={cardHoverVariants}
         initial="rest"
         whileHover="hover"
@@ -115,7 +115,7 @@ function HighlightCard({ image, imageAlt, title, description, index }) {
           />
         </div>
 
-        <div className="text-center relative z-10 flex-grow flex flex-col justify-center min-w-0">
+        <div className="text-center relative z-10 flex-grow flex flex-col justify-center min-w-0 p-5 sm:p-6">
           <motion.div
             variants={iconVariants}
             initial="rest"
