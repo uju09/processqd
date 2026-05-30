@@ -162,41 +162,43 @@ export function FeaturedIndustries() {
   const { currentIndex, canGoNext, canGoPrev, goNext, goPrev } = useCarousel(industries.length, 4);
 
   return (
-    <section className="py-12 md:py-20 px-4 sm:px-6 lg:px-8 container-responsive bg-gradient-to-b from-blue-50 to-slate-50 relative overflow-hidden">
-      <AnimatedBackground />
+    <div></div>
+    // <section className="py-12 md:py-20 px-4 sm:px-6 lg:px-8 container-responsive bg-gradient-to-b from-blue-50 to-slate-50 relative overflow-hidden">
+    //   <AnimatedBackground />
 
-      <motion.div
-        ref={headerRef}
-        variants={headerVariants}
-        initial="hidden"
-        animate={headerInView ? "visible" : "hidden"}
-      >
-        <h2 className="text-xl md:text-2xl lg:text-3xl font-extrabold text-center mb-4 bg-gradient-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent text-fluid-xl">
-          AI-Powered Solutions
-        </h2>
-        <p className="text-center text-gray-500 text-sm md:text-base lg:text-lg mb-8 md:mb-12 max-w-2xl mx-auto px-4">
-          Transform your enterprise with cutting-edge artificial intelligence and automation technologies
-        </p>
-      </motion.div>
+    //   <motion.div
+    //     ref={headerRef}
+    //     variants={headerVariants}
+    //     initial="hidden"
+    //     animate={headerInView ? "visible" : "hidden"}
+    //   >
+    //     <h2 className="text-xl md:text-2xl lg:text-3xl font-extrabold text-center mb-4 bg-gradient-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent text-fluid-xl">
+    //       AI-Powered Solutions
+    //     </h2>
+    //     <p className="text-center text-gray-500 text-sm md:text-base lg:text-lg mb-8 md:mb-12 max-w-2xl mx-auto px-4">
+    //       Transform your enterprise with cutting-edge artificial intelligence and automation technologies
+    //     </p>
+    //   </motion.div>
 
-      <motion.div
-        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 md:gap-6 px-2 md:px-0"
-        variants={containerVariants}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, margin: "-100px" }}
-      >
-        {industries.map((industry, index) => (
-          <IndustryCard key={industry.id} {...industry} index={index} />
-        ))}
-      </motion.div>
+    //   <motion.div
+    //     className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 md:gap-6 px-2 md:px-0"
+    //     variants={containerVariants}
+    //     initial="hidden"
+    //     whileInView="visible"
+    //     viewport={{ once: true, margin: "-100px" }}
+    //   >
+    //     {industries.map((industry, index) => (
+    //       <IndustryCard key={industry.id} {...industry} index={index} />
+    //     ))}
+    //   </motion.div>
 
-      <CarouselControls
-        canGoPrev={canGoPrev}
-        canGoNext={canGoNext}
-        onPrev={goPrev}
-        onNext={goNext}
-      />
-    </section>
+    //   <CarouselControls
+    //     canGoPrev={canGoPrev}
+    //     canGoNext={canGoNext}
+    //     onPrev={goPrev}
+    //     onNext={goNext}
+    //   />
+    // </section>
+
   );
 }
