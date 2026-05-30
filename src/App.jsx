@@ -7,6 +7,7 @@ import { FeaturedIndustries } from './components/sections/FeaturedIndustries';
 import { About } from './pages/About';
 import { Services } from './pages/Services';
 import { Service } from './pages/Service';
+import { Solutions } from './pages/Solutions';
 import { Contact } from './pages/Contact';
 import { Compliance } from './pages/Compliance';
 import { Terms } from './pages/Terms';
@@ -33,6 +34,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} />
+          <Route path="/solutions" element={<Solutions />} />
           <Route path="/service/:serviceId" element={<Service />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/compliance" element={<Compliance />} />

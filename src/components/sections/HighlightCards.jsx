@@ -146,6 +146,32 @@ export function HighlightCards() {
       transition={{ duration: 0.5 }}
     >
       <div className="container-responsive">
+        <div className="flex flex-col items-center mb-10 md:mb-14">
+          <motion.span
+            className="text-[10px] sm:text-xs font-bold text-blue-600 uppercase tracking-[0.25em] mb-3"
+            initial={{ opacity: 0, y: -10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            Explore What We Offer
+          </motion.span>
+          <motion.h2
+            className="text-xl sm:text-2xl lg:text-3xl font-extrabold text-center text-gray-900 text-fluid-2xl weight-fluid-heading"
+            initial={{ opacity: 0, y: -20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            Our Solutions
+          </motion.h2>
+          <motion.div
+            className="mt-4 h-1 w-12 rounded-full bg-gradient-to-r from-blue-500 via-blue-400 to-blue-600"
+            initial={{ scaleX: 0, opacity: 0 }}
+            whileInView={{ scaleX: 1, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.3, duration: 0.5 }}
+            style={{ transformOrigin: 'center' }}
+          />
+        </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 min-w-0">
           {servicesData.map((service, index) => (
             <Link
