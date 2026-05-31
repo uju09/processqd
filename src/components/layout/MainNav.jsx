@@ -177,7 +177,7 @@ export function MainNav() {
 
           {/* Mobile Hamburger Menu */}
           <motion.button
-            className="md:hidden flex flex-col justify-center items-center w-11 h-11 gap-1.5"
+            className="md:hidden flex flex-col justify-center items-center w-12 h-12 gap-1.5 -mr-2"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -223,7 +223,7 @@ export function MainNav() {
               initial="hidden"
               animate="visible"
               exit="exit"
-              className="fixed top-0 right-0 h-full w-full max-w-xs bg-white shadow-2xl z-50 md:hidden overflow-y-auto"
+              className="fixed top-0 right-0 h-full w-full max-w-xs bg-white shadow-2xl z-[60] md:hidden overflow-y-auto"
             >
               <div className="p-6 pt-20">
                 <div className="flex flex-col gap-1">

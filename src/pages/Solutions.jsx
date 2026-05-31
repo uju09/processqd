@@ -23,12 +23,12 @@ function HeroSection() {
         backgroundColor: '#F5F6F7'
       }}
     >
-      <div className="max-w-7xl mx-auto py-20 px-4 md:px-8 flex flex-col items-center text-center relative z-10">
+      <div className="max-w-7xl mx-auto py-16 sm:py-20 px-4 flex flex-col items-center text-center relative z-10">
         <motion.span
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="inline-block py-1 px-3 rounded-full bg-blue-100 text-blue-700 text-xs font-bold tracking-wide uppercase mb-6"
+          className="inline-block py-1 px-3 rounded-full bg-blue-100 text-blue-700 text-xs font-bold tracking-wide uppercase mb-4 sm:mb-6"
         >
           Next-Generation Intelligence
         </motion.span>
@@ -36,7 +36,7 @@ function HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="text-3xl md:text-5xl lg:text-6xl font-extrabold tracking-tight mb-6 text-slate-900 leading-tight max-w-4xl"
+          className="text-fluid-3xl weight-fluid-hero text-slate-900 leading-tight max-w-4xl"
         >
           Turning complex operations into proactive intelligence.
         </motion.h1>
@@ -44,7 +44,7 @@ function HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-lg text-slate-600 mb-10 max-w-3xl leading-relaxed text-fluid-lg"
+          className="text-fluid-base weight-fluid-body text-slate-600 mb-8 sm:mb-10 max-w-3xl leading-relaxed"
         >
           From autonomous site reliability and industrial data contextualization to spatial dynamics and clinical-grade health monitoring, ProcessQ Dynamics bridges the gap between raw data and actionable, life-saving insights.
         </motion.p>
@@ -54,10 +54,10 @@ function HeroSection() {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="flex flex-col sm:flex-row gap-4 justify-center"
         >
-          <a href="#solutions" className="bg-blue-600 text-white font-semibold px-8 py-3.5 rounded shadow hover:bg-blue-700 transition-colors text-center">
+          <a href="#solutions" className="bg-blue-600 text-white font-semibold px-8 py-3.5 rounded shadow hover:bg-blue-700 transition-colors text-center touch-target">
             Explore Our Solutions
           </a>
-          <Link to="/contact" className="bg-white text-slate-700 border border-gray-300 font-semibold px-8 py-3.5 rounded shadow-sm hover:bg-gray-50 hover:border-gray-400 transition-colors text-center">
+          <Link to="/contact" className="bg-white text-slate-700 border border-gray-300 font-semibold px-8 py-3.5 rounded shadow-sm hover:bg-gray-50 hover:border-gray-400 transition-colors text-center touch-target">
             Talk to an Expert
           </Link>
         </motion.div>
@@ -248,9 +248,9 @@ function SolutionSection({ solution, index }) {
           transition={{ duration: 0.6 }}
         >
           <p className="text-blue-600 font-semibold tracking-wide uppercase text-sm mb-3">{solution.category}</p>
-          <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-6">{solution.title}</h2>
+          <h2 className="text-fluid-xl weight-fluid-heading text-slate-900 mb-6">{solution.title}</h2>
           {solution.description.map((para, i) => (
-            <p key={i} className="text-slate-600 text-lg mb-6 leading-relaxed">{para}</p>
+            <p key={i} className="text-slate-600 text-fluid-base weight-fluid-body mb-6 leading-relaxed">{para}</p>
           ))}
 
           <ul className="space-y-6 text-slate-700 text-sm md:text-base">
@@ -308,7 +308,7 @@ function CTASection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-3xl md:text-4xl font-extrabold mb-6"
+          className="text-fluid-xl weight-fluid-heading mb-6"
         >
           Ready to transform your operations?
         </motion.h2>
@@ -337,7 +337,7 @@ function CTASection() {
                   type="text"
                   value={formData.firstName}
                   onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
-                  className="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all"
+                  className="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all touch-target"
                   placeholder="Jane"
                 />
               </div>
@@ -347,7 +347,7 @@ function CTASection() {
                   type="text"
                   value={formData.lastName}
                   onChange={(e) => setFormData({ ...formData, lastName: e.target.value })}
-                  className="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all"
+                  className="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all touch-target"
                   placeholder="Doe"
                 />
               </div>
@@ -358,7 +358,7 @@ function CTASection() {
                 type="email"
                 value={formData.email}
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                className="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all"
+                className="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all touch-target"
                 placeholder="jane@company.com"
               />
             </div>
@@ -367,7 +367,7 @@ function CTASection() {
               <select
                 value={formData.solution}
                 onChange={(e) => setFormData({ ...formData, solution: e.target.value })}
-                className="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all text-slate-700"
+                className="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all text-slate-700 touch-target"
               >
                 <option>Health Care Monitoring</option>
                 <option>Crowd Tracking Solution</option>
@@ -378,7 +378,7 @@ function CTASection() {
             </div>
             <button
               type="submit"
-              className="w-full bg-slate-900 text-white font-semibold py-4 rounded hover:bg-slate-800 transition-colors shadow-sm mt-4"
+              className="w-full bg-slate-900 text-white font-semibold py-4 rounded hover:bg-slate-800 transition-colors shadow-sm mt-4 touch-target"
             >
               Contact Solutions Team
             </button>

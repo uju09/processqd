@@ -298,11 +298,11 @@ export function Hero() {
             {currentSlideData.description}
           </motion.p>
           <motion.div
-            className="flex gap-3 sm:gap-4 justify-center flex-wrap"
+            className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center w-full max-w-md mx-auto px-4"
             variants={containerVariants}
           >
             <motion.button
-              className="w-full sm:w-auto px-6 sm:px-7 py-3 sm:py-3.5 text-sm sm:text-base font-semibold rounded-md bg-blue-600 hover:bg-blue-700 transition-all duration-200 cursor-pointer border-none weight-fluid-cta"
+              className="w-full sm:w-auto min-w-[200px] px-6 sm:px-7 py-3 sm:py-3.5 text-sm sm:text-base font-semibold rounded-md bg-blue-600 hover:bg-blue-700 transition-all duration-200 cursor-pointer border-none weight-fluid-cta"
               variants={buttonVariants}
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.98 }}
@@ -311,7 +311,7 @@ export function Hero() {
               {currentSlideData.ctaPrimary}
             </motion.button>
             <motion.button
-              className="w-full sm:w-auto px-6 sm:px-7 py-3 sm:py-3.5 text-sm sm:text-base font-semibold rounded-md bg-transparent text-white border-2 border-white/60 hover:bg-white/10 hover:border-white transition-all duration-200 cursor-pointer weight-fluid-cta"
+              className="w-full sm:w-auto min-w-[200px] px-6 sm:px-7 py-3 sm:py-3.5 text-sm sm:text-base font-semibold rounded-md bg-transparent text-white border-2 border-white/60 hover:bg-white/10 hover:border-white transition-all duration-200 cursor-pointer weight-fluid-cta"
               variants={buttonVariants}
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.98 }}

@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link, useLocation } from 'react-router-dom';
 
@@ -66,7 +67,63 @@ function BreadcrumbSection() {
   );
 }
 
-function Sidebar() {
+function MobileNav() {
+  const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
+
+  const currentLink = sidebarLinks.find(link => location.pathname === link.path);
+
+  return (
+    <div className="md:hidden mb-6">
+      <button
+        onClick={() => setIsOpen(!isOpen)}
+        className="w-full flex items-center justify-between bg-white border border-gray-200 rounded-sm px-4 py-3 text-sm font-semibold text-gray-700 shadow-sm"
+        aria-expanded={isOpen}
+        aria-label="Toggle legal documents navigation"
+      >
+        <div className="flex items-center">
+          <i className={`${currentLink?.icon || 'fas fa-file-alt'} mr-3 w-5 text-center text-cyan-600`}></i>
+          <span>{currentLink?.label || 'Legal Documents'}</span>
+        </div>
+        <i className={`fas fa-chevron-down transition-transform ${isOpen ? 'rotate-180' : ''}`}></i>
+      </button>
+
+      {isOpen && (
+        <motion.nav
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.2 }}
+          className="mt-2 bg-white border border-gray-200 rounded-sm shadow-sm overflow-hidden"
+        >
+          {sidebarLinks.map((link) => {
+            const isActive = location.pathname === link.path;
+            return (
+              <Link
+                key={link.path}
+                to={link.path}
+                onClick={() => setIsOpen(false)}
+                className={`
+                  block px-4 py-3 text-sm transition-colors border-l-4
+                  ${isActive
+                    ? 'bg-cyan-50 border-l-4 border-cyan-600 text-cyan-600 font-bold'
+                    : 'text-gray-600 hover:bg-gray-50 hover:text-cyan-600 border-l-transparent'
+                  }
+                `}
+              >
+                <div className="flex items-center">
+                  <i className={`${link.icon} mr-3 w-5 text-center`}></i>
+                  {link.label}
+                </div>
+              </Link>
+            );
+          })}
+        </motion.nav>
+      )}
+    </div>
+  );
+}
+
+function DesktopSidebar() {
   const location = useLocation();
 
   return (
@@ -224,7 +281,8 @@ export function Compliance() {
       <HeroSection />
       <BreadcrumbSection />
       <section className="max-w-7xl mx-auto px-4 md:px-8 py-8 md:py-12 flex flex-col md:flex-row gap-8 items-start">
-        <Sidebar />
+        <MobileNav />
+        <DesktopSidebar />
         <PrivacyPolicyContent />
       </section>
     </div>

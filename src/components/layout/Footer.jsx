@@ -1,323 +1,194 @@
-import { useState, useEffect, useRef } from 'react';
-import { motion, useInView, AnimatePresence } from 'framer-motion';
-import { footerColumns, footerContact, footerBottom } from '../../data/content/footer';
-import { branding } from '../../data/config/branding';
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import { footerContent } from '../../data/content/footer';
 
-// Social media icons as inline SVGs for better visibility and styling
-const SocialIcons = {
-  linkedin: (
-    <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
-      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-    </svg>
-  ),
-  twitter: (
-    <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
-      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-    </svg>
-  ),
-  github: (
-    <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
-      <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-    </svg>
-  ),
-  email: (
-    <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
-      <path d="M0 3v18h24v-18h-24zm6.623 7.929l-4.623 5.712v-8.5l4.623 2.788zm3.128-3.858l2.896 2.896c.144.144.333.216.525.216s.381-.072.525-.216l2.896-2.896-1.05-1.05-2.896 2.896-2.896-2.896-1.05 1.05zm5.518 5.518l1.05-1.05-2.896-2.896 2.896-2.896-1.05-1.05-2.896 2.896-2.896-2.896-1.05 1.05 2.896 2.896-2.896 2.896 1.05 1.05 2.896-2.896 2.896 2.896zm-8.649-8.649v8.5l-4.623-2.788v-8.5l4.623 2.788zm-1.05 11.414l4.623 2.788v-8.5l-4.623 5.712zm7.073-1.414l-2.896 2.896c-.144.144-.333.216-.525.216s-.381-.072-.525-.216l-2.896-2.896 1.05-1.05 2.896 2.896 2.896-2.896 1.05 1.05z"/>
-    </svg>
-  ),
-};
+function NewsletterSection() {
+  return (
+    <div className="w-full lg:w-1/2">
+      <h3 className="text-white text-2xl font-bold mb-2">Insights for the Intelligent Enterprise</h3>
+      <p className="text-slate-400 text-sm mb-6 max-w-md">
+        Join 50,000+ engineering leaders. Subscribe to our monthly newsletter for architecture deep-dives and product updates.
+      </p>
+      <form className="flex w-full max-w-md" onSubmit={(e) => e.preventDefault()}>
+        <input
+          type="email"
+          placeholder="Enter your work email"
+          className="flex-1 bg-slate-800 text-white border border-slate-700 px-4 py-3 rounded-l focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 placeholder-slate-500"
+          required
+        />
+        <button
+          type="submit"
+          className="bg-brand-600 hover:bg-brand-700 text-white font-semibold px-6 py-3 rounded-r transition-colors shadow-md min-h-[48px]"
+        >
+          Subscribe
+        </button>
+      </form>
+    </div>
+  );
+}
+
+function SupportLinks() {
+  return (
+    <div className="w-full lg:w-auto flex flex-col sm:flex-row gap-6 lg:gap-12 lg:border-l border-slate-800 lg:pl-12">
+      <div>
+        <p className="text-slate-500 text-xs font-bold uppercase tracking-wider mb-2">Global Support</p>
+        <p className="text-white font-semibold text-lg cursor-pointer">
+          <i className="fas fa-phone-alt text-brand-500 mr-2"></i> +1 (800) 555-0199
+        </p>
+        <a href="#" className="text-brand-400 text-sm font-medium hover:text-brand-300 mt-1 inline-block">
+          Open a support ticket &rarr;
+        </a>
+      </div>
+      <div>
+        <p className="text-slate-500 text-xs font-bold uppercase tracking-wider mb-2">Sales Inquiries</p>
+        <p className="text-white font-semibold text-lg cursor-pointer">
+          <i className="fas fa-envelope text-brand-500 mr-2"></i> Contact Sales
+        </p>
+        <a href="#" className="text-brand-400 text-sm font-medium hover:text-brand-300 mt-1 inline-block">
+          Request a live demo&rarr;
+        </a>
+      </div>
+    </div>
+  );
+}
+
+function BrandColumn() {
+  return (
+    <div className="lg:col-span-2 pr-0 lg:pr-10">
+      <div className="text-brand-400 font-bold text-2xl flex items-center mb-6">
+        <span className="bg-brand-600 text-white w-8 h-8 flex items-center justify-center mr-3 rounded text-sm shadow-sm">
+          <i className="fas fa-bolt"></i>
+        </span>
+        ProcessQ Dynamics
+      </div>
+      <p className="text-sm text-slate-400 leading-relaxed mb-8 max-w-sm">
+        Bridging the gap between physical operations and digital intelligence. We build the proactive tools of tomorrow, transforming complex operations into automated perfection.
+      </p>
+
+      <div className="flex space-x-4">
+        {footerContent.social.map((social) => (
+          <a
+            key={social.name}
+            href={social.href}
+            className="w-11 h-11 rounded-full bg-slate-800 flex items-center justify-center text-slate-300 hover:bg-brand-600 hover:text-white transition-all shadow-sm"
+            aria-label={social.name}
+          >
+            <i className={`fab fa-${social.icon}`}></i>
+          </a>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function SolutionsColumn() {
+  return (
+    <div>
+      <h4 className="text-white font-bold mb-5 tracking-wide">Platform& Solutions</h4>
+      <ul className="space-y-3 text-sm font-medium text-slate-400">
+        {footerContent.solutions.map((item) => (
+          <li key={item.text}>
+            <a href={item.href} className="hover:text-brand-300 transition-colors flex items-center group">
+              <span className="w-1.5 h-1.5 rounded-full bg-brand-600 mr-2 opacity-0 group-hover:opacity-100 transition-opacity"></span>
+              {item.text}
+            </a>
+          </li>
+        ))}
+        <li className="pt-2">
+          <a href="/solutions" className="text-brand-400 hover:text-brand-300 transition-colors font-semibold">
+            View All Solutions &rarr;
+          </a>
+        </li>
+      </ul>
+    </div>
+  );
+}
+
+function ResourcesColumn() {
+  return (
+    <div>
+      <h4 className="text-white font-bold mb-5 tracking-wide">Resources</h4>
+      <ul className="space-y-3 text-sm font-medium text-slate-400">
+        {footerContent.resources.map((item) => (
+          <li key={item.text}>
+            <a href={item.href} className="hover:text-brand-300 transition-colors">
+              {item.text}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+function CompanyColumn() {
+  return (
+    <div>
+      <h4 className="text-white font-bold mb-5 tracking-wide">Company</h4>
+      <ul className="space-y-3 text-sm font-medium text-slate-400">
+        {footerContent.company.map((item) => (
+          <li key={item.text}>
+            <a href={item.href} className="hover:text-brand-300 transition-colors flex items-center">
+              {item.text}
+              {item.badge && (
+                <span className="bg-brand-600 text-white text-[10px] px-1.5 py-0.5 rounded ml-1 font-bold">
+                  {item.badge}
+                </span>
+              )}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+function BottomBar() {
+  return (
+    <div className="border-t border-slate-800 bg-slate-900/50">
+      <div className="max-w-7xl mx-auto px-4 md:px-8 py-6 flex flex-col md:flex-row justify-between items-center text-xs font-medium text-slate-500 gap-4">
+        <div className="flex flex-col sm:flex-row items-center gap-4">
+          <span>© 2026 ProcessQ Dynamics, Inc. All rights reserved.</span>
+          <div className="hidden sm:block w-1 h-1 bg-slate-700 rounded-full"></div>
+          <button className="flex items-center hover:text-slate-300 transition-colors">
+            <i className="fas fa-globe-americas mr-1.5"></i> United States (EN)
+          </button>
+        </div>
+
+        <div className="flex flex-wrap justify-center gap-x-6 gap-y-2">
+          {footerContent.legal.map((item) => (
+            <a key={item.text} href={item.href} className="hover:text-white transition-colors">
+              {item.text}
+            </a>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
 
 export function Footer() {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: '-100px' });
-  const [showScrollTop, setShowScrollTop] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setShowScrollTop(window.scrollY > 400);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
-
-  const columnVariants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: (i) => ({
-      opacity: 1,
-      y: 0,
-      transition: { delay: i * 0.1 }
-    })
-  };
-
-  const iconVariants = {
-    hover: {
-      scale: 1.15,
-      boxShadow: '0 0 20px rgba(29, 78, 216, 0.5)',
-      backgroundColor: 'rgba(29, 78, 216, 0.3)'
-    }
-  };
-
-  const linkVariants = {
-    hover: { x: 6, color: '#60a5fa' }
-  };
-
-  const logoVariants = {
-    pulse: {
-      boxShadow: ['0 0 10px rgba(29, 78, 216, 0.3)', '0 0 25px rgba(29, 78, 216, 0.6)', '0 0 10px rgba(29, 78, 216, 0.3)'],
-      transition: {
-        duration: 2,
-        repeat: Infinity,
-        ease: 'easeInOut'
-      }
-    }
-  };
-
-  const socialLinks = [
-    {
-      href: 'https://linkedin.com/company/processqd',
-      label: 'LinkedIn',
-      icon: SocialIcons.linkedin
-    },
-    {
-      href: 'https://twitter.com/processqd',
-      label: 'Twitter',
-      icon: SocialIcons.twitter
-    },
-    {
-      href: 'https://github.com/processqd',
-      label: 'GitHub',
-      icon: SocialIcons.github
-    },
-    {
-      href: `mailto:${footerContact.email}`,
-      label: 'Email',
-      icon: SocialIcons.email
-    }
-  ];
-
   return (
-    <footer className="relative bg-gradient-to-b from-slate-900 via-slate-900 to-slate-950 border-t border-blue-500/30 overflow-hidden">
-      {/* Decorative background elements */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute -top-24 -right-24 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl" />
-        <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-indigo-500/5 rounded-full blur-3xl" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-blue-500/2 rounded-full blur-3xl" />
-      </div>
-
-      {/* Grid pattern overlay */}
-      <div
-        className="absolute inset-0 opacity-[0.03] pointer-events-none"
-        style={{
-          backgroundImage: `linear-gradient(rgba(29, 78, 216, 0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(29, 78, 216, 0.3) 1px, transparent 1px)`,
-          backgroundSize: '60px 60px'
-        }}
-      />
-
-      {/* Scroll to Top Button */}
-      <AnimatePresence>
-        {showScrollTop && (
-          <motion.button
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.8 }}
-            whileHover={{ scale: 1.15, boxShadow: '0 0 30px rgba(29, 78, 216, 0.6)' }}
-            whileTap={{ scale: 0.9 }}
-            onClick={scrollToTop}
-            className="fixed bottom-6 right-4 sm:bottom-8 sm:right-8 w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-blue-500 via-blue-400 to-indigo-500 text-white rounded-full flex items-center justify-center shadow-xl shadow-blue-500/40 z-50 cursor-pointer border border-white/20"
-            aria-label="Scroll to top"
-          >
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" width="24" height="24">
-              <path d="M18 15l-6-6-6 6" strokeLinecap="round" strokeLinejoin="round" />
-            </svg>
-          </motion.button>
-        )}
-      </AnimatePresence>
-
-      {/* Main Footer Content */}
-      <div className="relative container-responsive px-4 sm:px-6 lg:px-8 pb-12 sm:pb-16">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 sm:gap-10 py-10 sm:py-16">
-          {/* Company Info & Social */}
-          <motion.div
-            ref={ref}
-            className="sm:col-span-2 lg:col-span-1 flex flex-col gap-4 sm:gap-5 text-center sm:text-left"
-            initial="hidden"
-            animate={isInView ? 'visible' : 'hidden'}
-            custom={0}
-            variants={columnVariants}
-          >
-            <motion.div
-              className="flex items-center gap-3 justify-center sm:justify-start"
-              variants={logoVariants}
-              animate="pulse"
-            >
-              <span className="bg-gradient-to-br from-blue-400 via-blue-500 to-indigo-600 text-white rounded-xl w-12 h-12 flex items-center justify-center text-base font-bold shadow-lg shadow-blue-500/30">
-                PQ
-              </span>
-              <div className="flex flex-col">
-                <span className="text-white font-bold text-lg tracking-tight leading-tight">{branding.companyName}</span>
-                <span className="text-blue-400 text-xs font-medium tracking-wider">DYNAMICS</span>
-              </div>
-            </motion.div>
-            <p className="text-slate-400 text-sm leading-relaxed max-w-xs">{branding.tagline}</p>
-
-            {/* Social Icons */}
-            <motion.div
-              className="flex gap-3 mt-2"
-              initial={{ opacity: 0 }}
-              animate={isInView ? { opacity: 1 } : { opacity: 0 }}
-              transition={{ delay: 0.3 }}
-            >
-              {socialLinks.map((social, index) => (
-                <motion.a
-                  key={index}
-                  href={social.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={social.label}
-                  className="w-11 h-11 sm:w-12 sm:h-12 bg-slate-800/80 border border-slate-700/50 rounded-xl text-blue-300 flex items-center justify-center transition-colors duration-300"
-                  variants={iconVariants}
-                  whileHover="hover"
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
-                  transition={{ delay: 0.4 + index * 0.08 }}
-                >
-                  {social.icon}
-                </motion.a>
-              ))}
-            </motion.div>
-          </motion.div>
-
-          {/* Navigation Columns */}
-          {footerColumns.map((column, columnIndex) => (
-            <motion.div
-              key={column.id}
-              initial="hidden"
-              animate={isInView ? 'visible' : 'hidden'}
-              custom={columnIndex + 1}
-              variants={columnVariants}
-              className="lg:col-span-1"
-            >
-              <h4 className="font-extrabold text-white mb-4 sm:mb-5 text-base sm:text-lg md:text-xl uppercase tracking-wider relative weight-fluid-heading">
-                {column.title}
-                <span className="absolute -bottom-1 left-0 w-8 h-0.5 bg-gradient-to-r from-blue-500 to-transparent" />
-              </h4>
-              <ul className="flex flex-col gap-3 sm:gap-4 list-none p-0 m-0">
-                {column.links.map((link, linkIndex) => (
-                  <li key={linkIndex}>
-                    <motion.a
-                      href={link.href}
-                      className="text-slate-400 text-sm block py-1 hover:text-blue-400 transition-colors duration-200 relative group"
-                      variants={linkVariants}
-                      whileHover="hover"
-                      transition={{ duration: 0.2 }}
-                    >
-                      <span className="absolute left-0 top-1/2 -translate-y-1/2 w-0 h-0.5 bg-blue-400 group-hover:w-3 transition-all duration-200 -ml-3" />
-                      {link.text}
-                    </motion.a>
-                  </li>
-                ))}
-              </ul>
-            </motion.div>
-          ))}
-
-          {/* Contact Info */}
-          <motion.div
-            initial="hidden"
-            animate={isInView ? 'visible' : 'hidden'}
-            custom={footerColumns.length + 1}
-            variants={columnVariants}
-            className="lg:col-span-1"
-          >
-            <h4 className="font-bold text-white mb-4 sm:mb-5 text-base sm:text-lg md:text-xl uppercase tracking-wider relative weight-fluid-heading">
-              Contact Us
-              <span className="absolute -bottom-1 left-0 w-8 h-0.5 bg-gradient-to-r from-blue-500 to-transparent" />
-            </h4>
-            <ul className="flex flex-col gap-3 sm:gap-4 list-none p-0 m-0">
-              <li className="flex items-start gap-3 text-slate-400 text-sm group">
-                <span className="text-blue-400 flex-shrink-0 mt-0.5 w-8 h-8 bg-slate-800/80 rounded-lg flex items-center justify-center group-hover:bg-blue-500/20 transition-colors">
-                  <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
-                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-                  </svg>
-                </span>
-                <span className="leading-relaxed">{footerContact.address}</span>
-              </li>
-              <li className="flex items-start gap-3 text-slate-400 text-sm group">
-                <span className="text-blue-400 flex-shrink-0 mt-0.5 w-8 h-8 bg-slate-800/80 rounded-lg flex items-center justify-center group-hover:bg-blue-500/20 transition-colors">
-                  <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
-                    <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
-                  </svg>
-                </span>
-                <a href={`tel:${footerContact.phone}`} className="hover:text-blue-400 transition-colors">{footerContact.phone}</a>
-              </li>
-              <li className="flex items-start gap-3 text-slate-400 text-sm group">
-                <span className="text-blue-400 flex-shrink-0 mt-0.5 w-8 h-8 bg-slate-800/80 rounded-lg flex items-center justify-center group-hover:bg-blue-500/20 transition-colors">
-                  <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
-                    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-                  </svg>
-                </span>
-                <a href={`mailto:${footerContact.email}`} className="hover:text-blue-400 transition-colors">{footerContact.email}</a>
-              </li>
-            </ul>
-
-            {/* Business Hours */}
-            <div className="mt-8 pt-6 border-t border-slate-700/50">
-              <h5 className="text-white font-semibold text-[13px] mb-4 flex items-center gap-2">
-                <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14" className="text-blue-400">
-                  <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/>
-                </svg>
-                Business Hours
-              </h5>
-              <p className="text-slate-400 text-[13px] mb-1.5">{footerContact.businessHours.weekdays}</p>
-              <p className="text-slate-400 text-[13px]">{footerContact.businessHours.saturday}</p>
-            </div>
-          </motion.div>
+    <footer className="bg-slate-900 border-t-[8px] border-brand-600 font-sans">
+      <div className="border-b border-slate-800">
+        <div className="max-w-7xl mx-auto px-4 md:px-8 py-12 flex flex-col lg:flex-row justify-between items-center gap-8">
+          <NewsletterSection />
+          <SupportLinks />
         </div>
       </div>
 
-      {/* Bottom Footer Bar */}
-      <motion.div
-        className="relative bg-slate-950/90 border-t border-slate-800/50 py-6 px-4 sm:px-6 lg:px-8"
-        initial={{ opacity: 0 }}
-        animate={isInView ? { opacity: 1 } : { opacity: 0 }}
-        transition={{ delay: 0.6, duration: 0.5 }}
-      >
-        {/* Top border glow effect */}
-        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-blue-500/50 to-transparent" />
-
-        <div className="container-responsive flex flex-col sm:flex-row justify-between items-center gap-5 sm:gap-4">
-          {/* Legal Links - Wrapped on mobile */}
-          <div className="flex flex-wrap justify-center sm:justify-start gap-x-4 sm:gap-x-6 gap-y-2 order-2 sm:order-1">
-            <a href="/terms" className="text-slate-400 text-xs sm:text-sm hover:text-blue-400 transition-colors">Terms</a>
-            <a href="/compliance" className="text-slate-400 text-xs sm:text-sm hover:text-blue-400 transition-colors">Privacy</a>
-            <a href="/cookies" className="text-slate-400 text-xs sm:text-sm hover:text-blue-400 transition-colors">Cookies</a>
-            <a href="/gdpr" className="text-slate-400 text-xs sm:text-sm hover:text-blue-400 transition-colors">GDPR</a>
-            <a href="/sla" className="text-slate-400 text-xs sm:text-sm hover:text-blue-400 transition-colors">SLA</a>
-          </div>
-
-          <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-6 order-1 sm:order-2">
-            <div className="text-center sm:text-left">
-              <p className="text-slate-400 text-xs sm:text-sm m-0">{footerBottom.copyright}</p>
-              <p className="bg-gradient-to-r from-blue-400 via-indigo-400 to-blue-400 bg-clip-text text-transparent text-[10px] sm:text-[11px] mt-1 sm:mt-2 tracking-widest font-medium">
-                {footerBottom.tagline}
-              </p>
-            </div>
-
-            {/* Brand Badge */}
-            <motion.div
-              className="flex items-center gap-2 bg-slate-800/50 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full border border-slate-700/50"
-              whileHover={{ scale: 1.02 }}
-            >
-              <span className="bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent font-bold text-xs sm:text-sm">AI</span>
-              <span className="text-slate-500">|</span>
-              <span className="text-slate-400 font-semibold text-xs sm:text-sm tracking-tight">{branding.shortName}</span>
-            </motion.div>
-          </div>
+      <div className="max-w-7xl mx-auto px-4 md:px-8 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-8">
+          <BrandColumn />
+          <SolutionsColumn />
+          <ResourcesColumn />
+          <CompanyColumn />
         </div>
-      </motion.div>
+      </div>
+
+      <BottomBar />
     </footer>
   );
 }
+
+export default Footer;
