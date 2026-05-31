@@ -1,64 +1,75 @@
 export const servicesData = [
   {
-    id: 'autonomous-industrial-intelligence',
-    title: 'Autonomous Industrial Intelligence',
-    icon: 'fas fa-industry',
-    heroTitle: 'Autonomous Industrial Intelligence',
-    heroSubtitle: 'AI-Driven Industrial Operations',
-    description: 'Deploy AI-driven systems for predictive maintenance, anomaly detection, process optimization, and operational intelligence across manufacturing and process industries.',
-    image: 'tiles/Automous_Industrial_Intelligence.jpg',
+    id: 'implementation-integration',
+    title: 'Implementation & Integration',
+    icon: 'fa-network-wired',
+    description: 'Seamlessly deploy ProcessQ Dynamics within your existing ecosystem. Our architects specialize in integrating our platforms with legacy SCADA systems, EMRs, proprietary historians, and complex cloud architectures with zero operational downtime.',
     features: [
-      { title: 'Predictive Maintenance', description: 'AI-powered equipment failure prediction to reduce unplanned downtime.' },
-      { title: 'Process Optimization', description: 'Real-time optimization of industrial processes for maximum efficiency.' },
-      { title: 'Asset Performance Management', description: 'Comprehensive monitoring and management of critical industrial assets.' }
+      { title: 'Architecture Design & Validation', description: 'Comprehensive system architecture planning and validation' },
+      { title: 'Legacy System Data Migration', description: 'Secure migration from legacy systems and databases' },
+      { title: 'Custom API & Webhook Development', description: 'Tailored integration solutions for unique requirements' }
     ],
-    outcomes: ['Reduced unplanned downtime', 'Improved operational efficiency', 'Enhanced asset reliability']
+    ctaText: 'Learn about implementation'
   },
   {
-    id: 'agentic-ai-knowledge-systems',
-    title: 'Agentic AI & Knowledge Systems',
-    icon: 'fas fa-brain',
-    heroTitle: 'Agentic AI & Knowledge Systems',
-    heroSubtitle: 'Industrial Document Intelligence',
-    description: 'Transform industrial documents such as SOPs, P&IDs, PFDs, manuals, and datasheets into intelligent AI copilots using Agentic RAG, knowledge graphs, and domain-aware language models.',
-    image: 'tiles/AgenticAI_Knowledge_Systems.jpg',
+    id: 'applied-ai-custom-modeling',
+    title: 'Applied AI & Custom Modeling',
+    icon: 'fa-brain',
+    description: 'Out-of-the-box algorithms are a starting point. Our data science team works directly with your subject matter experts to fine-tune our predictive models using your proprietary historical data, ensuring hyper-accurate anomaly detection.',
     features: [
-      { title: 'Agentic RAG', description: 'Retrieval-augmented generation with autonomous agent capabilities.' },
-      { title: 'Knowledge Graphs', description: 'Structured knowledge representation for industrial domains.' },
-      { title: 'Industrial Copilot', description: 'AI-powered assistants specialized for industrial environments.' }
+      { title: 'Custom ML Pipeline Creation', description: 'End-to-end machine learning pipeline development' },
+      { title: 'Model Tuning for Industrial Assets', description: 'Fine-tuning for niche industrial equipment and processes' },
+      { title: 'Algorithmic Drift Monitoring', description: 'Continuous monitoring and recalibration of models' }
     ],
-    outcomes: ['Instant document access', 'Intelligent search', 'Automated compliance']
+    ctaText: 'Explore custom AI solutions'
   },
   {
-    id: 'predictive-prescriptive-optimization',
-    title: 'Predictive & Prescriptive Optimization',
-    icon: 'fas fa-chart-line',
-    heroTitle: 'Predictive & Prescriptive Optimization',
-    heroSubtitle: 'Data-Driven Decision Making',
-    description: 'Leverage forecasting, anomaly detection, and optimization models to improve throughput, reduce downtime, enhance quality, and drive measurable operational ROI.',
-    image: 'tiles/Predictive_and_Prescriptive_Optimization.jpg',
+    id: 'managed-intelligence-operations',
+    title: 'Managed Intelligence Operations',
+    icon: 'fa-headset',
+    description: 'Augment your internal teams with our 24/7 managed services. We monitor your ProcessQ instances, triage predictive alerts, and actively update your CAPA frameworks so your team can focus on strategic growth instead of daily operations.',
     features: [
-      { title: 'Time-Series Forecasting', description: 'Accurate predictions using advanced multivariate models.' },
-      { title: 'Anomaly Detection', description: 'Real-time identification of deviations from normal operations.' },
-      { title: 'Yield Optimization', description: 'Data-driven approaches to maximize production output.' }
+      { title: '24/7/365 Proactive Monitoring', description: 'Round-the-clock system surveillance and alerting' },
+      { title: 'Level 1 and Level 2 Incident Triage', description: 'Multi-tier support for rapid issue resolution' },
+      { title: 'Dedicated Technical Account Management', description: 'Personalized support and optimization guidance' }
     ],
-    outcomes: ['Improved throughput', 'Reduced defects', 'Measurable ROI']
+    ctaText: 'View managed service tiers'
   },
   {
-    id: 'quantum-inspired-decision-intelligence',
-    title: 'Quantum-Inspired Decision Intelligence',
-    icon: 'fas fa-atom',
-    heroTitle: 'Quantum-Inspired Decision Intelligence',
-    heroSubtitle: 'Advanced Optimization',
-    description: 'Apply advanced optimization techniques and quantum-inspired algorithms to solve complex industrial scheduling, resource allocation, and operational planning problems.',
-    image: 'tiles/Quantum_Inspired_Decision_Intelligence.jpg',
+    id: 'digital-transformation-consulting',
+    title: 'Digital Transformation Consulting',
+    icon: 'fa-map-marked-alt',
+    description: 'Before deploying software, you need a strategy. Our consultants help map your organizational journey from siloed, reactive operations to a fully contextualized, proactive digital enterprise, complete with ROI modeling.',
     features: [
-      { title: 'QUBO-inspired Optimization', description: 'Quantum-inspired formulations for complex optimization problems.' },
-      { title: 'Scheduling', description: 'Intelligent scheduling for industrial operations.' },
-      { title: 'Resource Allocation', description: 'Optimal distribution of resources across operations.' }
+      { title: 'Data Maturity & Readiness Assessments', description: 'Comprehensive evaluation of organizational capabilities' },
+      { title: 'Change Management & User Adoption', description: 'Strategies for smooth transition and user onboarding' },
+      { title: 'Enterprise-Wide Deployment Roadmapping', description: ' phased implementation planning and execution' }
     ],
-    outcomes: ['Optimal scheduling', 'Resource efficiency', 'Cost reduction']
+    ctaText: 'Schedule an assessment'
+  }
+];
+
+export const methodologySteps = [
+  {
+    step: 1,
+    title: 'Discovery & Design',
+    description: 'We audit your current data architecture, identify critical operational bottlenecks, and design a tailored deployment blueprint with clear success metrics.'
   },
+  {
+    step: 2,
+    title: 'Data Integration',
+    description: 'Securely connecting our platforms to your live telemetry, historical databases, and unstructured engineering documentation.'
+  },
+  {
+    step: 3,
+    title: 'Model Tuning',
+    description: 'Training our predictive engines and context graphs on your specific environmental variables to ensure high-fidelity, low-noise alerting.'
+  },
+  {
+    step: 4,
+    title: 'Go-Live & Optimize',
+    description: 'Transitioning to active monitoring, training your personnel, and continuously refining system parameters based on real-world operational feedback.'
+  }
 ];
 
 export const getServiceById = (id) => servicesData.find(s => s.id === id);

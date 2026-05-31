@@ -1,47 +1,59 @@
 export const contactContent = {
   hero: {
-    title: "Get in Touch",
-    subtitle: "We are here to help. Reach out to our global team for support, inquiries, and partnerships."
+    badge: "Connect With Us",
+    title: "Let's transform your operations.",
+    subtitle: "Whether you're looking to request a demo, inquire about enterprise deployments, or get technical support, our team is ready to assist you."
+  },
+  contactInfo: {
+    sales: {
+      title: "Sales Inquiries",
+      description: "Connect with our enterprise experts to discuss your needs.",
+      email: "sales@processqdynamics.com",
+      phone: "+1 (800) 555-0199"
+    },
+    support: {
+      title: "Technical Support",
+      description: "Existing customers can access 24/7 technical assistance.",
+      link: "Open a support ticket"
+    },
+    press: {
+      title: "Press & Media",
+      description: "For PR inquiries and media resources.",
+      email: "press@processqdynamics.com"
+    }
+  },
+  headquarters: {
+    name: "ProcessQ Dynamics, Inc.",
+    address: "One World Trade Center\nSuite 4500\nNew York, NY 10007\nUnited States"
   },
   form: {
-    inquiryTypes: [
-      { value: "sales", label: "Sales & Pricing" },
-      { value: "support", label: "Technical Support" },
-      { value: "ai-solutions", label: "AI Solutions" },
-      { value: "partnership", label: "Partnership" },
+    topics: [
+      { value: "health", label: "Health Care Monitoring Solution" },
+      { value: "crowd", label: "Crowd Tracking Solution" },
+      { value: "sre", label: "Autonomous Intelligence SRE" },
+      { value: "data", label: "Contextualized Data Processing" },
+      { value: "services", label: "Professional Services" },
       { value: "other", label: "Other Inquiry" }
     ]
   },
-  headquarters: {
-    title: "Global Headquarters",
-    address: "Bangalore, Karnataka\nIndia",
-    phone: "+91 80 1234 5678",
-    email: "info@processqd.com"
-  },
-  regions: [
+  globalOffices: [
     {
-      name: "The Americas",
-      offices: [
-        { location: "Bangalore, India", phone: "+91 80 1234 5678" }
-      ]
+      city: "London, UK",
+      region: "EMEA Hub",
+      address: "The Shard, 32 London Bridge St\nLondon SE1 9SG, United Kingdom",
+      phone: "+44 20 7946 0958"
     },
     {
-      name: "EMEA",
-      offices: [
-        { location: "London, UK", phone: "+44 20 1234 5678" }
-      ]
+      city: "Singapore",
+      region: "APAC Hub",
+      address: "Marina Bay Financial Centre\n8 Marina Blvd, Singapore 018981",
+      phone: "+65 6509 8888"
     },
     {
-      name: "Asia Pacific",
-      offices: [
-        { location: "Singapore", phone: "+65 1234 5678" }
-      ]
+      city: "Austin, TX",
+      region: "Engineering",
+      address: "Domain Tower\n10721 Domain Dr, Austin, TX 78758",
+      phone: "+1 (512) 555-0122"
     }
-  ],
-  socialLinks: [
-    { name: "LinkedIn", icon: "linkedin-in" },
-    { name: "Twitter", icon: "twitter" },
-    { name: "YouTube", icon: "youtube" },
-    { name: "Facebook", icon: "facebook-f" }
   ]
 };

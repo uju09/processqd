@@ -1,54 +1,104 @@
 export const aboutContent = {
   hero: {
-    title: "Engineering Quantum-Inspired Intelligence",
-    subtitle: "We are at the forefront of combining quantum computing principles with artificial intelligence to create transformative business solutions. Since 2024, we've been helping enterprises leverage cutting-edge technology for unprecedented growth."
+    badge: "Our Story",
+    title: "We believe the future of operations shouldn't be reactive.",
+    subtitle: "ProcessQ Dynamics was founded on a simple premise: waiting for systems to fail, queues to stall, or health to deteriorate is a legacy approach. We build the intelligence required to anticipate, understand, and optimize before the crisis occurs."
+  },
+  missionVision: {
+    title: "Transforming Industrial Data & Engineering Knowledge into Actionable Intelligence",
+    paragraphs: [
+      "At ProcessQ Dynamics, we help industrial enterprises unlock the value hidden within their data, documents, and domain expertise. By combining Industrial AI, Agentic AI, Knowledge Graphs, and Advanced Analytics, we transform complex information into actionable insights and intelligent decision support.",
+      "Our expertise spans process industries including steel, glass, chemicals, power, energy, cement, sugar, and manufacturing. We specialize in contextualizing industrial data and engineering knowledge—from sensor streams and maintenance records to P&IDs, SOPs, manuals, and datasheets—to create a unified foundation for operational intelligence.",
+      "Unlike traditional AI providers, we combine deep industrial domain understanding with technologies such as Digital Twins, Time-Series Intelligence, Agentic RAG, and Quantum-Inspired Optimization. This enables us to deliver solutions that are practical, scalable, and aligned with measurable business outcomes."
+    ],
+    closingStatement: "From predictive maintenance and process optimization to industrial copilots and autonomous decision systems, we help organizations move beyond reactive operations toward a future powered by intelligent, data-driven decision making.",
+    vision: "To make every complex system fundamentally self-aware and self-healing.",
+    mission: "Delivering the industry's most trusted proactive intelligence platform."
   },
   stats: [
-    { value: "50", label: "Global Clients" },
-    { value: "5", label: "Countries Served" },
-    { value: "2024+", label: "Year Founded" },
-    { value: "20", label: "Projects Delivered" },
-    { value: "98.7%", label: "Client Satisfaction" }
+    { value: "2.5B+", label: "Data Points Processed Daily" },
+    { value: "99.9%", label: "Anomaly Detection Accuracy" },
+    { value: "150+", label: "Enterprise Integrations" },
+    { value: "40+", label: "Global Data Centers" }
   ],
-  mission: "To revolutionize business processes through quantum-inspired AI solutions.",
-  vision: "To become the global leader in quantum-inspired AI solutions for enterprises by 2030.",
   coreValues: [
-    { title: "Innovation First", description: "We constantly push boundaries with quantum computing research." },
-    { title: "Client Success", description: "Your growth is our success. We measure our achievements by your outcomes." },
-    { title: "Quantum-Inspired Innovation", description: "Transparent, ethical AI practices with quantum-inspired algorithms." },
-    { title: "Continuous Evolution", description: "We adapt and evolve with emerging technologies." }
-  ],
-  timeline: [
-    { year: "2024", title: "Foundation", description: "ProcessQ Dynamics founded with focus on quantum-inspired algorithms" },
-    { year: "2025", title: "First Quantum-Inspired Optimization", description: "Delivered first Quantum-Inspired Optimization solution to a client" },
-    { year: "2026", title: "Enterprise Expansion", description: "Partnered with 10+ companies" }
+    {
+      icon: "fa-industry",
+      iconBg: "bg-brand-100",
+      iconColor: "text-brand-600",
+      title: "Industrial First",
+      description: "We believe technology creates value only when it solves real operational challenges. Every solution we build starts with a deep understanding of industrial processes, assets, and business objectives."
+    },
+    {
+      icon: "fa-brain",
+      iconBg: "bg-slate-200",
+      iconColor: "text-slate-700",
+      title: "Intelligence with Purpose",
+      description: "AI should do more than generate insights—it should enable better decisions and measurable outcomes. We focus on delivering intelligence that improves reliability, efficiency, quality, and profitability."
+    },
+    {
+      icon: "fa-gears",
+      iconBg: "bg-brand-100",
+      iconColor: "text-brand-600",
+      title: "Engineering-Driven Innovation",
+      description: "We combine scientific rigor, engineering expertise, and advanced AI to solve complex industrial problems. Our approach emphasizes practical, scalable solutions over technology hype."
+    },
+    {
+      icon: "fa-handshake",
+      iconBg: "bg-slate-200",
+      iconColor: "text-slate-700",
+      title: "Trust Through Transparency",
+      description: "Adoption happens when users understand and trust the system. We build explainable, auditable, and accountable AI solutions that support confident decision-making."
+    },
+    {
+      icon: "fa-chart-line",
+      iconBg: "bg-brand-100",
+      iconColor: "text-brand-600",
+      title: "Outcome-Oriented Execution",
+      description: "Success is measured by business impact, not model accuracy alone. We align every engagement with clearly defined KPIs, operational adoption, and measurable ROI."
+    },
+    {
+      icon: "fa-arrows-rotate",
+      iconBg: "bg-slate-200",
+      iconColor: "text-slate-700",
+      title: "Continuous Learning & Evolution",
+      description: "Industrial systems, processes, and technologies constantly evolve. We foster a culture of continuous learning and innovation to ensure our solutions remain relevant, adaptive, and future-ready."
+    }
   ],
   team: [
     {
-      name: "Mr. Saumitra Kayal",
+      name: "Marcus Vance",
       role: "Chief Executive Officer",
-      description: "Former director of Dell and JP Morgan. Expert in AI and Cloud.",
-      skills: ["Cloud Architecture", "Machine Learning", "Enterprise Architecture"]
+      image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      description: "Former VP of Engineering at major cloud infrastructure providers. Passionate about autonomous systems.",
+      grayscale: false
     },
     {
-      name: "Mr Biswajyoti Kar",
-      role: "CTO & Head of AI Research",
-      description: "Former Dell and GE AI researcher. Expert in neural networks.",
-      skills: ["Deep Learning", "Quantum-Inspired AI", "Cloud Architecture"]
+      name: "Dr. Elena Rostova",
+      role: "Chief Technology Officer",
+      image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      description: "Pioneer in Agentic RAG and machine learning. Leads the core intelligence processing team.",
+      grayscale: true
+    },
+    {
+      name: "James Chen",
+      role: "Chief Operating Officer",
+      image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      description: "Expert in industrial engineering and spatial dynamics. Ensures flawless global operations.",
+      grayscale: false
+    },
+    {
+      name: "Sarah Jenkins",
+      role: "VP of Medical Solutions",
+      image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      description: "MD with 15 years in clinical informatics. Bridges the gap between technology and patient care.",
+      grayscale: true
     }
   ],
-  techStack: [
-    { category: "Frontend", items: ["Angular 17+", "React", "TypeScript"] },
-    { category: "AI/ML", items: ["Python", "TensorFlow", "PyTorch"] },
-    { category: "Cloud", items: ["AWS", "Azure", "GCP"] },
-    { category: "Backend", items: ["Java", "Node.js", "Python"] },
-    { category: "DevOps", items: ["Docker", "Kubernetes", "CI/CD"] },
-    { category: "Database", items: ["MongoDB", "PostgreSQL", "Redis"] }
-  ],
   cta: {
-    title: "Join the Quantum Revolution",
-    subtitle: "Ready to transform your business with quantum AI? Let's build the future together.",
-    button: "Start a Conversation",
-    secondaryButton: "Explore Our Solutions"
+    title: "Join the Proactive Revolution",
+    subtitle: "We are always looking for brilliant data scientists, systems engineers, and domain experts who want to solve some of the world's most complex operational challenges.",
+    primaryButton: "View Open Roles",
+    secondaryButton: "Partner With Us"
   }
 };

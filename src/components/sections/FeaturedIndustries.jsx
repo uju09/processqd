@@ -1,5 +1,5 @@
+import { useState, useEffect, useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
-import { useRef } from 'react';
 import { industries } from '../../data/content/industries';
 import { useCarousel } from '../../hooks/useCarousel';
 import { CarouselControls } from '../widgets/CarouselControls';
@@ -159,11 +159,34 @@ function AnimatedBackground() {
 export function FeaturedIndustries() {
   const headerRef = useRef(null);
   const headerInView = useInView(headerRef, { once: true, margin: "-50px" });
-  const { currentIndex, canGoNext, canGoPrev, goNext, goPrev } = useCarousel(industries.length, 4);
+
+  // Responsive visible items: 1 on mobile, 2 on sm, 4 on lg+
+  const [visibleItems, setVisibleItems] = useState(1);
+
+  useEffect(() => {
+    const updateVisibleItems = () => {
+      if (window.innerWidth >= 1024) {
+        setVisibleItems(4);
+      } else if (window.innerWidth >= 640) {
+        setVisibleItems(2);
+      } else {
+        setVisibleItems(1);
+      }
+    };
+
+    updateVisibleItems();
+    window.addEventListener('resize', updateVisibleItems);
+    return () => window.removeEventListener('resize', updateVisibleItems);
+  }, []);
+
+  const { currentIndex, canGoNext, canGoPrev, goNext, goPrev, goTo } = useCarousel(industries.length, visibleItems);
+
+  // Show limited cards based on visibleItems
+  const visibleIndustries = industries.slice(currentIndex, currentIndex + visibleItems);
 
   return (
     <div></div>
-    // <section className="py-12 md:py-20 px-4 sm:px-6 lg:px-8 container-responsive bg-gradient-to-b from-blue-50 to-slate-50 relative overflow-hidden">
+    // <section className="py-12 md:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-blue-50 to-slate-50 relative overflow-hidden">
     //   <AnimatedBackground />
 
     //   <motion.div
@@ -180,8 +203,40 @@ export function FeaturedIndustries() {
     //     </p>
     //   </motion.div>
 
+    //   {/* Mobile carousel: single card with swipe/buttons */}
+    //   <div className="lg:hidden">
+    //     <motion.div
+    //       className="grid grid-cols-1 gap-4 sm:gap-5 px-2 sm:px-4"
+    //       variants={containerVariants}
+    //       initial="hidden"
+    //       whileInView="visible"
+    //       viewport={{ once: true, margin: "-100px" }}
+    //     >
+    //       {visibleIndustries.map((industry, index) => (
+    //         <IndustryCard key={industry.id} {...industry} index={index} />
+    //       ))}
+    //     </motion.div>
+
+    //     {/* Mobile pagination dots */}
+    //     <div className="flex justify-center gap-2 mt-6">
+    //       {Array.from({ length: Math.ceil(industries.length / visibleItems) }).map((_, idx) => (
+    //         <button
+    //           key={idx}
+    //           onClick={() => goTo(idx * visibleItems)}
+    //           className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
+    //             Math.floor(currentIndex / visibleItems) === idx
+    //               ? 'bg-blue-600 w-6'
+    //               : 'bg-gray-300 hover:bg-gray-400'
+    //           }`}
+    //           aria-label={`Go to slide ${idx + 1}`}
+    //         />
+    //       ))}
+    //     </div>
+    //   </div>
+
+    //   {/* Desktop: all cards in responsive grid */}
     //   <motion.div
-    //     className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 md:gap-6 px-2 md:px-0"
+    //     className="hidden lg:grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 md:gap-6 px-2 md:px-0"
     //     variants={containerVariants}
     //     initial="hidden"
     //     whileInView="visible"
@@ -199,6 +254,5 @@ export function FeaturedIndustries() {
     //     onNext={goNext}
     //   />
     // </section>
-
   );
 }
